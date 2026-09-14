@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Suraj Kumar - Data Analyst Portfolio</title>
+  <meta name="description" content="Get in touch with Suraj Kumar, Entry-Level Data Analyst. Contact via email, LinkedIn, GitHub, or the contact form.">
+  <meta name="keywords" content="Suraj Kumar, Data Analyst, Contact, Email, LinkedIn, GitHub">
+  <meta name="author" content="Suraj Kumar">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar glass-nav">
+      <div class="logo">SK | Suraj Kumar</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="resume/Suraj_Kumar_Resume.pdf" class="btn gradient-btn">Download Resume</a>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <main>
+    <section class="contact">
+      <h1 class="section-title">Contact Me</h1>
+      <p class="section-intro">
+        Feel free to reach out for opportunities, collaborations, or queries. I’ll respond as soon as possible.
+      </p>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:kumarsuraj2031k@gmail.com">kumarsuraj2031k@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/suraj-kumar-5048bb248/" target="_blank">linkedin.com/in/suraj-kumar-5048bb248</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Suraj-kumar121K" target="_blank">github.com/Suraj-kumar121K</a></p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form action="https://formsubmit.co/kumarsuraj2031k@gmail.com" method="POST" id="portfolioContactForm">
+          <!-- Hidden fields for FormSubmit -->
+          <input type="hidden" name="_subject" value="New Portfolio Contact - Suraj Kumar">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="true">
+
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="text" name="subject" placeholder="Subject" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+
+          <button type="submit" class="btn gradient-btn">Send Message</button>
+        </form>
+        <div id="formMessage"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Suraj Kumar | Entry-Level Data Analyst</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/suraj-kumar-5048bb248/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Suraj-kumar121K" target="_blank">GitHub</a>
+      <a href="mailto:kumarsuraj2031k@gmail.com">Email</a>
+    </div>
+    <p>© <span id="currentYear"></span> Suraj Kumar. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/script.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
