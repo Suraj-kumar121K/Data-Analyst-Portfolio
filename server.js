@@ -18,37 +18,50 @@ const HOST = process.env.HOST || "localhost";
 // MIDDLEWARE
 // =====================================================
 
-app.use(bodyParser.json());
 app.use(cors());
+app.use(bodyParser.json());
 
 
 // =====================================================
-// FOLDER PATHS
+// PROJECT PATHS
 // =====================================================
 
-const portfolioPath = path.join(__dirname, "..", "portfolio");
-const cssPath = path.join(__dirname, "..", "CSS");
-const assetsPath = path.join(__dirname, "..", "ASSETS");
+const publicPath = path.join(__dirname, "public");
+
+const portfolioPath = path.join(
+    publicPath,
+    "portfolio"
+);
+
+const cssPath = path.join(
+    publicPath,
+    "CSS"
+);
+
+const assetsPath = path.join(
+    publicPath,
+    "ASSETS"
+);
 
 
 // =====================================================
 // STATIC FILES
 // =====================================================
 
-// Portfolio folder
+// Portfolio files
 app.use(
     express.static(portfolioPath)
 );
 
 
-// CSS folder
+// CSS files
 app.use(
     "/CSS",
     express.static(cssPath)
 );
 
 
-// ASSETS folder
+// Assets / Images
 app.use(
     "/ASSETS",
     express.static(assetsPath)
@@ -207,7 +220,6 @@ app.use((req, res) => {
 // LOCAL SERVER
 // =====================================================
 
-// Local computer par npm start ke liye
 if (require.main === module) {
 
     app.listen(PORT, HOST, () => {
@@ -222,7 +234,7 @@ if (require.main === module) {
 
 
 // =====================================================
-// VERCEL EXPORT
+// VERCEL
 // =====================================================
 
 module.exports = app;
