@@ -1,0 +1,195 @@
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+
+    .nav-menu {
+
+        gap: 9px;
+
+    }
+
+
+    .nav-menu a {
+
+        font-size: 6px;
+
+    }
+
+
+    .skills-grid {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        gap: 5px;
+
+    }
+
+
+    .skill-card {
+
+        height: 58px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+
+    .navbar {
+
+        height: auto;
+
+        padding: 7px 0;
+
+    }
+
+
+    .nav-container {
+
+        flex-direction: column;
+
+        gap: 7px;
+
+    }
+
+
+    .nav-menu {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 9px;
+
+    }
+
+
+    .nav-menu a {
+
+        font-size: 7px;
+
+    }
+
+
+    .skills-section {
+
+        padding:
+
+            12px 4%
+            15px;
+
+    }
+
+
+    .skills-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 6px;
+
+    }
+
+
+    .skill-card {
+
+        height: 68px;
+
+    }
+
+
+    .skills-heading h1 {
+
+        font-size: 18px;
+
+    }
+
+
+    .skills-heading p {
+
+        font-size: 8px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+
+    .nav-menu {
+
+        gap: 7px;
+
+    }
+
+
+    .nav-menu a {
+
+        font-size: 6px;
+
+    }
+
+
+    .skills-heading h1 {
+
+        font-size: 16px;
+
+    }
+
+
+    .skills-heading p {
+
+        font-size: 7px;
+
+    }
+
+
+    .skill-card {
+
+        height: 64px;
+
+    }
+
+
+    .skill-icon {
+
+        width: 22px;
+
+        height: 22px;
+
+        font-size: 16px;
+
+    }
+
+
+    .skill-card h3 {
+
+        font-size: 7px;
+
+    }
+
+
+    .skill-card p {
+
+        font-size: 5px;
+
+    }
+
+}

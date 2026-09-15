@@ -5,59 +5,224 @@ const path = require("path");
 
 const app = express();
 
-// Agar environment variable set hai to use kare, warna default 5000
+
+// =====================================================
+// SERVER CONFIGURATION
+// =====================================================
+
 const PORT = process.env.PORT || 5000;
 const HOST = process.env.HOST || "localhost";
+
+
+// =====================================================
+// MIDDLEWARE
+// =====================================================
 
 app.use(bodyParser.json());
 app.use(cors());
 
-// Serve static files from portfolio folder
-app.use(express.static(path.join(__dirname, "..", "portfolio")));
 
-// Serve CSS folder separately
-app.use("/CSS", express.static(path.join(__dirname, "..", "CSS")));
+// =====================================================
+// FOLDER PATHS
+// =====================================================
 
-// Main Index
+const portfolioPath = path.join(__dirname, "..", "portfolio");
+const cssPath = path.join(__dirname, "..", "CSS");
+const assetsPath = path.join(__dirname, "..", "ASSETS");
+
+
+// =====================================================
+// STATIC FILES
+// =====================================================
+
+// Portfolio folder
+app.use(
+    express.static(portfolioPath)
+);
+
+
+// CSS folder
+app.use(
+    "/CSS",
+    express.static(cssPath)
+);
+
+
+// ASSETS folder
+app.use(
+    "/ASSETS",
+    express.static(assetsPath)
+);
+
+
+// =====================================================
+// HOME PAGE
+// =====================================================
+
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "portfolio", "index.html"));
+
+    res.sendFile(
+        path.join(
+            portfolioPath,
+            "index.html"
+        )
+    );
+
 });
 
-// Home Page
+
+// =====================================================
+// ABOUT PAGE
+// =====================================================
+
 app.get("/home", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "portfolio", "Home_page", "about.html"));
+
+    res.sendFile(
+        path.join(
+            portfolioPath,
+            "About",
+            "about.html"
+        )
+    );
+
 });
 
-// Skills
+
+// =====================================================
+// SKILLS PAGE
+// =====================================================
+
 app.get("/skills", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "portfolio", "Skills", "skills.html"));
+
+    res.sendFile(
+        path.join(
+            portfolioPath,
+            "Skills",
+            "skills.html"
+        )
+    );
+
 });
 
-// Projects
+
+// =====================================================
+// PROJECTS PAGE
+// =====================================================
+
 app.get("/projects", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "portfolio", "Projects", "projects.html"));
+
+    res.sendFile(
+        path.join(
+            portfolioPath,
+            "Projects",
+            "projects.html"
+        )
+    );
+
 });
 
-// Experience
+
+// =====================================================
+// EXPERIENCE PAGE
+// =====================================================
+
 app.get("/experience", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "portfolio", "Experience", "experience.html"));
+
+    res.sendFile(
+        path.join(
+            portfolioPath,
+            "Experience",
+            "experience.html"
+        )
+    );
+
 });
 
-// Education
+
+// =====================================================
+// EDUCATION PAGE
+// =====================================================
+
 app.get("/education", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "portfolio", "Education", "education.html"));
+
+    res.sendFile(
+        path.join(
+            portfolioPath,
+            "Education",
+            "education.html"
+        )
+    );
+
 });
 
-// Resume
+
+// =====================================================
+// RESUME PAGE
+// =====================================================
+
 app.get("/resume", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "portfolio", "Resume", "resume.html"));
+
+    res.sendFile(
+        path.join(
+            portfolioPath,
+            "Resume",
+            "resume.html"
+        )
+    );
+
 });
 
-// Contact
+
+// =====================================================
+// CONTACT PAGE
+// =====================================================
+
 app.get("/contact", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "portfolio", "Contact", "contact.html"));
+
+    res.sendFile(
+        path.join(
+            portfolioPath,
+            "Contact",
+            "contact.html"
+        )
+    );
+
 });
 
-app.listen(PORT, HOST, () => {
-  console.log(`Server running at http://${HOST}:${PORT}`);
+
+// =====================================================
+// 404 ERROR
+// =====================================================
+
+app.use((req, res) => {
+
+    res.status(404).send(
+        `Cannot GET ${req.path}`
+    );
+
 });
+
+
+// =====================================================
+// LOCAL SERVER
+// =====================================================
+
+// Local computer par npm start ke liye
+if (require.main === module) {
+
+    app.listen(PORT, HOST, () => {
+
+        console.log(
+            `Server running at http://${HOST}:${PORT}`
+        );
+
+    });
+
+}
+
+
+// =====================================================
+// VERCEL EXPORT
+// =====================================================
+
+module.exports = app;

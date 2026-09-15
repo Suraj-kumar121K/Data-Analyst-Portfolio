@@ -1,86 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Suraj Kumar - Data Analyst Portfolio</title>
-  <meta name="description" content="Get in touch with Suraj Kumar, Entry-Level Data Analyst. Contact via email, LinkedIn, GitHub, or the contact form.">
-  <meta name="keywords" content="Suraj Kumar, Data Analyst, Contact, Email, LinkedIn, GitHub">
-  <meta name="author" content="Suraj Kumar">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/CSS/style.css">
-  <link rel="stylesheet" href="/CSS/responsive.css">
-  <link rel="stylesheet" href="/CSS/animations.css">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Suraj Kumar</title>
+
+
+    <!-- =====================================================
+         CONTACT CSS
+    ====================================================== -->
+    <link rel="stylesheet" href="/CSS/Contect/style.css">
+    <link rel="stylesheet" href="/CSS/Contect/animations.css">
+    <link rel="stylesheet" href="/CSS/Contect/responsive.css">
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
 </head>
+
+
 <body>
-  <!-- Header / Navbar -->
-  <header>
-    <nav class="navbar glass-nav">
-      <div class="logo">SK | Suraj Kumar</div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="/" class="active">Home</a></li>
-        <li><a href="/Home_page/about.html">About</a></li>
-        <li><a href="/Skills/skills.html">Skills</a></li>
-        <li><a href="/Projects/projects.html">Projects</a></li>
-        <li><a href="/Experience/experience.html">Experience</a></li>
-        <li><a href="/Education/education.html">Education</a></li>
-        <li><a href="/Resume/resume.html">Resume</a></li>
-        <li><a href="/Contact/contact.html" class="active">Contact</a></li>
-      </ul>
-      <a href="/Resume/Suraj_Kumar_Resume.pdf" class="btn gradient-btn">Download Resume</a>
-      <div class="hamburger" id="hamburger">&#9776;</div>
-    </nav>
-  </header>
 
-  <!-- Contact Section -->
-  <main>
-    <section class="contact">
-      <h1 class="section-title">Contact Me</h1>
-      <p class="section-intro">
-        Feel free to reach out for opportunities, collaborations, or queries. I’ll respond as soon as possible.
-      </p>
 
-      <div class="contact-info">
-        <p><strong>Email:</strong> <a href="mailto:kumarsuraj2031k@gmail.com">kumarsuraj2031k@gmail.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/suraj-kumar-5048bb248/" target="_blank">linkedin.com/in/suraj-kumar-5048bb248</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Suraj-kumar121K" target="_blank">github.com/Suraj-kumar121K</a></p>
-      </div>
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
 
-      <!-- Contact Form -->
-      <div class="contact-form">
-        <form action="https://formsubmit.co/kumarsuraj2031k@gmail.com" method="POST" id="portfolioContactForm">
-          <!-- Hidden fields for FormSubmit -->
-          <input type="hidden" name="_subject" value="New Portfolio Contact - Suraj Kumar">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="true">
+    <header class="navbar">
 
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <input type="text" name="subject" placeholder="Subject" required>
-          <textarea name="message" placeholder="Your Message" required></textarea>
+        <div class="nav-container">
 
-          <button type="submit" class="btn gradient-btn">Send Message</button>
-        </form>
-        <div id="formMessage"></div>
-      </div>
-    </section>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>Suraj Kumar | Entry-Level Data Analyst</p>
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/suraj-kumar-5048bb248/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Suraj-kumar121K" target="_blank">GitHub</a>
-      <a href="mailto:kumarsuraj2031k@gmail.com">Email</a>
-    </div>
-    <p>© <span id="currentYear"></span> Suraj Kumar. All Rights Reserved.</p>
-  </footer>
+            <!-- LOGO -->
 
-  <!-- JS -->
-  <script src="js/script.js"></script>
-  <script src="js/animations.js"></script>
+            <a href="/" class="logo">
+                <span>Suraj</span> Kumar
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav-menu">
+
+                <a href="/">
+                    Home
+                </a>
+
+                <a href="/home">
+                    About
+                </a>
+
+                <a href="/skills">
+                    Skills
+                </a>
+
+                <a href="/projects">
+                    Projects
+                </a>
+
+                <a href="/experience">
+                    Experience
+                </a>
+
+                <a href="/education">
+                    Education
+                </a>
+
+                <a href="/resume">
+                    Resume
+                </a>
+
+                <a href="/contact" class="active">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTACT SECTION
+    ====================================================== -->
+
+    <main class="contact-section">
+
+        <div class="contact-container">
+
+
+            <!-- =================================================
+                 LEFT CONTENT
+            ================================================== -->
+
+            <section class="contact-left">
+
+                <h1>
+                    Get In Touch
+                </h1>
+
+
+                <p class="description">
+                    Feel free to reach out for collaboration,
+                    project discussion or just to say hello!
+                </p>
+
+
+                <!-- ================= EMAIL ================= -->
+
+                <div class="contact-info">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Email
+                        </h3>
+
+                        <p>
+                            kumarsuraj2031@gmail.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= LINKEDIN ================= -->
+
+                <div class="contact-info">
+
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            LinkedIn
+                        </h3>
+
+                        <p>
+                            linkedin.com/in/suraj-kumar5204b0248
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= GITHUB ================= -->
+
+                <div class="contact-info">
+
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            GitHub
+                        </h3>
+
+                        <p>
+                            github.com/suraj-kumar21k
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     FOLLOW ME
+                ================================================== -->
+
+                <h3 class="follow-title">
+                    Follow Me
+                </h3>
+
+
+                <div class="social-links">
+
+
+                    <!-- LINKEDIN -->
+
+                    <a
+                        href="https://www.linkedin.com/in/suraj-kumar5204b0248/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                        <span>
+                            LinkedIn
+                        </span>
+
+                    </a>
+
+
+                    <!-- GITHUB -->
+
+                    <a
+                        href="https://github.com/suraj-kumar21k"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="fa-brands fa-github"></i>
+
+                        <span>
+                            GitHub
+                        </span>
+
+                    </a>
+
+
+                    <!-- EMAIL -->
+
+                    <a
+                        href="mailto:kumarsuraj2031@gmail.com"
+                    >
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span>
+                            Email
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 RIGHT CONTACT FORM
+            ================================================== -->
+
+            <section class="contact-form">
+
+                <form>
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Write your message..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- SEND BUTTON -->
+
+                    <button type="submit">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <p>
+            © 2025 Suraj Kumar. All rights reserved.
+        </p>
+
+        <p>
+            Built with
+            <span>♥</span>
+            using HTML, CSS &amp; JavaScript
+        </p>
+
+    </footer>
+
+
 </body>
+
 </html>

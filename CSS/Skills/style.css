@@ -1,0 +1,535 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #020b1c;
+
+    color: #ffffff;
+
+    overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+
+    width: 100%;
+
+    height: 34px;
+
+    background: #020b1c;
+
+    border-bottom: 1px solid
+        rgba(255, 255, 255, 0.10);
+
+}
+
+
+.nav-container {
+
+    width: 94%;
+
+    max-width: 1100px;
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+
+.logo span {
+
+    color: #00d9ff;
+
+}
+
+
+
+/* =====================================================
+   NAV MENU
+===================================================== */
+
+.nav-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+}
+
+
+.nav-menu a {
+
+    position: relative;
+
+    color: #d7e3f2;
+
+    font-size: 6.5px;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+
+}
+
+
+.nav-menu a:hover {
+
+    color: #00d9ff;
+
+}
+
+
+.nav-menu a.active {
+
+    color: #ffffff;
+
+}
+
+
+/* Active Line */
+
+.nav-menu a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -5px;
+
+    width: 100%;
+
+    height: 1px;
+
+    background: #00d9ff;
+
+    box-shadow: 0 0 5px #00d9ff;
+
+}
+
+
+
+/* =====================================================
+   SKILLS SECTION
+===================================================== */
+
+.skills-section {
+
+    width: 100%;
+
+    min-height: calc(100vh - 34px);
+
+    padding: 9px 4% 12px;
+
+    position: relative;
+
+    overflow: hidden;
+
+
+    background:
+
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(0, 80, 255, 0.12),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(0, 120, 255, 0.08),
+            transparent 30%
+        ),
+
+        #020b1c;
+
+}
+
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.skills-heading {
+
+    margin-bottom: 5px;
+
+}
+
+
+.skills-heading h1 {
+
+    font-size: 16px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    margin-bottom: 2px;
+
+}
+
+
+.skills-heading p {
+
+    color: #00d9ff;
+
+    font-size: 7px;
+
+    font-weight: 500;
+
+}
+
+
+
+/* =====================================================
+   SKILLS GRID
+===================================================== */
+
+.skills-grid {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 5px;
+
+}
+
+
+
+/* =====================================================
+   SKILL CARD
+===================================================== */
+
+.skill-card {
+
+    height: 59px;
+
+    border: 1px solid #07529a;
+
+    border-radius: 4px;
+
+    background:
+        rgba(0, 35, 70, 0.35);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 3px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+
+.skill-card:hover {
+
+    border-color: #00d9ff;
+
+    background:
+        rgba(0, 60, 110, 0.40);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 12px
+        rgba(0, 190, 255, 0.20);
+
+}
+
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.skill-icon {
+
+    width: 24px;
+
+    height: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+
+    margin-bottom: 2px;
+
+}
+
+
+
+/* =====================================================
+   ICON COLORS
+===================================================== */
+
+.excel {
+
+    color: #20d46b;
+
+}
+
+
+.sql {
+
+    color: #29a9ff;
+
+}
+
+
+.powerbi {
+
+    color: #ffc928;
+
+}
+
+
+.python {
+
+    color: #ffd43b;
+
+}
+
+
+.pandas {
+
+    color: #8e5cff;
+
+}
+
+
+.numpy {
+
+    color: #4ca8ff;
+
+}
+
+
+.matplotlib {
+
+    color: #ffca38;
+
+}
+
+
+.query {
+
+    color: #39d98a;
+
+}
+
+
+.statistics {
+
+    color: #79bfff;
+
+}
+
+
+.github {
+
+    color: #ffffff;
+
+}
+
+
+.office {
+
+    color: #f25022;
+
+}
+
+
+.html {
+
+    color: #ff5a36;
+
+}
+
+
+
+/* =====================================================
+   CARD TEXT
+===================================================== */
+
+.skill-card h3 {
+
+    color: #ffffff;
+
+    font-size: 7px;
+
+    font-weight: 600;
+
+    margin-bottom: 2px;
+
+}
+
+
+.skill-card p {
+
+    color: #c7d5e5;
+
+    font-size: 5.5px;
+
+    line-height: 1.15;
+
+}
+
+
+
+/* =====================================================
+   GITHUB
+===================================================== */
+
+.github-card {
+
+    cursor: pointer;
+
+}
+
+
+.github-card:hover .github {
+
+    transform: scale(1.12);
+
+}
+
+
+.github {
+
+    transition: 0.3s ease;
+
+}
+
+
+
+/* =====================================================
+   BACKGROUND GLOW
+===================================================== */
+
+.skills-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+
+    height: 170px;
+
+    right: -80px;
+
+    top: 30px;
+
+    background: #005cff;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    opacity: 0.13;
+
+    pointer-events: none;
+
+}
+
+
+.skills-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+
+    height: 140px;
+
+    left: -70px;
+
+    bottom: -50px;
+
+    background: #007cff;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    opacity: 0.12;
+
+    pointer-events: none;
+
+}

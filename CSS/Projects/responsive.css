@@ -1,0 +1,166 @@
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .nav-menu {
+
+        gap: 9px;
+
+    }
+
+
+    .nav-menu a {
+
+        font-size: 6px;
+
+    }
+
+
+    .projects-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 7px;
+
+    }
+
+
+    .project-card {
+
+        height: 175px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        height: auto;
+
+        padding: 7px 0;
+
+    }
+
+
+    .nav-container {
+
+        flex-direction: column;
+
+        gap: 7px;
+
+    }
+
+
+    .nav-menu {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 9px;
+
+    }
+
+
+    .nav-menu a {
+
+        font-size: 7px;
+
+    }
+
+
+    .projects-section {
+
+        padding:
+            12px 4%
+            15px;
+
+    }
+
+
+    .projects-heading h1 {
+
+        font-size: 18px;
+
+    }
+
+
+    .projects-heading p {
+
+        font-size: 8px;
+
+    }
+
+
+    .projects-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 8px;
+
+    }
+
+
+    .project-card {
+
+        height: 185px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .nav-menu {
+
+        gap: 7px;
+
+    }
+
+
+    .nav-menu a {
+
+        font-size: 6px;
+
+    }
+
+
+    .projects-heading h1 {
+
+        font-size: 16px;
+
+    }
+
+
+    .projects-heading p {
+
+        font-size: 7px;
+
+    }
+
+
+    .project-card {
+
+        height: 180px;
+
+    }
+
+}

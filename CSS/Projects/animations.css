@@ -1,0 +1,155 @@
+/* =====================================================
+   PROJECT ANIMATIONS
+===================================================== */
+
+.projects-heading {
+
+    animation:
+        headingShow
+        0.7s
+        ease-out
+        both;
+
+}
+
+
+.project-card {
+
+    animation:
+        projectShow
+        0.6s
+        ease-out
+        both;
+
+}
+
+
+
+/* =====================================================
+   CARD DELAY
+===================================================== */
+
+.project-card:nth-child(1) {
+
+    animation-delay: 0.10s;
+
+}
+
+
+.project-card:nth-child(2) {
+
+    animation-delay: 0.20s;
+
+}
+
+
+.project-card:nth-child(3) {
+
+    animation-delay: 0.30s;
+
+}
+
+
+.project-card:nth-child(4) {
+
+    animation-delay: 0.40s;
+
+}
+
+
+
+/* =====================================================
+   KEYFRAMES
+===================================================== */
+
+@keyframes headingShow {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-12px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes projectShow {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+
+/* =====================================================
+   IMAGE HOVER
+===================================================== */
+
+.project-card:hover .project-image {
+
+    transform:
+        scale(1.01);
+
+}
+
+
+.project-image {
+
+    transition:
+        transform
+        0.3s ease;
+
+}
+
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+    }
+
+}
