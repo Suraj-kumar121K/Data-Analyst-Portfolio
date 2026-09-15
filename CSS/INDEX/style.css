@@ -1,0 +1,65 @@
+:root {
+  --color-dark-navy: #0a0f1c;
+  --color-electric-blue: #3a8ef6;
+  --color-purple: #7a4df6;
+  --color-cyan: #00ffe7;
+  --color-white: #ffffff;
+  --gradient-blue-purple: linear-gradient(135deg, #3a8ef6, #7a4df6);
+  --font-primary: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--font-primary);
+  background: radial-gradient(circle at top left, #0a0f1c, #0f2a40);
+  color: var(--color-white);
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar.glass-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(15, 42, 64, 0.6);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(58, 142, 246, 0.3);
+  box-shadow: 0 4px 20px rgba(58, 142, 246, 0.2);
+  position: sticky; top: 0; z-index: 1000;
+}
+.logo { font-weight: bold; font-size: 1.3rem; color: var(--color-cyan); }
+.nav-links { list-style: none; display: flex; gap: 1.2rem; }
+.nav-links a {
+  color: var(--color-white); text-decoration: none; padding: 0.5rem 1rem;
+  transition: 0.3s;
+}
+.nav-links a:hover, .nav-links a.active {
+  background: var(--gradient-blue-purple); border-radius: 6px;
+  box-shadow: 0 0 12px var(--color-purple);
+}
+.btn.gradient-btn {
+  background: var(--gradient-blue-purple); color: var(--color-white);
+  padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none;
+  font-weight: bold; transition: 0.3s;
+}
+.btn.gradient-btn:hover { box-shadow: 0 0 15px var(--color-cyan); transform: translateY(-2px); }
+.hamburger { display: none; font-size: 1.8rem; color: var(--color-cyan); cursor: pointer; }
+
+/* Hero */
+.hero { display: flex; justify-content: space-between; align-items: center; padding: 5rem 2rem; }
+.hero-content { max-width: 50%; }
+.hero-content h1 { font-size: 3rem; color: var(--color-cyan); text-shadow: 0 0 15px var(--color-electric-blue); }
+.hero-content h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+.hero-content p { margin-bottom: 1.5rem; }
+.hero-buttons { display: flex; gap: 1rem; margin-top: 1.5rem; }
+.hero-visual img {
+  border-radius: 50%; border: 3px solid var(--color-electric-blue);
+  box-shadow: 0 0 20px var(--color-purple); width: 250px;
+}
+.tagline { margin-top: 1rem; color: var(--color-cyan); text-shadow: 0 0 10px var(--color-electric-blue); }
+
+/* Footer */
+footer {
+  background: rgba(15,42,64,0.95); text-align: center;
+  padding: 1.5rem; margin-top: 2rem; border-top: 2px solid var(--color-purple);
+}
+footer p { color: #ccc; }

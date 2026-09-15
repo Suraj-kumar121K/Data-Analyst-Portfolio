@@ -1,28 +1,18 @@
-/* ===========================
-   Responsive Design
-=========================== */
-
 /* Tablet */
 @media (max-width: 1024px) {
   .hero { flex-direction: column; text-align: center; }
   .hero-content { max-width: 100%; }
   .hero-visual { margin-top: 2rem; }
-  .quick-stats { flex-wrap: wrap; gap: 1rem; }
-  .stat-card { width: 45%; }
+  .nav-links { gap: 0.8rem; }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .navbar { flex-direction: row; }
   .nav-links {
-    display: none;
-    flex-direction: column;
+    display: none; flex-direction: column;
     background: rgba(15,42,64,0.95);
-    position: absolute;
-    top: 60px; right: 0;
-    width: 220px;
-    padding: 1rem;
-    border-radius: 8px;
+    position: absolute; top: 60px; right: 0;
+    width: 220px; padding: 1rem; border-radius: 8px;
   }
   .nav-links.show { display: flex; }
   .hamburger { display: block; }
@@ -31,9 +21,6 @@
   .hero-content h1 { font-size: 2rem; }
   .hero-content h2 { font-size: 1.2rem; }
   .hero-buttons { flex-direction: column; gap: 0.8rem; }
-
-  .skill-grid { grid-template-columns: 1fr; }
-  .stat-card { width: 100%; }
 }
 
 /* Small Mobile */

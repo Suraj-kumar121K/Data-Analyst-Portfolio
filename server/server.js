@@ -4,7 +4,10 @@ const cors = require("cors");
 const path = require("path");
 
 const app = express();
-const PORT = 5000;
+
+// Agar environment variable set hai to use kare, warna default 5000
+const PORT = process.env.PORT || 5000;
+const HOST = process.env.HOST || "localhost";
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -55,6 +58,6 @@ app.get("/contact", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "portfolio", "Contact", "contact.html"));
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`Server running at http://${HOST}:${PORT}`);
 });

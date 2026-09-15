@@ -1,113 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suraj Kumar | Data Analyst Portfolio</title>
-  <meta name="description" content="Suraj Kumar - Entry-Level Data Analyst Portfolio showcasing skills, projects, and career journey.">
-  <meta name="keywords" content="Suraj Kumar, Data Analyst, Portfolio, SQL, Python, Power BI, Excel">
-  <meta name="author" content="Suraj Kumar">
+  <title>Suraj Kumar | Data Analyst</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="CSS/style.css">
-  <link rel="stylesheet" href="CSS/responsive.css">
-  <link rel="stylesheet" href="CSS/animations.css">
+  <!-- ================= CSS ================= -->
+  <!-- Main Style -->
+  <link rel="stylesheet" href="CSS/INDEX/style.css">
+  <!-- Responsive Style -->
+  <link rel="stylesheet" href="CSS/INDEX/responsive.css">
+  <!-- Animation Style -->
+  <link rel="stylesheet" href="CSS/INDEX/animations.css">
 
-  <!-- Chart.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <!-- Header / Navbar -->
-  <header>
-    <nav class="navbar glass-nav">
-      <div class="logo">SK | Suraj Kumar</div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="/" class="active">Home</a></li>
-        <li><a href="/Home_page/about.html">About</a></li>
-        <li><a href="/Skills/skills.html">Skills</a></li>
-        <li><a href="/Projects/projects.html">Projects</a></li>
-        <li><a href="/Experience/experience.html">Experience</a></li>
-        <li><a href="/Education/education.html">Education</a></li>
-        <li><a href="/Resume/resume.html">Resume</a></li>
-        <li><a href="/Contact/contact.html" class="active">Contact</a></li>
-      </ul>
-      <a href="/Resume/Suraj_Kumar_Resume.pdf" class="btn gradient-btn">Download Resume</a>
-      <div class="hamburger" id="hamburger">&#9776;</div>
-    </nav>
-  </header>
+  <!-- =====================================================
+       NAVBAR
+  ====================================================== -->
 
-  <!-- Hero Section -->
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <span class="badge">● Entry-Level / Fresher Data Analyst</span>
-        <h1>Hi, I'm <span class="gradient-text">Suraj Kumar</span></h1>
-        <h2>Data Analyst | Business Mindset | Data Driven</h2>
-        <p>
-          I come from a Sales and business background, where I learned to understand customer and business requirements. 
-          Now, I am transitioning into Data Analytics — learning and applying Excel, SQL, Python, and Power BI. 
-          I focus on data cleaning, performing analysis, creating dashboards, and communicating business insights.
-        </p>
-        <div class="hero-buttons">
-          <a href="/Projects/projects.html" class="btn gradient-btn">View My Projects</a>
-          <a href="/Resume/Suraj_Kumar_Resume.pdf" class="btn gradient-btn">Download Resume</a>
-          <a href="/Contact/contact.html" class="btn gradient-btn">Let's Connect</a>
-        </div>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/suraj-kumar-5048bb248/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
-          <a href="https://github.com/Suraj-kumar121K" target="_blank" aria-label="GitHub">GitHub</a>
-          <a href="mailto:kumarsuraj2031k@gmail.com" aria-label="Email">Email</a>
-        </div>
-      </div>
-
-      <!-- Hero Visual -->
-      <div class="hero-visual">
-        <div class="profile-placeholder"></div>
-        <div class="floating-card">Analyze</div>
-        <div class="floating-card">Visualize</div>
-        <div class="floating-card">Solve</div>
-        <div class="floating-card">Sales → Data Analytics</div>
-        <div class="floating-card">Data + Strategy = Better Decisions</div>
-        <canvas id="miniBarChart"></canvas>
-        <canvas id="miniLineChart"></canvas>
-      </div>
-    </section>
-
-    <!-- Quick Stats -->
-    <section class="quick-stats">
-      <div class="stat-card">
-        <h3>4+</h3>
-        <p>Analytics Projects</p>
-      </div>
-      <div class="stat-card">
-        <h3>5+</h3>
-        <p>Tools & Technologies</p>
-      </div>
-      <div class="stat-card">
-        <h3>01</h3>
-        <p>Business Background</p>
-      </div>
-      <div class="stat-card">
-        <h3>100%</h3>
-        <p>Learning & Improving</p>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>Suraj Kumar | Entry-Level Data Analyst</p>
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/suraj-kumar-5048bb248/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Suraj-kumar121K" target="_blank">GitHub</a>
-      <a href="mailto:kumarsuraj2031k@gmail.com">Email</a>
+  <nav class="navbar glass-nav">
+    <!-- Logo -->
+    <div class="logo">
+      SK | Suraj Kumar
     </div>
-    <p>© <span id="currentYear"></span> Suraj Kumar. All Rights Reserved.</p>
-  </footer>
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+      <li>
+        <a href="#home" class="active">Home</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
 
-  <!-- JS -->
-  <script src="js/script.js"></script>
-  <script src="js/charts.js"></script>
-  <script src="js/animations.js"></script>
+      <li>
+        <a href="#skills">Skills</a>
+      </li>
+
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+
+      <li>
+        <a href="#experience">Experience</a>
+      </li>
+
+      <li>
+        <a href="#education">Education</a>
+      </li>
+
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+
+    </ul>
+
+    <!-- Resume Button -->
+    <a href="#resume" class="btn gradient-btn">
+      Download Resume
+    </a>
+    <!-- Mobile Hamburger -->
+    <div class="hamburger" id="hamburger">
+      &#9776;
+    </div>
+  </nav>
+
+
+  <!-- =====================================================
+       HERO SECTION
+  ====================================================== -->
+  <section id="home" class="hero">
+    <!-- =================================================
+         HERO CONTENT
+    ================================================== -->
+    <div class="hero-content fade-in">
+      <!-- Main Heading -->
+      <h1>
+        Hello, I'm
+        <span class="gradient-text">
+          Suraj Kumar
+        </span>
+      </h1>
+      <!-- Job Title -->
+      <h2 class="slide-in">
+        Data Analyst | Data Analytics Engineer
+      </h2>
+      <!-- Description -->
+      <p>
+        I turn raw data into meaningful insights.
+        I'm passionate about data analysis, visualization
+        and solving real-world problems using data-driven
+        decisions.
+      </p>
+      <!-- =================================================
+           HERO BUTTONS
+      ================================================== -->
+      <div class="hero-buttons">
+        <a href="#projects" class="btn gradient-btn pulse">
+          View My Projects
+        </a>
+        <a href="#contact" class="btn outline-btn">
+          Contact Me
+        </a>
+      </div>
+      <!-- =================================================
+           SOCIAL LINKS
+      ================================================== -->
+      <div class="social-links">
+        <a
+          href="https://linkedin.com/in/suraj-kumar-5048bb248"
+          target="_blank"
+          rel="noopener noreferrer">
+          LinkedIn
+        </a>
+        <a
+          href="https://github.com/Suraj-kumar121K"
+          target="_blank"
+          rel="noopener noreferrer">
+          GitHub
+        </a>
+        <a
+          href="mailto:kumarsuraj2031k@gmail.com">
+          Email
+        </a>
+      </div>
+    </div>
+
+    <!-- =================================================
+         HERO VISUAL / PROFILE
+    ================================================== -->
+
+    <div class="hero-visual floating-card">
+
+      <!-- Outer Profile Ring -->
+      <div class="profile-ring"></div>
+
+      <!-- Orbit Ring -->
+      <div class="orbit"></div>
+
+      <!-- Small Glowing Dot -->
+      <div class="light-dot"></div>
+
+      <!-- Profile Image -->
+      <img
+        src="assets/images/profile.png"
+        alt="Suraj Kumar">
+
+      <!-- Tagline -->
+      <h3 class="tagline">
+        Data Drives
+        <br>
+        Better Decisions
+      </h3>
+
+    </div>
+
+
+    <!-- =================================================
+         SCROLL INDICATOR
+    ================================================== -->
+
+    <div class="scroll-explore">
+
+      <span>
+        ↓
+      </span>
+
+      <p>
+        Scroll to explore
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       ABOUT SECTION
+  ====================================================== -->
+
+  <section id="about">
+    <!-- About section will be added here -->
+  </section>
+
+
+  <!-- =====================================================
+       SKILLS SECTION
+  ====================================================== -->
+
+  <section id="skills">
+    <!-- Skills section will be added here -->
+  </section>
+
+
+  <!-- =====================================================
+       PROJECTS SECTION
+  ====================================================== -->
+
+  <section id="projects">
+    <!-- Projects section will be added here -->
+  </section>
+
+
+  <!-- =====================================================
+       EXPERIENCE SECTION
+  ====================================================== -->
+
+  <section id="experience">
+    <!-- Experience section will be added here -->
+  </section>
+
+
+  <!-- =====================================================
+       EDUCATION SECTION
+  ====================================================== -->
+
+  <section id="education">
+    <!-- Education section will be added here -->
+  </section>
+
+
+  <!-- =====================================================
+       CONTACT SECTION
+  ====================================================== -->
+
+  <section id="contact">
+    <!-- Contact section will be added here -->
+  </section>
+
+
+  <!-- =====================================================
+       RESUME SECTION
+  ====================================================== -->
+
+  <section id="resume">
+    <!-- Resume section will be added here -->
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer>
+
+    <p>
+      © 2026 Suraj Kumar. All Rights Reserved.
+    </p>
+
+    <p>
+      Built with ❤️ using HTML, CSS & JavaScript.
+    </p>
+
+  </footer>
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+  <script>
+    // Hamburger Button
+    const hamburger =
+      document.getElementById("hamburger");
+
+    // Navigation Menu
+    const navLinks =
+      document.querySelector(".nav-links");
+
+
+    // Mobile Menu Toggle
+    hamburger.addEventListener("click", () => {
+
+      navLinks.classList.toggle("show");
+
+    });
+    // Close Mobile Menu After Clicking Link
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(link => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("show");
+        });
+      });
+  </script>
 </body>
 </html>
