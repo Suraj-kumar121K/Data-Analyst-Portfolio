@@ -1,7 +1,14 @@
-/* =====================================================
-   LARGE DESKTOP
-   1920 x 1080
-===================================================== */
+/* =========================================================
+   RESPONSIVE CSS
+   Portfolio: Suraj Kumar | Data Analyst
+   ========================================================= */
+
+
+/* =========================================================
+   1. LARGE DESKTOP
+   Target: 1600px and above
+   Example: 1920 × 1080
+   ========================================================= */
 
 @media (min-width: 1600px) {
 
@@ -9,19 +16,18 @@
     .hero-container,
     .footer-container,
     .footer-bottom {
-
-        width: min(
-            1800px,
-            calc(100% - 120px)
-        );
+        width: min(1800px, calc(100% - 120px));
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
 
 
-/* =====================================================
-   LAPTOP
-===================================================== */
+/* =========================================================
+   2. LAPTOP / DESKTOP
+   Target: 1051px - 1400px
+   ========================================================= */
 
 @media (max-width: 1400px) {
 
@@ -29,52 +35,53 @@
     .hero-container,
     .footer-container,
     .footer-bottom {
-
         width: calc(100% - 80px);
+        margin-left: auto;
+        margin-right: auto;
     }
 
+
+    /* ---------- NAVBAR ---------- */
 
     .nav-menu {
         gap: 25px;
     }
 
-
     .nav-menu a {
         font-size: 14px;
     }
-
 
     .search-box {
         width: 270px;
     }
 
 
+    /* ---------- HERO ---------- */
+
     .hero-content h1 {
         font-size: 72px;
     }
 
-
     .role {
         font-size: 23px;
     }
-
 
     .tech-stack {
         gap: 35px;
     }
 
 
+    /* ---------- PROFILE ---------- */
+
     .profile-rings {
         width: 470px;
         height: 470px;
     }
 
-
     .ring-one {
         width: 470px;
         height: 470px;
     }
-
 
     .ring-two {
         width: 410px;
@@ -84,7 +91,6 @@
         left: 30px;
     }
 
-
     .ring-three {
         width: 350px;
         height: 350px;
@@ -93,286 +99,541 @@
         left: 60px;
     }
 
-
     .profile-circle {
         width: 275px;
         height: 275px;
     }
 
-
     .profile-text {
         right: -5px;
-
         font-size: 16px;
     }
 
 }
 
 
-/* =====================================================
-   TABLET
-===================================================== */
+/* =========================================================
+   3. TABLET
+   Target: 651px - 1050px
+   ========================================================= */
 
 @media (max-width: 1050px) {
+
+    /* ---------- NAVBAR ---------- */
 
     .navbar {
         height: auto;
     }
 
-
     .nav-container {
-
         min-height: 80px;
 
         padding: 15px 0;
 
+        display: flex;
         flex-wrap: wrap;
 
         justify-content: center;
+        align-items: center;
 
         gap: 15px;
     }
 
 
+    /* ---------- LOGO ---------- */
+
     .logo {
         width: 100%;
-
         justify-content: center;
     }
 
-
     .logo-image {
         width: 145px;
+        height: auto;
+        object-fit: contain;
     }
 
+    .logo-text {
+        display: none;
+    }
+
+
+    /* ---------- NAV MENU ---------- */
 
     .nav-menu {
         order: 2;
 
         width: 100%;
 
+        display: flex;
         flex-wrap: wrap;
+
+        justify-content: center;
 
         gap: 18px;
     }
 
-
     .nav-menu a {
         padding: 5px 0;
-
         font-size: 13px;
     }
-
 
     .nav-menu a.active::after {
         bottom: -3px;
     }
 
 
+    /* ---------- SEARCH ---------- */
+
     .search-box {
         order: 3;
 
         width: 300px;
+        max-width: 100%;
 
         height: 40px;
     }
 
 
+    /* ---------- HERO ---------- */
+
     .hero {
         padding-top: 50px;
     }
 
-
     .hero-container {
+        width: calc(100% - 80px);
 
+        display: grid;
         grid-template-columns: 1fr;
 
-        gap: 30px;
+        gap: 40px;
 
         text-align: center;
     }
 
-
     .hero-content {
-
         display: flex;
-
         flex-direction: column;
-
         align-items: center;
-    }
 
+        width: 100%;
+    }
 
     .hero-content h1 {
         font-size: 65px;
     }
 
-
     .role {
         justify-content: center;
     }
-
 
     .tech-stack {
         justify-content: center;
     }
 
-
     .hero-description {
         max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
     }
-
 
     .hero-buttons {
         justify-content: center;
     }
 
+
+    /* ---------- PROFILE ---------- */
 
     .hero-image-area {
         height: 520px;
     }
 
 
+    /* ---------- STATS ---------- */
+
     .stats-container {
         width: calc(100% - 80px);
     }
 
 
+    /* ---------- FOOTER ---------- */
+
     .footer-container {
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* =========================================================
+   4. MOBILE
+   Target: 401px - 650px
+   ========================================================= */
 
 @media (max-width: 650px) {
 
-    .nav-container,
-    .hero-container,
-    .footer-container,
-    .footer-bottom {
+    /* ---------- GLOBAL ---------- */
 
-        width: calc(100% - 30px);
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        height: auto;
+        padding: 12px 0 18px;
+    }
+
+    .nav-container {
+        width: calc(100% - 30px);
+
+        min-height: auto;
+
+        padding: 10px 0;
+
+        display: flex;
+        flex-direction: column;
+
+        flex-wrap: nowrap;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 16px;
+    }
+
+
+    /* ---------- LOGO ---------- */
+
+    .logo {
+        width: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     .logo-image {
         width: 125px;
+        max-height: 45px;
+
+        object-fit: contain;
+        display: block;
     }
 
+    .logo-text {
+        display: none;
+    }
+
+
+    /* ---------- NAV MENU ---------- */
 
     .nav-menu {
-        gap: 12px;
-    }
+        order: 2;
 
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 10px 13px;
+    }
 
     .nav-menu a {
-        font-size: 11px;
+        padding: 4px 0;
+
+        font-size: 12px;
+
+        white-space: nowrap;
     }
 
+    .nav-menu a.active::after {
+        bottom: -3px;
+    }
+
+
+    /* ---------- SEARCH ---------- */
 
     .search-box {
+        order: 3;
+
         width: 100%;
+        max-width: 100%;
+
+        height: 45px;
+
+        display: flex;
+        align-items: center;
+
+        box-sizing: border-box;
     }
 
+    .search-box input {
+        width: 100%;
+        min-width: 0;
+
+        font-size: 15px;
+
+        box-sizing: border-box;
+    }
+
+    .search-box button {
+        width: 50px;
+        min-width: 50px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
 
     .hero {
+        width: 100%;
+
         padding-top: 35px;
+        padding-bottom: 40px;
     }
 
+    .hero-container {
+        width: calc(100% - 30px);
+
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 40px;
+
+        text-align: center;
+    }
+
+
+    /* ---------- HERO CONTENT ---------- */
+
+    .hero-content {
+        width: 100%;
+        min-width: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    /* ---------- AVAILABILITY ---------- */
 
     .availability {
-        font-size: 10px;
+        max-width: 100%;
 
         padding: 8px 12px;
+
+        font-size: 11px;
+
+        box-sizing: border-box;
+
+        white-space: normal;
     }
 
+
+    /* ---------- HELLO ---------- */
 
     .hello {
         font-size: 25px;
+
+        line-height: 1.3;
+
+        margin-top: 20px;
     }
 
+
+    /* ---------- NAME ---------- */
 
     .hero-content h1 {
-        font-size: 48px;
+        width: 100%;
+
+        font-size: clamp(42px, 12vw, 52px);
+
+        line-height: 1.05;
 
         letter-spacing: -1px;
+
+        overflow-wrap: anywhere;
     }
 
+
+    /* ---------- ROLE ---------- */
 
     .role {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 7px;
+
         font-size: 17px;
 
-        gap: 8px;
+        line-height: 1.5;
 
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 
 
-    .tech-stack {
+    /* =====================================================
+       TECH STACK
+       ===================================================== */
 
+    .tech-stack {
         width: 100%;
 
         display: grid;
 
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
 
-        gap: 25px;
+        gap: 25px 15px;
+
+        justify-content: center;
+
+        margin-top: 10px;
     }
-
 
     .tech-item {
-        width: auto;
-    }
+        width: 100%;
 
+        display: flex;
 
-    .hero-description {
-        font-size: 13px;
-
-        padding: 0 5px;
-    }
-
-
-    .hero-buttons {
         flex-direction: column;
 
-        width: 100%;
+        align-items: center;
+
+        justify-content: center;
+
+        min-width: 0;
     }
 
+    .tech-item img {
+        width: 55px;
+        height: 55px;
+
+        object-fit: contain;
+    }
+
+    .tech-item strong {
+        margin-top: 8px;
+
+        font-size: 15px;
+    }
+
+
+    /* =====================================================
+       HERO DESCRIPTION
+       ===================================================== */
+
+    .hero-description {
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 0 5px;
+
+        box-sizing: border-box;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        text-align: center;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* =====================================================
+       HERO BUTTONS
+       ===================================================== */
+
+    .hero-buttons {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 14px;
+    }
 
     .btn {
         width: 230px;
 
         min-width: 230px;
 
+        max-width: 100%;
+
         height: 52px;
 
         font-size: 14px;
+
+        box-sizing: border-box;
     }
 
+
+    /* =====================================================
+       PROFILE
+       ===================================================== */
 
     .hero-image-area {
-        height: 420px;
-    }
+        width: 100%;
 
+        height: 420px;
+
+        max-width: 360px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        overflow: hidden;
+
+        transform: none;
+    }
 
     .profile-rings {
         width: 330px;
         height: 330px;
-    }
 
+        max-width: 100%;
+    }
 
     .ring-one {
         width: 330px;
         height: 330px;
     }
-
 
     .ring-two {
         width: 285px;
@@ -382,7 +643,6 @@
         left: 22px;
     }
 
-
     .ring-three {
         width: 240px;
         height: 240px;
@@ -391,12 +651,10 @@
         left: 45px;
     }
 
-
     .profile-circle {
         width: 205px;
         height: 205px;
     }
-
 
     .profile-text {
         right: 0;
@@ -404,23 +662,22 @@
         font-size: 11px;
     }
 
-
     .profile-text::after {
         width: 55px;
     }
 
+
+    /* ---------- DOTS ---------- */
 
     .dots {
         right: 0;
 
         width: 55px;
 
-        grid-template-columns:
-            repeat(5, 5px);
+        grid-template-columns: repeat(5, 5px);
 
         gap: 6px;
     }
-
 
     .dots span {
         width: 4px;
@@ -428,52 +685,81 @@
     }
 
 
+    /* =====================================================
+       STATS
+       ===================================================== */
+
     .stats-container {
         width: calc(100% - 30px);
 
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
+        display: grid;
 
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+    }
 
     .stat-card {
-        min-height: 85px;
-    }
+        width: 100%;
 
+        min-height: 85px;
+
+        box-sizing: border-box;
+
+        padding: 18px 10px;
+    }
 
     .stat-card:nth-child(2)::after {
         display: none;
     }
 
-
     .stat-card strong {
         font-size: 18px;
     }
 
-
     .stat-card span {
-        font-size: 9px;
+        font-size: 10px;
+
+        line-height: 1.4;
     }
 
+
+    /* =====================================================
+       CTA
+       ===================================================== */
 
     .cta {
-        padding-top: 50px;
+        padding: 50px 20px;
 
         min-height: 190px;
-    }
 
+        box-sizing: border-box;
+
+        text-align: center;
+    }
 
     .cta h2 {
-        font-size: 21px;
-    }
+        font-size: 23px;
 
+        line-height: 1.25;
+    }
 
     .cta p {
-        font-size: 11px;
+        font-size: 12px;
+
+        line-height: 1.6;
     }
 
 
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
     .footer-container {
+        width: calc(100% - 30px);
+
+        display: grid;
+
         grid-template-columns: 1fr;
 
         text-align: center;
@@ -481,25 +767,29 @@
         gap: 30px;
     }
 
-
     .footer-brand img {
         width: 170px;
-    }
 
+        max-width: 100%;
+
+        height: auto;
+    }
 
     .footer-brand p {
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
-
 
     .footer-column {
         align-items: center;
     }
 
-
     .footer-bottom {
+        width: calc(100% - 30px);
 
         padding: 15px 0;
+
+        display: flex;
 
         flex-direction: column;
 
@@ -511,53 +801,138 @@
 }
 
 
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
+/* =========================================================
+   5. SMALL MOBILE
+   Target: 400px and below
+   ========================================================= */
 
 @media (max-width: 400px) {
 
-    .nav-menu {
-        gap: 8px;
+    /* ---------- NAVBAR ---------- */
+
+    .nav-container {
+        width: calc(100% - 24px);
     }
 
+    .logo-image {
+        width: 115px;
+    }
+
+    .nav-menu {
+        gap: 8px 10px;
+    }
 
     .nav-menu a {
-        font-size: 9px;
+        font-size: 11px;
     }
 
 
-    .hero-content h1 {
-        font-size: 40px;
+    /* ---------- SEARCH ---------- */
+
+    .search-box {
+        height: 43px;
     }
 
+    .search-box input {
+        font-size: 14px;
+    }
+
+    .search-box button {
+        width: 45px;
+        min-width: 45px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        padding-top: 30px;
+    }
+
+    .hero-container {
+        width: calc(100% - 24px);
+
+        gap: 35px;
+    }
+
+    .availability {
+        font-size: 10px;
+
+        padding: 7px 10px;
+    }
 
     .hello {
         font-size: 22px;
     }
 
+    .hero-content h1 {
+        font-size: 40px;
+
+        letter-spacing: -0.8px;
+    }
 
     .role {
+        font-size: 14px;
+
+        gap: 6px;
+    }
+
+
+    /* ---------- TECH ---------- */
+
+    .tech-stack {
+        gap: 20px 10px;
+    }
+
+    .tech-item img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .tech-item strong {
         font-size: 14px;
     }
 
 
-    .hero-image-area {
-        height: 350px;
+    /* ---------- DESCRIPTION ---------- */
+
+    .hero-description {
+        font-size: 13px;
+
+        line-height: 1.65;
     }
 
+
+    /* ---------- BUTTONS ---------- */
+
+    .btn {
+        width: 100%;
+
+        min-width: 0;
+
+        height: 50px;
+
+        font-size: 13px;
+    }
+
+
+    /* ---------- PROFILE ---------- */
+
+    .hero-image-area {
+        height: 350px;
+
+        max-width: 300px;
+    }
 
     .profile-rings {
         width: 280px;
         height: 280px;
     }
 
-
     .ring-one {
         width: 280px;
         height: 280px;
     }
-
 
     .ring-two {
         width: 240px;
@@ -567,7 +942,6 @@
         left: 20px;
     }
 
-
     .ring-three {
         width: 205px;
         height: 205px;
@@ -576,25 +950,100 @@
         left: 38px;
     }
 
-
     .profile-circle {
         width: 175px;
         height: 175px;
     }
-
 
     .profile-text {
         display: none;
     }
 
 
-    .stats-container {
-        grid-template-columns: 1fr;
+    /* ---------- DOTS ---------- */
+
+    .dots {
+        display: none;
     }
 
 
+    /* ---------- STATS ---------- */
+
+    .stats-container {
+        width: calc(100% - 24px);
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .stat-card {
+        min-height: 75px;
+    }
+
     .stat-card::after {
         display: none !important;
+    }
+
+    .stat-card strong {
+        font-size: 18px;
+    }
+
+    .stat-card span {
+        font-size: 10px;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .cta {
+        padding: 45px 15px;
+
+        min-height: 170px;
+    }
+
+    .cta h2 {
+        font-size: 21px;
+    }
+
+    .cta p {
+        font-size: 11px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-container {
+        width: calc(100% - 24px);
+    }
+
+    .footer-brand img {
+        width: 150px;
+    }
+
+    .footer-bottom {
+        width: calc(100% - 24px);
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   6. REDUCED MOTION
+   Accessibility
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 
 }
