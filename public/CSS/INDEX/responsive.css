@@ -1,50 +1,91 @@
-/* =========================================================
-   RESPONSIVE CSS
-   Portfolio: Suraj Kumar | Data Analyst
-   ========================================================= */
+/* =====================================================
+   LARGE DESKTOP
+   1920 x 1080
+===================================================== */
 
-
-/* =========================================================
-   1. LARGE DESKTOP
-   Target: 1600px and above
-   Example: 1920 × 1080
-   ========================================================= */
-
-@media (min-width: 1600px) {
+@media (min-width: 1601px) {
 
     .nav-container,
     .hero-container,
     .footer-container,
     .footer-bottom {
-        width: min(1800px, calc(100% - 120px));
-        margin-left: auto;
-        margin-right: auto;
+        width: min(
+            1800px,
+            calc(100% - 100px)
+        );
     }
 
+    .nav-menu {
+        gap: 34px;
+    }
+
+    .nav-menu a {
+        font-size: 15px;
+    }
+
+    .search-box {
+        width: 280px;
+    }
+
+    .hero {
+        padding-top: 55px;
+    }
+
+    .hero-container {
+        min-height: 650px;
+    }
+
+    .hero-content h1,
+    .hero-name {
+        font-size: 88px;
+    }
+
+    .hello {
+        font-size: 38px;
+    }
+
+    .role {
+        font-size: 26px;
+    }
+
+    .hero-image-area {
+        height: 650px;
+    }
+
+    .profile-rings {
+        width: 540px;
+        height: 540px;
+    }
 }
 
 
-/* =========================================================
-   2. LAPTOP / DESKTOP
-   Target: 1051px - 1400px
-   ========================================================= */
+/* =====================================================
+   LAPTOP
+   1366 x 768
+   1600 x 900
+   1680 x 1050
+   1760 x 990
+===================================================== */
 
-@media (max-width: 1080px) {
+@media (max-width: 1600px) {
 
     .nav-container,
     .hero-container,
     .footer-container,
     .footer-bottom {
         width: calc(100% - 80px);
-        margin-left: auto;
-        margin-right: auto;
     }
 
+    .nav-container {
+        gap: 22px;
+    }
 
-    /* ---------- NAVBAR ---------- */
+    .logo-image {
+        width: 150px;
+    }
 
     .nav-menu {
-        gap: 25px;
+        gap: 22px;
     }
 
     .nav-menu a {
@@ -52,26 +93,87 @@
     }
 
     .search-box {
-        width: 270px;
+        width: 240px;
     }
 
+    .hero {
+        padding-top: 45px;
+    }
 
-    /* ---------- HERO ---------- */
+    .hero-container {
+        min-height: 590px;
 
-    .hero-content h1 {
-        font-size: 72px;
+        grid-template-columns:
+            50% 50%;
+
+        gap: 0;
+    }
+
+    .hero-content {
+        max-width: 720px;
+    }
+
+    .availability {
+        font-size: 13px;
+
+        padding: 8px 16px;
+    }
+
+    .hello {
+        font-size: 33px;
+    }
+
+    .hero-content h1,
+    .hero-name {
+        font-size: 74px;
+
+        letter-spacing: -3px;
     }
 
     .role {
-        font-size: 23px;
+        font-size: 22px;
+
+        margin-bottom: 27px;
     }
 
     .tech-stack {
-        gap: 35px;
+        gap: 28px;
+
+        margin-bottom: 25px;
     }
 
+    .tech-item {
+        width: 90px;
 
-    /* ---------- PROFILE ---------- */
+        font-size: 14px;
+    }
+
+    .tech-item img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .hero-description {
+        max-width: 650px;
+
+        font-size: 15px;
+
+        line-height: 1.65;
+
+        margin-bottom: 27px;
+    }
+
+    .btn {
+        min-width: 205px;
+
+        height: 54px;
+
+        font-size: 14px;
+    }
+
+    .hero-image-area {
+        height: 590px;
+    }
 
     .profile-rings {
         width: 470px;
@@ -104,946 +206,981 @@
         height: 275px;
     }
 
-    .profile-text {
+    .profile-text,
+    .quote {
         right: -5px;
+
         font-size: 16px;
     }
 
+    .profile-text::after,
+    .quote::after {
+        width: 75px;
+    }
+
+    .stats-container {
+        width: min(
+            1200px,
+            calc(100% - 80px)
+        );
+    }
+
+    .footer-container {
+        gap: 40px;
+    }
 }
 
 
-/* =========================================================
-   3. TABLET
-   Target: 651px - 1050px
-   ========================================================= */
+/* =====================================================
+   SMALL LAPTOP
+   1280 x 720
+   1280 x 1024
+===================================================== */
 
-@media (max-width: 1050px) {
+@media (max-width: 1350px) {
 
-    /* ---------- NAVBAR ---------- */
-
-    .navbar {
-        height: auto;
-    }
-
-    .nav-container {
-        min-height: 80px;
-
-        padding: 15px 0;
-
-        display: flex;
-        flex-wrap: wrap;
-
-        justify-content: center;
-        align-items: center;
-
-        gap: 15px;
-    }
-
-
-    /* ---------- LOGO ---------- */
-
-    .logo {
-        width: 100%;
-        justify-content: center;
+    .nav-container,
+    .hero-container,
+    .footer-container,
+    .footer-bottom {
+        width: calc(100% - 60px);
     }
 
     .logo-image {
-        width: 145px;
-        height: auto;
-        object-fit: contain;
+        width: 140px;
     }
-
-    .logo-text {
-        display: none;
-    }
-
-
-    /* ---------- NAV MENU ---------- */
 
     .nav-menu {
-        order: 2;
-
-        width: 100%;
-
-        display: flex;
-        flex-wrap: wrap;
-
-        justify-content: center;
-
         gap: 18px;
     }
 
     .nav-menu a {
-        padding: 5px 0;
         font-size: 13px;
     }
 
-    .nav-menu a.active::after {
-        bottom: -3px;
-    }
-
-
-    /* ---------- SEARCH ---------- */
-
     .search-box {
-        order: 3;
-
-        width: 300px;
-        max-width: 100%;
+        width: 210px;
 
         height: 40px;
     }
 
-
-    /* ---------- HERO ---------- */
-
     .hero {
-        padding-top: 50px;
-    }
-
-    .hero-container {
-        width: calc(100% - 80px);
-
-        display: grid;
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-
-        text-align: center;
-    }
-
-    .hero-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        width: 100%;
-    }
-
-    .hero-content h1 {
-        font-size: 65px;
-    }
-
-    .role {
-        justify-content: center;
-    }
-
-    .tech-stack {
-        justify-content: center;
-    }
-
-    .hero-description {
-        max-width: 650px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-
-    /* ---------- PROFILE ---------- */
-
-    .hero-image-area {
-        height: 520px;
-    }
-
-
-    /* ---------- STATS ---------- */
-
-    .stats-container {
-        width: calc(100% - 80px);
-    }
-
-
-    /* ---------- FOOTER ---------- */
-
-    .footer-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-/* =========================================================
-   4. MOBILE
-   Target: 401px - 650px
-   ========================================================= */
-
-@media (max-width: 650px) {
-
-    /* ---------- GLOBAL ---------- */
-
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-
-    /* ---------- NAVBAR ---------- */
-
-    .navbar {
-        height: auto;
-        padding: 12px 0 18px;
-    }
-
-    .nav-container {
-        width: calc(100% - 30px);
-
-        min-height: auto;
-
-        padding: 10px 0;
-
-        display: flex;
-        flex-direction: column;
-
-        flex-wrap: nowrap;
-
-        justify-content: center;
-        align-items: center;
-
-        gap: 16px;
-    }
-
-
-    /* ---------- LOGO ---------- */
-
-    .logo {
-        width: auto;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .logo-image {
-        width: 125px;
-        max-height: 45px;
-
-        object-fit: contain;
-        display: block;
-    }
-
-    .logo-text {
-        display: none;
-    }
-
-
-    /* ---------- NAV MENU ---------- */
-
-    .nav-menu {
-        order: 2;
-
-        width: 100%;
-
-        display: flex;
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-        align-items: center;
-
-        gap: 10px 13px;
-    }
-
-    .nav-menu a {
-        padding: 4px 0;
-
-        font-size: 12px;
-
-        white-space: nowrap;
-    }
-
-    .nav-menu a.active::after {
-        bottom: -3px;
-    }
-
-
-    /* ---------- SEARCH ---------- */
-
-    .search-box {
-        order: 3;
-
-        width: 100%;
-        max-width: 100%;
-
-        height: 45px;
-
-        display: flex;
-        align-items: center;
-
-        box-sizing: border-box;
-    }
-
-    .search-box input {
-        width: 100%;
-        min-width: 0;
-
-        font-size: 15px;
-
-        box-sizing: border-box;
-    }
-
-    .search-box button {
-        width: 50px;
-        min-width: 50px;
-
-        flex-shrink: 0;
-    }
-
-
-    /* =====================================================
-       HERO
-       ===================================================== */
-
-    .hero {
-        width: 100%;
-
         padding-top: 35px;
-        padding-bottom: 40px;
     }
 
     .hero-container {
-        width: calc(100% - 30px);
-
-        margin-left: auto;
-        margin-right: auto;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 40px;
-
-        text-align: center;
+        min-height: 550px;
     }
-
-
-    /* ---------- HERO CONTENT ---------- */
-
-    .hero-content {
-        width: 100%;
-        min-width: 0;
-
-        display: flex;
-        flex-direction: column;
-
-        align-items: center;
-
-        text-align: center;
-    }
-
-
-    /* ---------- AVAILABILITY ---------- */
-
-    .availability {
-        max-width: 100%;
-
-        padding: 8px 12px;
-
-        font-size: 11px;
-
-        box-sizing: border-box;
-
-        white-space: normal;
-    }
-
-
-    /* ---------- HELLO ---------- */
 
     .hello {
-        font-size: 25px;
-
-        line-height: 1.3;
-
-        margin-top: 20px;
+        font-size: 30px;
     }
 
-
-    /* ---------- NAME ---------- */
-
-    .hero-content h1 {
-        width: 100%;
-
-        font-size: clamp(42px, 12vw, 52px);
-
-        line-height: 1.05;
-
-        letter-spacing: -1px;
-
-        overflow-wrap: anywhere;
+    .hero-content h1,
+    .hero-name {
+        font-size: 66px;
     }
-
-
-    /* ---------- ROLE ---------- */
 
     .role {
-        width: 100%;
+        font-size: 20px;
 
-        display: flex;
-
-        justify-content: center;
-        align-items: center;
-
-        flex-wrap: wrap;
-
-        gap: 7px;
-
-        font-size: 17px;
-
-        line-height: 1.5;
-
-        margin-bottom: 20px;
+        margin-bottom: 24px;
     }
 
-
-    /* =====================================================
-       TECH STACK
-       ===================================================== */
-
     .tech-stack {
-        width: 100%;
-
-        display: grid;
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 25px 15px;
-
-        justify-content: center;
-
-        margin-top: 10px;
+        gap: 20px;
     }
 
     .tech-item {
-        width: 100%;
+        width: 82px;
 
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        justify-content: center;
-
-        min-width: 0;
+        font-size: 13px;
     }
 
     .tech-item img {
-        width: 55px;
-        height: 55px;
-
-        object-fit: contain;
+        width: 60px;
+        height: 60px;
     }
-
-    .tech-item strong {
-        margin-top: 8px;
-
-        font-size: 15px;
-    }
-
-
-    /* =====================================================
-       HERO DESCRIPTION
-       ===================================================== */
 
     .hero-description {
-        width: 100%;
-
-        max-width: 100%;
-
-        padding: 0 5px;
-
-        box-sizing: border-box;
-
         font-size: 14px;
 
-        line-height: 1.7;
-
-        text-align: center;
-
-        overflow-wrap: break-word;
+        max-width: 580px;
     }
 
+    .hero-image-area {
+        height: 540px;
+    }
 
-    /* =====================================================
-       HERO BUTTONS
-       ===================================================== */
+    .profile-rings {
+        width: 420px;
+        height: 420px;
+    }
 
-    .hero-buttons {
-        width: 100%;
+    .ring-one {
+        width: 420px;
+        height: 420px;
+    }
 
-        display: flex;
+    .ring-two {
+        width: 365px;
+        height: 365px;
 
-        flex-direction: column;
+        top: 27px;
+        left: 27px;
+    }
 
-        align-items: center;
+    .ring-three {
+        width: 310px;
+        height: 310px;
+
+        top: 55px;
+        left: 55px;
+    }
+
+    .profile-circle {
+        width: 245px;
+        height: 245px;
+    }
+
+    .profile-text,
+    .quote {
+        font-size: 14px;
+
+        right: -8px;
+    }
+
+    .stats-container {
+        min-height: 100px;
+    }
+
+    .stat-card strong {
+        font-size: 20px;
+    }
+}
+
+
+/* =====================================================
+   TABLET
+   <= 1050px
+===================================================== */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+        height: auto;
+    }
+
+    .nav-container {
+
+        width: calc(100% - 40px);
+
+        min-height: 80px;
+
+        height: auto;
+
+        padding: 15px 0;
+
+        flex-wrap: wrap;
 
         justify-content: center;
 
         gap: 14px;
     }
 
-    .btn {
-        width: 230px;
-
-        min-width: 230px;
-
-        max-width: 100%;
-
-        height: 52px;
-
-        font-size: 14px;
-
-        box-sizing: border-box;
-    }
-
-
-    /* =====================================================
-       PROFILE
-       ===================================================== */
-
-    .hero-image-area {
+    .logo {
         width: 100%;
 
-        height: 420px;
-
-        max-width: 360px;
-
-        margin-left: auto;
-        margin-right: auto;
-
-        overflow: hidden;
-
-        transform: none;
+        justify-content: center;
     }
 
-    .profile-rings {
-        width: 330px;
-        height: 330px;
-
-        max-width: 100%;
+    .logo-image {
+        width: 145px;
     }
 
-    .ring-one {
-        width: 330px;
-        height: 330px;
-    }
+    .nav-menu {
 
-    .ring-two {
-        width: 285px;
-        height: 285px;
+        order: 2;
 
-        top: 22px;
-        left: 22px;
-    }
-
-    .ring-three {
-        width: 240px;
-        height: 240px;
-
-        top: 45px;
-        left: 45px;
-    }
-
-    .profile-circle {
-        width: 205px;
-        height: 205px;
-    }
-
-    .profile-text {
-        right: 0;
-
-        font-size: 11px;
-    }
-
-    .profile-text::after {
-        width: 55px;
-    }
-
-
-    /* ---------- DOTS ---------- */
-
-    .dots {
-        right: 0;
-
-        width: 55px;
-
-        grid-template-columns: repeat(5, 5px);
-
-        gap: 6px;
-    }
-
-    .dots span {
-        width: 4px;
-        height: 4px;
-    }
-
-
-    /* =====================================================
-       STATS
-       ===================================================== */
-
-    .stats-container {
-        width: calc(100% - 30px);
-
-        display: grid;
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 12px;
-    }
-
-    .stat-card {
         width: 100%;
 
-        min-height: 85px;
+        flex: none;
 
-        box-sizing: border-box;
+        flex-wrap: wrap;
 
-        padding: 18px 10px;
+        justify-content: center;
+
+        gap: 16px;
     }
 
-    .stat-card:nth-child(2)::after {
-        display: none;
+    .nav-menu a {
+
+        padding: 5px 0;
+
+        font-size: 13px;
     }
 
-    .stat-card strong {
-        font-size: 18px;
+    .nav-menu a.active::after {
+
+        bottom: -4px;
+
+        height: 2px;
     }
 
-    .stat-card span {
-        font-size: 10px;
+    .search-box {
 
-        line-height: 1.4;
+        order: 3;
+
+        width: 300px;
+
+        height: 40px;
     }
 
+    .hero {
 
-    /* =====================================================
-       CTA
-       ===================================================== */
-
-    .cta {
-        padding: 50px 20px;
-
-        min-height: 190px;
-
-        box-sizing: border-box;
-
-        text-align: center;
+        padding-top: 40px;
     }
 
-    .cta h2 {
-        font-size: 23px;
+    .hero-container {
 
-        line-height: 1.25;
-    }
-
-    .cta p {
-        font-size: 12px;
-
-        line-height: 1.6;
-    }
-
-
-    /* =====================================================
-       FOOTER
-       ===================================================== */
-
-    .footer-container {
-        width: calc(100% - 30px);
-
-        display: grid;
+        width: calc(100% - 40px);
 
         grid-template-columns: 1fr;
 
+        gap: 20px;
+
         text-align: center;
 
-        gap: 30px;
+        min-height: auto;
     }
 
-    .footer-brand img {
-        width: 170px;
-
-        max-width: 100%;
-
-        height: auto;
-    }
-
-    .footer-brand p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .footer-column {
-        align-items: center;
-    }
-
-    .footer-bottom {
-        width: calc(100% - 30px);
-
-        padding: 15px 0;
+    .hero-content {
 
         display: flex;
 
         flex-direction: column;
 
-        gap: 8px;
+        align-items: center;
+
+        max-width: 750px;
+
+        margin: 0 auto;
+    }
+
+    .availability {
+        margin-bottom: 20px;
+    }
+
+    .hello {
+        font-size: 31px;
+    }
+
+    .hero-content h1,
+    .hero-name {
+        font-size: 65px;
+    }
+
+    .role {
+
+        justify-content: center;
+
+        font-size: 22px;
+    }
+
+    .tech-stack {
+
+        justify-content: center;
+
+        gap: 30px;
+    }
+
+    .hero-description {
+
+        max-width: 650px;
 
         text-align: center;
     }
 
-}
+    .hero-buttons {
 
-
-/* =========================================================
-   5. SMALL MOBILE
-   Target: 400px and below
-   ========================================================= */
-
-@media (max-width: 400px) {
-
-    /* ---------- NAVBAR ---------- */
-
-    .nav-container {
-        width: calc(100% - 24px);
+        justify-content: center;
     }
 
-    .logo-image {
-        width: 115px;
+    .hero-image-area {
+
+        height: 400px;
+
+        width: 100%;
+
+        max-width: 650px;
+
+        margin: 0 auto;
     }
 
-    .nav-menu {
-        gap: 8px 10px;
+    .stats-container {
+
+        width: calc(100% - 40px);
+
+        margin-top: 20px;
     }
 
-    .nav-menu a {
-        font-size: 11px;
-    }
+    .footer-container {
 
+        width: calc(100% - 40px);
 
-    /* ---------- SEARCH ---------- */
-
-    .search-box {
-        height: 43px;
-    }
-
-    .search-box input {
-        font-size: 14px;
-    }
-
-    .search-box button {
-        width: 45px;
-        min-width: 45px;
-    }
-
-
-    /* ---------- HERO ---------- */
-
-    .hero {
-        padding-top: 30px;
-    }
-
-    .hero-container {
-        width: calc(100% - 24px);
+        grid-template-columns:
+            repeat(2, 1fr);
 
         gap: 35px;
     }
 
+    .footer-bottom {
+
+        width: calc(100% - 40px);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   <= 650px
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+    }
+
+    .nav-container {
+
+        width: calc(100% - 30px);
+
+        padding: 13px 0;
+
+        gap: 13px;
+    }
+
+    .logo-image {
+        width: 125px;
+    }
+
+    .nav-menu {
+
+        gap: 10px 13px;
+    }
+
+    .nav-menu a {
+
+        font-size: 11px;
+
+        padding: 4px 0;
+    }
+
+    .nav-menu a.active::after {
+
+        bottom: -3px;
+
+        height: 2px;
+    }
+
+    .search-box {
+
+        width: 100%;
+
+        max-width: 320px;
+
+        height: 38px;
+    }
+
+    .search-box input {
+        font-size: 13px;
+    }
+
+    .search-box button {
+        width: 45px;
+
+        font-size: 16px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        padding-top: 30px;
+
+        padding-bottom: 20px;
+    }
+
+    .hero-container {
+
+        width: calc(100% - 30px);
+
+        gap: 10px;
+    }
+
     .availability {
+
+        padding: 7px 12px;
+
         font-size: 10px;
 
-        padding: 7px 10px;
+        margin-bottom: 18px;
+    }
+
+    .availability-dot {
+
+        width: 7px;
+        height: 7px;
+
+        margin-right: 7px;
     }
 
     .hello {
-        font-size: 22px;
+
+        font-size: 25px;
+
+        margin-bottom: 4px;
     }
 
-    .hero-content h1 {
-        font-size: 40px;
+    .hero-content h1,
+    .hero-name {
 
-        letter-spacing: -0.8px;
+        font-size: 48px;
+
+        letter-spacing: -2px;
+
+        margin-bottom: 14px;
     }
 
     .role {
+
+        justify-content: center;
+
+        gap: 8px;
+
+        font-size: 17px;
+
+        margin-bottom: 23px;
+    }
+
+    .tech-stack {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px 12px;
+
+        margin-bottom: 24px;
+    }
+
+    .tech-item {
+
+        width: auto;
+
+        font-size: 12px;
+
+        gap: 7px;
+    }
+
+    .tech-item img {
+
+        width: 58px;
+
+        height: 58px;
+    }
+
+    .hero-description {
+
+        width: 100%;
+
+        padding: 0 5px;
+
+        font-size: 13px;
+
+        line-height: 1.6;
+
+        margin-bottom: 25px;
+    }
+
+    .hero-buttons {
+
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .btn {
+
+        width: 230px;
+
+        min-width: 230px;
+
+        height: 52px;
+
+        font-size: 14px;
+    }
+
+
+    /* PROFILE */
+
+    .hero-image-area {
+
+        width: 100%;
+
+        height: 400px;
+    }
+
+    .profile-rings {
+
+        width: 330px;
+
+        height: 330px;
+    }
+
+    .ring-one {
+
+        width: 330px;
+
+        height: 330px;
+    }
+
+    .ring-two {
+
+        width: 285px;
+
+        height: 285px;
+
+        top: 22px;
+
+        left: 22px;
+    }
+
+    .ring-three {
+
+        width: 240px;
+
+        height: 240px;
+
+        top: 45px;
+
+        left: 45px;
+    }
+
+    .profile-circle {
+
+        width: 205px;
+
+        height: 205px;
+    }
+
+    .profile-text,
+    .quote {
+
+        right: 0;
+
+        font-size: 11px;
+    }
+
+    .profile-text::after,
+    .quote::after {
+
+        width: 55px;
+
+        height: 2px;
+    }
+
+    .dots-one {
+
+        right: 0;
+
+        top: 20px;
+    }
+
+    .dot-pattern,
+    .dots {
+
+        grid-template-columns:
+            repeat(5, 5px);
+
+        gap: 6px;
+    }
+
+    .dot-pattern span,
+    .dots span {
+
+        width: 4px;
+
+        height: 4px;
+    }
+
+
+    /* STATS */
+
+    .stats-container {
+
+        width: calc(100% - 30px);
+
+        min-height: 0;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .stat-card {
+
+        min-height: 85px;
+    }
+
+    .stat-card:nth-child(2)::after {
+
+        display: none;
+    }
+
+    .stat-card strong {
+
+        font-size: 18px;
+    }
+
+    .stat-card span {
+
+        font-size: 9px;
+    }
+
+    .stat-card i {
+
+        font-size: 18px;
+    }
+
+
+    /* CTA */
+
+    .cta {
+
+        min-height: 180px;
+
+        padding: 50px 15px 0;
+    }
+
+    .cta h2 {
+
+        font-size: 21px;
+    }
+
+    .cta p {
+
+        font-size: 11px;
+    }
+
+    .cta-arrow {
+
+        margin-top: 17px;
+
+        font-size: 23px;
+    }
+
+
+    /* FOOTER */
+
+    footer,
+    .footer {
+
+        margin-top: 30px;
+    }
+
+    .footer-container {
+
+        width: calc(100% - 30px);
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 28px;
+    }
+
+    .footer-brand img {
+
+        width: 170px;
+
+        margin: 0 auto 12px;
+    }
+
+    .footer-brand p {
+
+        margin: 0 auto;
+    }
+
+    .footer-column {
+
+        align-items: center;
+    }
+
+    .footer-bottom {
+
+        width: calc(100% - 30px);
+
+        padding: 14px 0;
+
+        min-height: 55px;
+
+        flex-direction: column;
+
+        gap: 7px;
+
+        text-align: center;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   <= 400px
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .nav-container {
+
+        width: calc(100% - 20px);
+    }
+
+    .logo-image {
+
+        width: 110px;
+    }
+
+    .nav-menu {
+
+        gap: 8px 10px;
+    }
+
+    .nav-menu a {
+
+        font-size: 9px;
+    }
+
+    .search-box {
+
+        height: 36px;
+    }
+
+    .hero-container {
+
+        width: calc(100% - 20px);
+    }
+
+    .availability {
+
+        font-size: 9px;
+
+        padding: 6px 10px;
+    }
+
+    .hello {
+
+        font-size: 22px;
+    }
+
+    .hero-content h1,
+    .hero-name {
+
+        font-size: 40px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .role {
+
         font-size: 14px;
 
         gap: 6px;
     }
 
-
-    /* ---------- TECH ---------- */
-
     .tech-stack {
-        gap: 20px 10px;
+
+        gap: 18px 8px;
+    }
+
+    .tech-item {
+
+        font-size: 11px;
     }
 
     .tech-item img {
-        width: 48px;
-        height: 48px;
+
+        width: 52px;
+
+        height: 52px;
     }
-
-    .tech-item strong {
-        font-size: 14px;
-    }
-
-
-    /* ---------- DESCRIPTION ---------- */
 
     .hero-description {
-        font-size: 13px;
 
-        line-height: 1.65;
+        font-size: 12px;
     }
-
-
-    /* ---------- BUTTONS ---------- */
 
     .btn {
-        width: 100%;
 
-        min-width: 0;
+        width: 215px;
 
-        height: 50px;
+        min-width: 215px;
+
+        height: 49px;
 
         font-size: 13px;
     }
 
-
-    /* ---------- PROFILE ---------- */
-
     .hero-image-area {
-        height: 350px;
 
-        max-width: 300px;
+        height: 340px;
     }
 
     .profile-rings {
+
         width: 280px;
+
         height: 280px;
     }
 
     .ring-one {
+
         width: 280px;
+
         height: 280px;
     }
 
     .ring-two {
+
         width: 240px;
+
         height: 240px;
 
         top: 20px;
+
         left: 20px;
     }
 
     .ring-three {
+
         width: 205px;
+
         height: 205px;
 
         top: 38px;
+
         left: 38px;
     }
 
     .profile-circle {
+
         width: 175px;
+
         height: 175px;
     }
 
-    .profile-text {
+    .profile-text,
+    .quote {
+
         display: none;
     }
-
-
-    /* ---------- DOTS ---------- */
-
-    .dots {
-        display: none;
-    }
-
-
-    /* ---------- STATS ---------- */
 
     .stats-container {
-        width: calc(100% - 24px);
+
+        width: calc(100% - 20px);
 
         grid-template-columns: 1fr;
-
-        gap: 12px;
-    }
-
-    .stat-card {
-        min-height: 75px;
     }
 
     .stat-card::after {
+
         display: none !important;
     }
 
-    .stat-card strong {
-        font-size: 18px;
-    }
-
-    .stat-card span {
-        font-size: 10px;
-    }
-
-
-    /* ---------- CTA ---------- */
-
-    .cta {
-        padding: 45px 15px;
-
-        min-height: 170px;
-    }
-
     .cta h2 {
-        font-size: 21px;
+
+        font-size: 19px;
     }
 
     .cta p {
-        font-size: 11px;
+
+        font-size: 10px;
     }
-
-
-    /* ---------- FOOTER ---------- */
-
-    .footer-container {
-        width: calc(100% - 24px);
-    }
-
-    .footer-brand img {
-        width: 150px;
-    }
-
-    .footer-bottom {
-        width: calc(100% - 24px);
-
-        font-size: 11px;
-    }
-
 }
 
 
-/* =========================================================
-   6. REDUCED MOTION
-   Accessibility
-   ========================================================= */
+/* =====================================================
+   VERY SMALL PHONE
+===================================================== */
 
-@media (prefers-reduced-motion: reduce) {
+@media (max-width: 330px) {
 
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
+    .nav-menu {
+
+        gap: 7px;
     }
 
+    .nav-menu a {
+
+        font-size: 8px;
+    }
+
+    .hero-content h1,
+    .hero-name {
+
+        font-size: 36px;
+    }
+
+    .role {
+
+        font-size: 13px;
+    }
+
+    .profile-rings {
+
+        width: 250px;
+
+        height: 250px;
+    }
+
+    .ring-one {
+
+        width: 250px;
+
+        height: 250px;
+    }
+
+    .ring-two {
+
+        width: 215px;
+
+        height: 215px;
+
+        top: 17px;
+
+        left: 17px;
+    }
+
+    .ring-three {
+
+        width: 180px;
+
+        height: 180px;
+
+        top: 35px;
+
+        left: 35px;
+    }
+
+    .profile-circle {
+
+        width: 155px;
+
+        height: 155px;
+    }
 }

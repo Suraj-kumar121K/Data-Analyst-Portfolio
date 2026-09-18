@@ -8,7 +8,6 @@
         transform 0.3s ease;
 }
 
-
 .nav-menu a:hover {
     transform: translateY(-2px);
 }
@@ -23,7 +22,6 @@
         border-color 0.3s ease,
         box-shadow 0.3s ease;
 }
-
 
 .search-box:focus-within {
     border-color: #00bfff;
@@ -42,18 +40,15 @@
         heroLeft 0.8s ease-out both;
 }
 
-
 .hero-image-area {
     animation:
         heroRight 0.9s ease-out both;
 }
 
-
 .stats-container {
     animation:
         statsUp 0.8s ease-out 0.2s both;
 }
-
 
 .cta {
     animation:
@@ -81,48 +76,51 @@
 }
 
 
+/* =====================================================
+   RINGS
+===================================================== */
+
 .ring-one {
     animation:
-        ringRotate 10s linear infinite;
+        ringRotateOne 10s linear infinite;
 }
-
 
 .ring-two {
     animation:
-        ringRotateReverse 14s linear infinite;
+        ringRotateTwo 14s linear infinite;
 }
-
 
 .ring-three {
     animation:
-        ringRotate 18s linear infinite;
+        ringRotateThree 18s linear infinite;
 }
 
 
 /* =====================================================
-   BUTTON
+   BUTTONS
 ===================================================== */
 
 .btn {
     transition:
         transform 0.3s ease,
-        box-shadow 0.3s ease;
+        box-shadow 0.3s ease,
+        background 0.3s ease;
 }
-
 
 .btn:hover {
     transform: translateY(-3px);
 }
 
-
-.btn-primary:hover {
+.btn-primary:hover,
+.primary-btn:hover {
     box-shadow:
         0 10px 30px rgba(0, 157, 255, 0.35);
 }
 
-
-.btn-secondary:hover {
-    background: rgba(0, 157, 255, 0.08);
+.btn-secondary:hover,
+.secondary-btn:hover {
+    background:
+        rgba(0, 157, 255, 0.08);
 
     box-shadow:
         0 8px 25px rgba(0, 157, 255, 0.18);
@@ -130,7 +128,7 @@
 
 
 /* =====================================================
-   TECH
+   TECHNOLOGY
 ===================================================== */
 
 .tech-item {
@@ -138,20 +136,19 @@
         transform 0.3s ease;
 }
 
-
 .tech-item:hover {
-    transform: translateY(-5px);
+    transform:
+        translateY(-5px);
 }
-
 
 .tech-item img {
     transition:
         transform 0.3s ease;
 }
 
-
 .tech-item:hover img {
-    transform: scale(1.08);
+    transform:
+        scale(1.08);
 }
 
 
@@ -165,17 +162,17 @@
         transform 0.3s ease;
 }
 
-
 .stat-card:hover {
     background:
         rgba(0, 90, 150, 0.16);
 
-    transform: translateY(-3px);
+    transform:
+        translateY(-3px);
 }
 
 
 /* =====================================================
-   CTA
+   CTA ARROW
 ===================================================== */
 
 .cta-arrow {
@@ -183,14 +180,14 @@
         transform 0.3s ease;
 }
 
-
 .cta-arrow:hover {
-    transform: translateY(5px);
+    transform:
+        translateY(5px);
 }
 
 
 /* =====================================================
-   KEYFRAMES
+   HERO LEFT
 ===================================================== */
 
 @keyframes heroLeft {
@@ -211,6 +208,10 @@
 }
 
 
+/* =====================================================
+   HERO RIGHT
+===================================================== */
+
 @keyframes heroRight {
 
     from {
@@ -228,6 +229,10 @@
     }
 }
 
+
+/* =====================================================
+   STATS UP
+===================================================== */
 
 @keyframes statsUp {
 
@@ -247,6 +252,10 @@
 }
 
 
+/* =====================================================
+   FADE UP
+===================================================== */
+
 @keyframes fadeUp {
 
     from {
@@ -265,22 +274,66 @@
 }
 
 
+/* =====================================================
+   PROFILE FLOAT
+===================================================== */
+
 @keyframes profileFloat {
 
     0%,
     100% {
         transform:
-            translateY(0);
+            translate(-50%, -50%);
     }
 
     50% {
         transform:
-            translateY(-8px);
+            translate(-50%, calc(-50% - 8px));
     }
 }
 
 
-@keyframes ringRotate {
+/* =====================================================
+   RING ONE
+===================================================== */
+
+@keyframes ringRotateOne {
+
+    from {
+        transform:
+            rotate(25deg);
+    }
+
+    to {
+        transform:
+            rotate(385deg);
+    }
+}
+
+
+/* =====================================================
+   RING TWO
+===================================================== */
+
+@keyframes ringRotateTwo {
+
+    from {
+        transform:
+            rotate(-35deg);
+    }
+
+    to {
+        transform:
+            rotate(-395deg);
+    }
+}
+
+
+/* =====================================================
+   RING THREE
+===================================================== */
+
+@keyframes ringRotateThree {
 
     from {
         transform:
@@ -294,19 +347,9 @@
 }
 
 
-@keyframes ringRotateReverse {
-
-    from {
-        transform:
-            rotate(360deg);
-    }
-
-    to {
-        transform:
-            rotate(0deg);
-    }
-}
-
+/* =====================================================
+   PULSE
+===================================================== */
 
 @keyframes pulse {
 
@@ -342,5 +385,53 @@
         animation-iteration-count: 1 !important;
 
         transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* =====================================================
+   MOBILE ANIMATION
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .hero-content {
+        animation:
+            heroLeft 0.7s ease-out both;
+    }
+
+    .hero-image-area {
+        animation:
+            heroRight 0.7s ease-out both;
+    }
+
+    .tech-item:hover {
+        transform:
+            translateY(-3px);
+    }
+
+    .btn:hover {
+        transform:
+            translateY(-2px);
+    }
+}
+
+
+/* =====================================================
+   SMALL PHONE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .hero-content {
+        animation:
+            fadeUp 0.7s ease-out both;
+    }
+
+    .hero-image-area {
+        animation:
+            fadeUp 0.8s ease-out 0.1s both;
     }
 }

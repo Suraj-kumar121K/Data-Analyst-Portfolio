@@ -1,143 +1,176 @@
-/* =====================================================
-   LARGE DESKTOP
-   Target: 1280px+ CSS viewport
-===================================================== */
+/* =========================================================
+   LARGE LAPTOP
+========================================================= */
 
-@media (min-width: 1200px) {
+@media (max-width: 1500px) {
 
-    .nav-container {
-        max-width: 1180px;
+    .nav-container,
+    .about-container,
+    .stats-container,
+    .strength-section,
+    .footer-container {
+        width: calc(100% - 70px);
     }
 
-    .about-container {
-        max-width: 1120px;
-    }
-
-    .feature-container {
-        max-width: 1120px;
-    }
-}
-
-
-/* =====================================================
-   LAPTOP
-===================================================== */
-
-@media (max-width: 1199px) {
-
-    .nav-container {
-        width: 92%;
+    .logo-image {
+        width: 230px;
     }
 
     .nav-menu {
-        gap: 21px;
-    }
-
-    .about-section {
-        padding-left: 4%;
-        padding-right: 4%;
-    }
-
-    .about-container {
-        max-width: 1050px;
-
-        gap: 40px;
-    }
-
-    .image-frame {
-        width: 290px;
-        height: 185px;
-    }
-
-    .feature-container {
-        max-width: 1050px;
-    }
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media (max-width: 900px) {
-
-    /* Navbar */
-
-    .nav-menu {
-        gap: 14px;
+        gap: 30px;
     }
 
     .nav-menu a {
-        font-size: 9px;
+        font-size: 16px;
     }
-
-
-    /* About */
 
     .about-container {
-        gap: 25px;
+        grid-template-columns: 45% 55%;
     }
 
-    .about-content {
-        width: 54%;
+    .about-title {
+        font-size: 62px;
     }
 
-    .about-image {
-        width: 43%;
-    }
-
-    .about-content h1 {
+    .about-role {
         font-size: 26px;
     }
 
-    .about-text {
-        font-size: 11px;
+    .about-description {
+        font-size: 16px;
     }
 
-    .info-item {
-        font-size: 10px;
+    .about-image-card {
+        height: 390px;
     }
 
-    .image-frame {
-        width: 260px;
-        height: 170px;
+    .about-image-wrapper {
+        min-height: 390px;
     }
 
-
-    /* Cards */
-
-    .feature-container {
-        gap: 9px;
-    }
-
-    .feature-card {
-        height: 70px;
-    }
-
-    .feature-card p {
-        font-size: 9px;
+    .strength-content h3 {
+        font-size: 17px;
     }
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* =========================================================
+   LAPTOP
+========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 1200px) {
 
-    /* Navbar */
+    .navbar {
+        height: 72px;
+    }
+
+    .nav-container {
+        width: calc(100% - 40px);
+        gap: 10px;
+    }
+
+    .logo-image {
+        width: 190px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+
+    .about-section {
+        padding-top: 30px;
+    }
+
+    .about-container {
+        width: calc(100% - 40px);
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 25px;
+    }
+
+    .about-title {
+        font-size: 52px;
+    }
+
+    .about-role {
+        font-size: 22px;
+    }
+
+    .about-description {
+        font-size: 15px;
+    }
+
+    .info-item {
+        padding: 0 12px;
+    }
+
+    .info-icon {
+        font-size: 28px;
+        width: 32px;
+    }
+
+    .info-text h4,
+    .info-text p {
+        font-size: 14px;
+    }
+
+    .about-image-card {
+        height: 350px;
+    }
+
+    .about-image-wrapper {
+        min-height: 350px;
+    }
+
+    .stats-container {
+        width: calc(100% - 40px);
+    }
+
+    .strength-section {
+        width: calc(100% - 40px);
+    }
+
+    .strength-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        width: calc(100% - 40px);
+    }
+
+    .footer-contact {
+        gap: 15px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
 
     .navbar {
         height: auto;
+
+        border-radius: 0;
     }
 
     .nav-container {
         flex-direction: column;
 
-        gap: 10px;
+        padding: 15px 0 10px;
 
-        padding: 12px 0;
+        gap: 8px;
+    }
+
+    .logo-image {
+        width: 200px;
     }
 
     .nav-menu {
@@ -145,140 +178,345 @@
 
         flex-wrap: wrap;
 
-        justify-content: center;
-
-        gap: 13px;
+        gap: 12px 25px;
     }
 
     .nav-menu a {
-        padding: 3px 0;
-
-        font-size: 9px;
+        padding: 7px 0 12px;
     }
 
     .nav-menu a.active::after {
-        bottom: -4px;
+        bottom: 2px;
     }
 
-
-    /* About */
-
-    .about-section {
-        min-height: auto;
-
-        padding:
-            30px
-            20px
-            50px;
-    }
 
     .about-container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
 
-        align-items: center;
-
-        text-align: center;
-
-        gap: 30px;
+        gap: 35px;
     }
 
     .about-content {
-        width: 100%;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
+        text-align: center;
     }
 
-    .about-content h1 {
-        font-size: 28px;
+    .section-label {
+        justify-content: center;
     }
 
-    .about-text {
-        max-width: 520px;
-
-        font-size: 11px;
+    .about-description {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .about-info {
-        width: fit-content;
-
-        align-items: flex-start;
+        margin-left: auto;
+        margin-right: auto;
 
         text-align: left;
     }
 
+    .project-btn {
+        margin: 0 auto;
+    }
 
-    /* Image */
-
-    .about-image {
+    .about-image-wrapper {
         width: 100%;
+
+        min-height: 400px;
+    }
+
+    .about-image-card {
+        height: 400px;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-item:nth-child(2)::after {
+        display: none;
+    }
+
+    .strength-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        flex-direction: column;
+
+        padding: 30px 0;
+    }
+
+    .footer-contact {
+        flex-wrap: wrap;
 
         justify-content: center;
-
-        padding-top: 0;
-    }
-
-    .image-frame {
-        width: min(80vw, 340px);
-
-        height: min(50vw, 220px);
-    }
-
-
-    /* Cards */
-
-    .feature-container {
-        width: 100%;
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-        gap: 10px;
-
-        margin-top: 35px;
-    }
-
-    .feature-card {
-        height: 75px;
     }
 }
 
 
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
+/* =========================================================
+   MOBILE
+========================================================= */
 
-@media (max-width: 400px) {
+@media (max-width: 650px) {
+
+    .nav-container {
+        width: calc(100% - 25px);
+    }
+
+    .logo-image {
+        width: 180px;
+    }
 
     .nav-menu {
-        gap: 9px;
+        gap: 7px 17px;
     }
 
     .nav-menu a {
-        font-size: 8px;
+        font-size: 13px;
+
+        padding: 5px 0 10px;
     }
 
-    .about-content h1 {
-        font-size: 25px;
+
+    .about-section {
+        padding-top: 28px;
     }
 
-    .about-text {
-        font-size: 10px;
+    .about-container {
+        width: calc(100% - 30px);
     }
 
-    .info-item {
-        font-size: 9px;
+
+    .section-label span {
+        width: 40px;
+        height: 4px;
     }
 
-    .image-frame {
-        width: 280px;
-        height: 180px;
+    .section-label p {
+        font-size: 16px;
     }
 
-    .feature-container {
+
+    .about-title {
+        font-size: 43px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .about-role {
+        font-size: 19px;
+
+        line-height: 1.4;
+    }
+
+    .about-role b {
+        padding: 0 4px;
+    }
+
+
+    .about-description {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .about-info {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+    }
+
+    .info-item,
+    .info-item:first-child {
+        width: 100%;
+
+        padding: 12px 0;
+
+        border-right: none;
+
+        border-bottom: 1px solid #176eaa;
+
+        justify-content: center;
+    }
+
+    .info-item:last-child {
+        border-bottom: none;
+    }
+
+
+    .project-btn {
+        width: 100%;
+
+        max-width: 300px;
+
+        height: 56px;
+
+        font-size: 17px;
+    }
+
+
+    .about-image-wrapper {
+        min-height: 260px;
+    }
+
+    .about-image-card {
+        height: 260px;
+
+        border-radius: 14px;
+    }
+
+    .image-caption {
+        left: 12px;
+        bottom: 12px;
+
+        padding: 8px 12px;
+
+        font-size: 11px;
+    }
+
+
+    .stats-container {
+        width: calc(100% - 30px);
+
+        grid-template-columns: 1fr 1fr;
+
+        border-radius: 12px;
+    }
+
+    .stat-item {
+        gap: 10px;
+
+        padding: 15px 8px;
+    }
+
+    .stat-item:not(:last-child)::after {
+        display: none;
+    }
+
+    .stat-icon {
+        width: 48px;
+        height: 48px;
+
+        font-size: 21px;
+    }
+
+    .stat-content strong {
+        font-size: 23px;
+    }
+
+    .stat-content p {
+        font-size: 12px;
+    }
+
+
+    .strength-section {
+        width: calc(100% - 30px);
+
+        margin-top: 28px;
+    }
+
+    .strength-grid {
         grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .strength-card {
+        min-height: 125px;
+
+        padding: 16px;
+    }
+
+    .strength-icon {
+        width: 55px;
+        height: 55px;
+
+        font-size: 24px;
+    }
+
+    .strength-content h3 {
+        font-size: 17px;
+    }
+
+    .strength-content p {
+        font-size: 13px;
+    }
+
+
+    .footer-container {
+        width: calc(100% - 30px);
+
+        text-align: center;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .footer-divider {
+        width: 100px;
+
+        height: 1px;
+    }
+
+    .footer-copyright {
+        font-size: 11px;
+
+        white-space: normal;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .logo-image {
+        width: 160px;
+    }
+
+    .nav-menu {
+        gap: 5px 13px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .about-title {
+        font-size: 37px;
+    }
+
+    .about-role {
+        font-size: 17px;
+    }
+
+    .about-image-card {
+        height: 220px;
+    }
+
+    .about-image-wrapper {
+        min-height: 220px;
+    }
+
+    .stat-item {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .strength-card {
+        gap: 13px;
     }
 }

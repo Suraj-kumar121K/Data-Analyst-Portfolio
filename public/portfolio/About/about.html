@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>About | Suraj Kumar</title>
 
-    <!-- Home CSS -->
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="/CSS/About/style.css">
-    <link rel="stylesheet" href="/CSS/About/animations.css">
+
+    <!-- Responsive CSS -->
     <link rel="stylesheet" href="/CSS/About/responsive.css">
+
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="/CSS/About/animations.css">
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-
+    <!-- =========================
+         NAVBAR
+    ========================== -->
     <header class="navbar">
 
         <div class="nav-container">
 
+            <!-- Logo -->
             <a href="/" class="logo">
-                <span>Suraj</span> Kumar
+                <img
+                    src="/ASSETS/logo.png"
+                    alt="Suraj Kumar Logo"
+                    class="logo-image"
+                >
             </a>
 
+            <!-- Navigation -->
             <nav class="nav-menu">
 
                 <a href="/">Home</a>
@@ -50,151 +66,243 @@
     </header>
 
 
-    <!-- ================= ABOUT SECTION ================= -->
+    <!-- =========================
+         ABOUT SECTION
+    ========================== -->
+    <main class="about-section">
 
-    <main class="about-page">
+        <div class="about-container">
 
-        <section class="about-section">
+            <!-- =====================
+                 LEFT CONTENT
+            ====================== -->
+            <div class="about-content">
 
-            <div class="about-container">
+                <!-- Section Label -->
+                <div class="section-label">
+                    <span></span>
+                    <p>ABOUT ME</p>
+                </div>
 
-                <!-- LEFT CONTENT -->
 
-                <div class="about-content">
+                <!-- Heading -->
+                <h1 class="about-title">
+                    I'm
+                    <span>Suraj Kumar</span>
+                </h1>
 
-                    <h1>About Me</h1>
 
-                    <div class="title-line"></div>
+                <!-- Role -->
+                <h2 class="about-role">
+                    Data Analyst
+                    <b>|</b>
+                    Turning Data into Insights
+                </h2>
 
-                    <p class="about-text">
 
-                        I am an Entry-Level Data Analyst with a background
-                        in Sales and a strong interest in data analysis.
-                        I enjoy working with data, exploring trends,
-                        and creating visualizations that help in making
-                        better business decisions.
+                <!-- Description -->
+                <div class="about-description">
 
+                    <p>
+                        I am an
+                        <strong class="purple-text">
+                            Entry-Level Data Analyst
+                        </strong>
+                        with a background in Data Analytics.
                     </p>
 
+                    <p>
+                        I work with
+                        <strong>SQL</strong>,
+                        <strong>Excel</strong>,
+                        <strong>Python</strong>
+                        and
+                        <strong>Power BI</strong>
+                        to clean, analyze and visualize data.
+                    </p>
 
-                    <!-- INFORMATION -->
+                    <p>
+                        I enjoy finding insights from data and creating
+                        dashboards that support better business decisions.
+                    </p>
 
-                    <div class="about-info">
+                </div>
 
-                        <div class="info-item">
 
-                            <span class="info-icon">⌾</span>
+                <!-- Information -->
+                <div class="about-info">
 
-                            <strong>Location:</strong>
+                    <!-- Location -->
+                    <div class="info-item">
 
-                            <span> Noida, India</span>
-
+                        <div class="info-icon">
+                            <i class="fa-solid fa-location-dot"></i>
                         </div>
 
-
-                        <div class="info-item">
-
-                            <span class="info-icon">⌾</span>
-
-                            <strong>Languages:</strong>
-
-                            <span> English, Hindi (Learning)</span>
-
-                        </div>
-
-
-                        <div class="info-item">
-
-                            <span class="info-icon">⌾</span>
-
-                            <strong>Availability:</strong>
-
-                            <span> Open to Work</span>
-
+                        <div class="info-text">
+                            <h4>Location:</h4>
+                            <p>Noida, India</p>
                         </div>
 
                     </div>
 
 
-                    <!-- BUTTON -->
+                    <!-- Languages -->
+                    <div class="info-item">
 
-                    <a href="/skills" class="learn-btn">
-                        Learn More About Me
-                    </a>
+                        <div class="info-icon">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+
+                        <div class="info-text">
+                            <h4>Languages:</h4>
+                            <p>English, Hindi</p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Availability -->
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+
+                        <div class="info-text">
+                            <h4>Availability:</h4>
+                            <p>Open to Work</p>
+                        </div>
+
+                    </div>
 
                 </div>
 
 
-                <!-- RIGHT IMAGE -->
+                <!-- Project Button -->
+                <a href="/projects" class="project-btn">
 
-                <div class="about-image">
+                    <span>View My Projects</span>
 
-                    <div class="image-frame">
+                    <i class="fa-solid fa-arrow-right"></i>
 
-                        <img
-                            src="../ASSETS/about.png"
-                            alt="Data Analytics"
-                        >
+                </a>
 
+            </div>
+
+
+            <!-- =====================
+                 RIGHT IMAGE
+            ====================== -->
+            <div class="about-image-wrapper">
+
+                <div class="image-glow"></div>
+
+                <div class="about-image-card">
+
+                    <img
+                        src="/ASSETS/about.png"
+                        alt="Data Analytics Workspace"
+                    >
+
+                    <div class="image-overlay"></div>
+
+                    <div class="image-caption">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Data Analytics & Visualization</span>
                     </div>
 
                 </div>
 
             </div>
 
+        </div>
 
-            <!-- ================= FEATURE CARDS ================= -->
 
-            <div class="feature-container">
+        <!-- =========================
+             STATISTICS
+        ========================== -->
+        <section class="stats-section">
 
-                <!-- Card 1 -->
+            <div class="stats-container">
 
-                <div class="feature-card">
 
-                    <div class="feature-icon">
-                        ◉
+                <!-- Stat 1 -->
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
                     </div>
 
-                    <p>Problem Solver</p>
+                    <div class="stat-content">
+
+                        <strong>
+                            <span>4</span>+
+                        </strong>
+
+                        <p>Skills</p>
+
+                    </div>
 
                 </div>
 
 
-                <!-- Card 2 -->
+                <!-- Stat 2 -->
+                <div class="stat-item">
 
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-                        ✈
+                    <div class="stat-icon purple-icon">
+                        <i class="fa-regular fa-folder-open"></i>
                     </div>
 
-                    <p>Analytical Thinker</p>
+                    <div class="stat-content">
+
+                        <strong>
+                            <span>5</span>+
+                        </strong>
+
+                        <p>Projects</p>
+
+                    </div>
 
                 </div>
 
 
-                <!-- Card 3 -->
+                <!-- Stat 3 -->
+                <div class="stat-item">
 
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-                        ♧
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-database"></i>
                     </div>
 
-                    <p>Continuous Learner</p>
+                    <div class="stat-content">
+
+                        <strong>
+                            <span>1000</span>+
+                        </strong>
+
+                        <p>Rows Analyzed</p>
+
+                    </div>
 
                 </div>
 
 
-                <!-- Card 4 -->
+                <!-- Stat 4 -->
+                <div class="stat-item">
 
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-                        ♙
+                    <div class="stat-icon purple-icon">
+                        <i class="fa-solid fa-code"></i>
                     </div>
 
-                    <p>Team Player</p>
+                    <div class="stat-content">
+
+                        <strong>
+                            <span>4</span>
+                        </strong>
+
+                        <p>Core Tools</p>
+
+                    </div>
 
                 </div>
 
@@ -202,8 +310,162 @@
 
         </section>
 
+
+        <!-- =========================
+             STRENGTHS
+        ========================== -->
+        <section class="strength-section">
+
+            <div class="strength-grid">
+
+
+                <!-- Card 1 -->
+                <article class="strength-card">
+
+                    <div class="strength-icon cyan-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <div class="strength-content">
+
+                        <h3>Problem Solver</h3>
+
+                        <p>
+                            I use data to understand problems
+                            and find practical solutions.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Card 2 -->
+                <article class="strength-card">
+
+                    <div class="strength-icon purple-icon">
+                        <i class="fa-solid fa-chart-column"></i>
+                    </div>
+
+                    <div class="strength-content">
+
+                        <h3>Analytical Thinker</h3>
+
+                        <p>
+                            I analyze data to identify trends
+                            and useful insights.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Card 3 -->
+                <article class="strength-card">
+
+                    <div class="strength-icon cyan-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+
+                    <div class="strength-content">
+
+                        <h3>Continuous Learner</h3>
+
+                        <p>
+                            I continuously improve my skills in
+                            SQL, Python, Excel and Power BI.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Card 4 -->
+                <article class="strength-card">
+
+                    <div class="strength-icon purple-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="strength-content">
+
+                        <h3>Team Player</h3>
+
+                        <p>
+                            I enjoy collaborating with teams
+                            and sharing ideas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
     </main>
 
-</body>
 
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Contact -->
+            <div class="footer-contact">
+
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Noida, India</span>
+                </div>
+
+                <div class="footer-divider"></div>
+
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>kumarsuraj2031@gmail.com</span>
+                </div>
+
+                <div class="footer-divider"></div>
+
+                <a
+                    href="https://www.linkedin.com/in/suraj-kumar5204b0248/"
+                    target="_blank"
+                    class="footer-contact-item"
+                >
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+
+                <div class="footer-divider"></div>
+
+                <a
+                    href="https://github.com/suraj-kumar21k"
+                    target="_blank"
+                    class="footer-contact-item"
+                >
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+
+            </div>
+
+
+            <!-- Copyright -->
+            <div class="footer-copyright">
+
+                © 2025 Suraj Kumar. All rights reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
 </html>

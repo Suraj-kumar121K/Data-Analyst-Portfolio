@@ -1,80 +1,157 @@
-/* =====================================================
-   ABOUT PAGE ANIMATIONS
-===================================================== */
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-menu a {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-menu a:hover {
+    transform: translateY(-2px);
+}
 
 
-/* =====================================================
-   MAIN CONTENT
-===================================================== */
+/* =========================================================
+   ABOUT CONTENT
+========================================================= */
 
 .about-content {
-    animation:
-        aboutLeft 0.8s ease-out both;
+    animation: aboutLeft 0.8s ease-out both;
+}
+
+.about-image-wrapper {
+    animation: aboutRight 0.9s ease-out both;
 }
 
 
-/* =====================================================
+/* =========================================================
    IMAGE
-===================================================== */
+========================================================= */
 
-.about-image {
-    animation:
-        aboutRight 0.9s ease-out both;
+.about-image-card {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.about-image-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 30px rgba(0, 217, 255, 0.35),
+        0 15px 40px rgba(0, 83, 255, 0.18);
 }
 
 
-/* =====================================================
-   FEATURE CARDS
-===================================================== */
+/* =========================================================
+   INFO
+========================================================= */
 
-.feature-card {
-    animation:
-        cardAppear 0.7s ease-out both;
+.info-item {
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-3px);
+}
+
+.info-icon {
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.info-item:hover .info-icon {
+    transform: scale(1.08);
+
+    filter:
+        drop-shadow(0 0 12px rgba(0, 217, 255, 0.7));
 }
 
 
-/* Card delays */
+/* =========================================================
+   BUTTON
+========================================================= */
 
-.feature-card:nth-child(1) {
-    animation-delay: 0.15s;
-}
-
-.feature-card:nth-child(2) {
-    animation-delay: 0.25s;
-}
-
-.feature-card:nth-child(3) {
-    animation-delay: 0.35s;
-}
-
-.feature-card:nth-child(4) {
-    animation-delay: 0.45s;
+.project-btn {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
-/* =====================================================
-   IMAGE FLOAT
-===================================================== */
+/* =========================================================
+   STATS
+========================================================= */
 
-.image-frame {
-    animation:
-        imageFloat 4s ease-in-out 1s infinite;
+.stat-item {
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-3px);
+
+    background: rgba(0, 116, 210, 0.10);
+}
+
+.stat-icon {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.stat-item:hover .stat-icon {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 22px rgba(0, 217, 255, 0.35);
 }
 
 
-/* =====================================================
+/* =========================================================
+   STRENGTH CARDS
+========================================================= */
+
+.strength-card {
+    animation: cardUp 0.7s ease-out both;
+}
+
+.strength-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.strength-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.strength-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.strength-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+
+/* =========================================================
    KEYFRAMES
-===================================================== */
+========================================================= */
 
 @keyframes aboutLeft {
 
     from {
         opacity: 0;
-        transform: translateX(-45px);
+
+        transform: translateX(-35px);
     }
 
     to {
         opacity: 1;
+
         transform: translateX(0);
     }
 }
@@ -84,86 +161,44 @@
 
     from {
         opacity: 0;
-        transform: translateX(45px);
+
+        transform: translateX(35px);
     }
 
     to {
         opacity: 1;
+
         transform: translateX(0);
     }
 }
 
 
-@keyframes cardAppear {
+@keyframes cardUp {
 
     from {
         opacity: 0;
+
         transform: translateY(25px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
 }
 
 
-@keyframes imageFloat {
-
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-6px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-
-/* =====================================================
-   HOVER
-===================================================== */
-
-.nav-menu a {
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease;
-}
-
-.nav-menu a:hover {
-    transform: translateY(-1px);
-}
-
-
-.learn-btn {
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-
-.feature-card {
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        background 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-
-/* =====================================================
+/* =========================================================
    REDUCED MOTION
-===================================================== */
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
     *,
     *::before,
     *::after {
+
         animation-duration: 0.01ms !important;
 
         animation-iteration-count: 1 !important;
