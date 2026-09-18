@@ -1,208 +1,386 @@
-/* =========================================================
-   NAVIGATION
-========================================================= */
+/* =====================================================
+   LARGE LAPTOP
+===================================================== */
 
-.nav-menu a {
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease;
-}
+@media (max-width: 1500px) {
 
-.nav-menu a:hover {
-    transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   ABOUT CONTENT
-========================================================= */
-
-.about-content {
-    animation: aboutLeft 0.8s ease-out both;
-}
-
-.about-image-wrapper {
-    animation: aboutRight 0.9s ease-out both;
-}
-
-
-/* =========================================================
-   IMAGE
-========================================================= */
-
-.about-image-card {
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
-}
-
-.about-image-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 0 30px rgba(0, 217, 255, 0.35),
-        0 15px 40px rgba(0, 83, 255, 0.18);
-}
-
-
-/* =========================================================
-   INFO
-========================================================= */
-
-.info-item {
-    transition: transform 0.3s ease;
-}
-
-.info-item:hover {
-    transform: translateY(-3px);
-}
-
-.info-icon {
-    transition:
-        transform 0.3s ease,
-        filter 0.3s ease;
-}
-
-.info-item:hover .info-icon {
-    transform: scale(1.08);
-
-    filter:
-        drop-shadow(0 0 12px rgba(0, 217, 255, 0.7));
-}
-
-
-/* =========================================================
-   BUTTON
-========================================================= */
-
-.project-btn {
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-
-/* =========================================================
-   STATS
-========================================================= */
-
-.stat-item {
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease;
-}
-
-.stat-item:hover {
-    transform: translateY(-3px);
-
-    background: rgba(0, 116, 210, 0.10);
-}
-
-.stat-icon {
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.stat-item:hover .stat-icon {
-    transform: scale(1.08);
-
-    box-shadow:
-        0 0 22px rgba(0, 217, 255, 0.35);
-}
-
-
-/* =========================================================
-   STRENGTH CARDS
-========================================================= */
-
-.strength-card {
-    animation: cardUp 0.7s ease-out both;
-}
-
-.strength-card:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.strength-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.strength-card:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.strength-card:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-
-/* =========================================================
-   KEYFRAMES
-========================================================= */
-
-@keyframes aboutLeft {
-
-    from {
-        opacity: 0;
-
-        transform: translateX(-35px);
+    .nav-container,
+    .about-container,
+    .stats-container,
+    .strength-grid,
+    .footer-container {
+        width: calc(100% - 70px);
     }
 
-    to {
-        opacity: 1;
+    .logo-image {
+        width: 245px;
+    }
 
-        transform: translateX(0);
+    .nav-menu {
+        gap: 24px;
+    }
+
+    .nav-menu a {
+        font-size: 16px;
+    }
+
+    .about-container {
+        gap: 35px;
+    }
+
+    .about-image-card {
+        height: 390px;
+    }
+
+    .about-description {
+        font-size: 17px;
+    }
+
+    .strength-card {
+        padding: 18px;
+        gap: 13px;
+    }
+
+    .strength-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 24px;
+    }
+
+    .strength-content h3 {
+        font-size: 17px;
+    }
+
+    .strength-content p {
+        font-size: 14px;
     }
 }
 
+/* =====================================================
+   TABLET / SMALL LAPTOP
+===================================================== */
 
-@keyframes aboutRight {
+@media (max-width: 1150px) {
 
-    from {
-        opacity: 0;
-
-        transform: translateX(35px);
+    .navbar {
+        height: auto;
+        min-height: 76px;
     }
 
-    to {
-        opacity: 1;
+    .nav-container {
+        width: calc(100% - 40px);
+        padding: 15px 0;
+        flex-direction: column;
+        gap: 12px;
+    }
 
-        transform: translateX(0);
+    .logo-image {
+        width: 220px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .nav-menu a {
+        padding: 8px 0 12px;
+        font-size: 15px;
+    }
+
+    .nav-menu a.active::after {
+        bottom: 0;
+    }
+
+    .about-hero {
+        padding-top: 35px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .section-label,
+    .about-role,
+    .about-info {
+        justify-content: center;
+    }
+
+    .about-description {
+        max-width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .project-btn {
+        margin: auto;
+    }
+
+    .about-image-wrapper {
+        width: min(700px, 100%);
+        justify-self: center;
+    }
+
+    .about-image-card {
+        height: 430px;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-item:nth-child(2)::after {
+        display: none;
+    }
+
+    .stat-item {
+        border-bottom: 1px solid #17618d;
+    }
+
+    .stat-item:nth-child(3),
+    .stat-item:nth-child(4) {
+        border-bottom: none;
+    }
+
+    .strength-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        padding: 25px 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-contact {
+        justify-content: center;
+    }
+
+    .footer-copyright {
+        white-space: normal;
+        text-align: center;
     }
 }
 
+/* =====================================================
+   MOBILE
+===================================================== */
 
-@keyframes cardUp {
+@media (max-width: 650px) {
 
-    from {
-        opacity: 0;
-
-        transform: translateY(25px);
+    .nav-container,
+    .about-container,
+    .stats-container,
+    .strength-grid,
+    .footer-container {
+        width: calc(100% - 28px);
     }
 
-    to {
-        opacity: 1;
+    .navbar {
+        min-height: 70px;
+    }
 
-        transform: translateY(0);
+    .logo-image {
+        width: 195px;
+    }
+
+    .nav-menu {
+        gap: 13px;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
+    }
+
+    .about-hero {
+        padding-top: 28px;
+    }
+
+    .section-label {
+        gap: 12px;
+    }
+
+    .section-label span {
+        width: 40px;
+        height: 4px;
+    }
+
+    .section-label p {
+        font-size: 16px;
+    }
+
+    .about-title {
+        font-size: 40px;
+    }
+
+    .about-role {
+        font-size: 20px;
+        gap: 8px;
+    }
+
+    .about-description {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        text-align: left;
+    }
+
+    .info-item {
+        justify-content: flex-start;
+    }
+
+    .info-icon {
+        font-size: 30px;
+    }
+
+    .project-btn {
+        min-width: 245px;
+        height: 54px;
+        font-size: 16px;
+    }
+
+    .about-image-card {
+        height: 270px;
+        border-radius: 15px;
+    }
+
+    .image-caption {
+        left: 14px;
+        bottom: 13px;
+        font-size: 12px;
+    }
+
+    .image-caption i {
+        font-size: 16px;
+    }
+
+    .stats-section {
+        padding-top: 25px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+        border-radius: 13px;
+    }
+
+    .stat-item {
+        min-height: 105px;
+        border-bottom: 1px solid #17618d !important;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none !important;
+    }
+
+    .stat-item::after {
+        display: none !important;
+    }
+
+    .stat-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 25px;
+    }
+
+    .stat-content strong {
+        font-size: 27px;
+    }
+
+    .stat-content p {
+        font-size: 16px;
+    }
+
+    .strength-section {
+        padding: 25px 0 35px;
+    }
+
+    .strength-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .strength-card {
+        min-height: auto;
+        padding: 18px;
+    }
+
+    .strength-content h3 {
+        font-size: 18px;
+    }
+
+    .strength-content p {
+        font-size: 14px;
+    }
+
+    .footer-container {
+        gap: 20px;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+
+    .footer-contact-item {
+        font-size: 14px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
     }
 }
 
+/* =====================================================
+   EXTRA SMALL MOBILE
+===================================================== */
 
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
+@media (max-width: 400px) {
 
-@media (prefers-reduced-motion: reduce) {
+    .logo-image {
+        width: 175px;
+    }
 
-    *,
-    *::before,
-    *::after {
+    .nav-menu {
+        gap: 10px;
+    }
 
-        animation-duration: 0.01ms !important;
+    .nav-menu a {
+        font-size: 12px;
+    }
 
-        animation-iteration-count: 1 !important;
+    .about-title {
+        font-size: 34px;
+    }
 
-        transition-duration: 0.01ms !important;
+    .about-role {
+        font-size: 18px;
+    }
+
+    .about-image-card {
+        height: 230px;
+    }
+
+    .strength-card {
+        gap: 12px;
+    }
+
+    .strength-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 22px;
     }
 }
