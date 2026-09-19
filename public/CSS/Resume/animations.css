@@ -1,0 +1,259 @@
+/* =====================================================
+   RESUME PAGE - ANIMATIONS
+===================================================== */
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.nav-menu a {
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.nav-menu a:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.resume-content {
+
+    animation:
+        slideFromLeft 0.8s ease both;
+
+}
+
+
+.resume-image-wrapper {
+
+    animation:
+        slideFromRight 0.9s ease both;
+
+}
+
+
+/* =====================================================
+   HIGHLIGHTS
+===================================================== */
+
+.highlights-container {
+
+    animation:
+        fadeUp 0.8s ease 0.2s both;
+
+}
+
+
+.highlight-card {
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.highlight-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 0 25px rgba(0, 155, 255, 0.3);
+
+}
+
+
+.highlight-icon {
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.highlight-card:hover .highlight-icon {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.resume-btn {
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.resume-btn:hover {
+
+    transform: translateY(-4px);
+
+}
+
+
+.primary-btn:hover {
+
+    box-shadow:
+        0 12px 32px rgba(0, 183, 255, 0.5);
+
+}
+
+
+.secondary-btn:hover {
+
+    background:
+        rgba(0, 183, 255, 0.1);
+
+    box-shadow:
+        0 8px 25px rgba(0, 183, 255, 0.25);
+
+}
+
+
+/* =====================================================
+   RESUME IMAGE
+===================================================== */
+
+.resume-image-card {
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+}
+
+
+.resume-image-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 0 35px rgba(0, 204, 255, 0.8),
+        inset 0 0 25px rgba(0, 120, 255, 0.2);
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta-arrow {
+
+    animation:
+        arrowDown 1.8s ease-in-out infinite;
+
+}
+
+
+/* =====================================================
+   KEYFRAMES
+===================================================== */
+
+@keyframes slideFromLeft {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+@keyframes slideFromRight {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes arrowDown {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(8px);
+
+    }
+
+}

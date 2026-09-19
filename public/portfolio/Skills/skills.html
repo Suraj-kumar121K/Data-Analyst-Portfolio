@@ -8,23 +8,30 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Suraj Kumar | Skills</title>
-
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="/CSS/Skills/style.css">
-
-    <!-- Animation CSS -->
-    <link rel="stylesheet" href="/CSS/Skills/animations.css">
-
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="/CSS/Skills/responsive.css">
-
+    <title>Skills | Suraj Kumar</title>
 
     <!-- Font Awesome -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="/CSS/Skills/style.css"
+    >
+
+    <!-- Responsive CSS -->
+    <link
+        rel="stylesheet"
+        href="/CSS/Skills/responsive.css"
+    >
+
+    <!-- Animation CSS -->
+    <link
+        rel="stylesheet"
+        href="/CSS/Skills/animations.css"
     >
 
 </head>
@@ -41,15 +48,16 @@
 
     <div class="nav-container">
 
-
-        <!-- Logo -->
-
         <a href="/" class="logo">
-            <span>Suraj</span> Kumar
+
+            <img
+                src="/ASSETS/logo.png"
+                alt="Suraj Kumar"
+                class="logo-image"
+            >
+
         </a>
 
-
-        <!-- Menu -->
 
         <nav class="nav-menu">
 
@@ -92,289 +100,803 @@
 </header>
 
 
-
 <!-- =====================================================
-     SKILLS SECTION
+     SKILLS PAGE
 ===================================================== -->
 
-<main>
-
-<section class="skills-section">
-
-
-    <!-- Heading -->
-
-    <div class="skills-heading">
-
-        <h1>
-            Skills &amp; Tools
-        </h1>
-
-        <p>
-            Tools and technologies I work with
-        </p>
-
-    </div>
-
+<main class="skills-page">
 
 
     <!-- =================================================
-         SKILLS GRID
+         SKILLS HERO
     ================================================== -->
 
-    <div class="skills-grid">
+    <section class="skills-hero">
+
+        <div class="skills-decoration skills-decoration-left">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
 
 
-        <!-- 1 Excel -->
+        <div class="skills-decoration skills-decoration-right">
 
-        <div class="skill-card">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
 
-            <div class="skill-icon excel">
-                <i class="fa-solid fa-file-excel"></i>
+        </div>
+
+
+        <div class="skills-heading">
+
+            <div class="skills-label">
+
+                <span class="label-dot"></span>
+
+                <span>
+                    My Skills
+                </span>
+
             </div>
 
-            <h3>
-                Excel
-            </h3>
 
-            <p>
-                Data Analysis &amp; Pivot Tables
+            <h1 class="skills-title">
+
+                <span>My</span>
+                <strong>Skills</strong>
+
+            </h1>
+
+
+            <p class="skills-subtitle">
+
+                Tools and technologies I use to turn
+                data into meaningful insights.
+
             </p>
 
         </div>
 
 
+    </section>
 
-        <!-- 2 SQL -->
 
-        <div class="skill-card">
+    <!-- =================================================
+         SKILLS CARDS
+    ================================================== -->
 
-            <div class="skill-icon sql">
-                <i class="fa-solid fa-database"></i>
-            </div>
+    <section class="skills-section">
 
-            <h3>
-                SQL
-            </h3>
+        <div class="skills-grid">
 
-            <p>
-                Data Query &amp; Management
-            </p>
+
+            <!-- EXCEL -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon image-icon">
+
+                    <img
+                        src="/ASSETS/Excel.png"
+                        alt="Excel"
+                    >
+
+                </div>
+
+                <h2>
+                    Excel
+                </h2>
+
+                <p>
+                    Data cleaning, analysis,
+                    pivot tables and reporting.
+                </p>
+
+                <div class="skill-progress">
+
+                    <div class="progress-bar">
+                        <span class="progress-advanced"></span>
+                    </div>
+
+                    <span>
+                        Advanced
+                    </span>
+
+                </div>
+
+                <a href="/skills" class="skill-button">
+
+                    <span>
+                        View Details
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- SQL -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon image-icon">
+
+                    <img
+                        src="/ASSETS/Sql.png"
+                        alt="SQL"
+                    >
+
+                </div>
+
+                <h2>
+                    SQL
+                </h2>
+
+                <p>
+                    Data extraction, querying,
+                    joins, and calculations.
+                </p>
+
+                <div class="skill-progress">
+
+                    <div class="progress-bar">
+                        <span class="progress-advanced"></span>
+                    </div>
+
+                    <span>
+                        Advanced
+                    </span>
+
+                </div>
+
+                <a href="/skills" class="skill-button">
+
+                    <span>
+                        View Details
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- POWER BI -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon image-icon">
+
+                    <img
+                        src="/ASSETS/PowerBI.png"
+                        alt="Power BI"
+                    >
+
+                </div>
+
+                <h2>
+                    Power BI
+                </h2>
+
+                <p>
+                    Interactive dashboards,
+                    visualization and storytelling.
+                </p>
+
+                <div class="skill-progress">
+
+                    <div class="progress-bar">
+                        <span class="progress-intermediate"></span>
+                    </div>
+
+                    <span>
+                        Intermediate
+                    </span>
+
+                </div>
+
+                <a href="/skills" class="skill-button">
+
+                    <span>
+                        View Details
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- PYTHON -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon image-icon">
+
+                    <img
+                        src="/ASSETS/Python.png"
+                        alt="Python"
+                    >
+
+                </div>
+
+                <h2>
+                    Python
+                </h2>
+
+                <p>
+                    Data analysis, automation,
+                    scripting and data manipulation.
+                </p>
+
+                <div class="skill-progress">
+
+                    <div class="progress-bar">
+                        <span class="progress-advanced"></span>
+                    </div>
+
+                    <span>
+                        Advanced
+                    </span>
+
+                </div>
+
+                <a href="/skills" class="skill-button">
+
+                    <span>
+                        View Details
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- NUMPY -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon">
+
+                    <i class="fa-solid fa-cubes"></i>
+
+                </div>
+
+                <h2>
+                    NumPy
+                </h2>
+
+                <p>
+                    Numerical computing,
+                    arrays, linear algebra
+                    and mathematical functions.
+                </p>
+
+                <div class="skill-progress">
+
+                    <div class="progress-bar">
+                        <span class="progress-intermediate"></span>
+                    </div>
+
+                    <span>
+                        Intermediate
+                    </span>
+
+                </div>
+
+                <a href="/skills" class="skill-button">
+
+                    <span>
+                        View Details
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- PANDAS -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon">
+
+                    <i class="fa-solid fa-chart-simple"></i>
+
+                </div>
+
+                <h2>
+                    Pandas
+                </h2>
+
+                <p>
+                    Data cleaning, transformation,
+                    analysis and feature engineering.
+                </p>
+
+                <div class="skill-progress">
+
+                    <div class="progress-bar">
+                        <span class="progress-advanced"></span>
+                    </div>
+
+                    <span>
+                        Advanced
+                    </span>
+
+                </div>
+
+                <a href="/skills" class="skill-button">
+
+                    <span>
+                        View Details
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- MATPLOTLIB -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </div>
+
+                <h2>
+                    Matplotlib
+                </h2>
+
+                <p>
+                    Charts, graphs and data
+                    visualization for better understanding.
+                </p>
+
+                <div class="skill-progress">
+
+                    <div class="progress-bar">
+                        <span class="progress-intermediate"></span>
+                    </div>
+
+                    <span>
+                        Intermediate
+                    </span>
+
+                </div>
+
+                <a href="/skills" class="skill-button">
+
+                    <span>
+                        View Details
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- GITHUB -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </div>
+
+                <h2>
+                    GitHub
+                </h2>
+
+                <p>
+                    Version control, collaboration
+                    and project management.
+                </p>
+
+                <div class="skill-progress">
+
+                    <div class="progress-bar">
+                        <span class="progress-intermediate"></span>
+                    </div>
+
+                    <span>
+                        Intermediate
+                    </span>
+
+                </div>
+
+                <a href="/skills" class="skill-button">
+
+                    <span>
+                        View Details
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- STATISTICS -->
+
+            <article class="skill-card skill-card-wide">
+
+                <div class="skill-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <div class="wide-content">
+
+                    <h2>
+                        Statistics
+                    </h2>
+
+                    <p>
+                        Data distribution, probability,
+                        hypothesis testing and
+                        statistical analysis.
+                    </p>
+
+                </div>
+
+                <div class="wide-bottom">
+
+                    <div class="skill-progress">
+
+                        <div class="progress-bar">
+                            <span class="progress-intermediate"></span>
+                        </div>
+
+                        <span>
+                            Intermediate
+                        </span>
+
+                    </div>
+
+                    <a href="/skills" class="skill-button">
+
+                        <span>
+                            View Details
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- MACHINE LEARNING -->
+
+            <article class="skill-card skill-card-wide">
+
+                <div class="skill-icon">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+                <div class="wide-content">
+
+                    <h2>
+                        Machine Learning
+                    </h2>
+
+                    <p>
+                        Model building, training,
+                        evaluation and real-world
+                        predictions.
+                    </p>
+
+                </div>
+
+                <div class="wide-bottom">
+
+                    <div class="skill-progress">
+
+                        <div class="progress-bar">
+                            <span class="progress-beginner"></span>
+                        </div>
+
+                        <span>
+                            Beginner
+                        </span>
+
+                    </div>
+
+                    <a href="/skills" class="skill-button">
+
+                        <span>
+                            View Details
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         SKILLS CTA
+    ================================================== -->
+
+    <section class="skills-cta">
+
+        <div class="cta-decoration cta-left">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
 
         </div>
 
 
+        <div class="cta-icon">
 
-        <!-- 3 Power BI -->
-
-        <div class="skill-card">
-
-            <div class="skill-icon powerbi">
-                <i class="fa-solid fa-chart-column"></i>
-            </div>
-
-            <h3>
-                Power BI
-            </h3>
-
-            <p>
-                Data Visualization &amp; BI
-            </p>
+            <i class="fa-solid fa-code"></i>
 
         </div>
 
 
+        <h2>
 
-        <!-- 4 Python -->
+            Turning Skills into
+            <span>Real Solutions</span>
 
-        <div class="skill-card">
-
-            <div class="skill-icon python">
-                <i class="fa-brands fa-python"></i>
-            </div>
-
-            <h3>
-                Python
-            </h3>
-
-            <p>
-                Data Analysis &amp; Automation
-            </p>
-
-        </div>
+        </h2>
 
 
+        <p>
 
-        <!-- 5 Pandas -->
+            Consistently learning
 
-        <div class="skill-card">
+            <b>•</b>
 
-            <div class="skill-icon pandas">
-                <i class="fa-solid fa-table"></i>
-            </div>
+            Building Projects
 
-            <h3>
-                Pandas
-            </h3>
+            <b>•</b>
 
-            <p>
-                Data Manipulation
-            </p>
+            Growing Every Day
+
+        </p>
+
+
+        <div class="cta-arrow">
+
+            <i class="fa-solid fa-chevron-down"></i>
 
         </div>
 
 
+        <div class="cta-decoration cta-right">
 
-        <!-- 6 NumPy -->
-
-        <div class="skill-card">
-
-            <div class="skill-icon numpy">
-                <i class="fa-solid fa-calculator"></i>
-            </div>
-
-            <h3>
-                NumPy
-            </h3>
-
-            <p>
-                Numerical Computing
-            </p>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
 
         </div>
 
+    </section>
 
-
-        <!-- 7 Matplotlib -->
-
-        <div class="skill-card">
-
-            <div class="skill-icon matplotlib">
-                <i class="fa-solid fa-chart-line"></i>
-            </div>
-
-            <h3>
-                Matplotlib
-            </h3>
-
-            <p>
-                Data Visualization
-            </p>
-
-        </div>
-
-
-
-        <!-- 8 Power Query -->
-
-        <div class="skill-card">
-
-            <div class="skill-icon query">
-                <i class="fa-solid fa-filter"></i>
-            </div>
-
-            <h3>
-                Power Query
-            </h3>
-
-            <p>
-                Data Cleaning &amp; ETL
-            </p>
-
-        </div>
-
-
-
-        <!-- 9 Statistics -->
-
-        <div class="skill-card">
-
-            <div class="skill-icon statistics">
-                <i class="fa-solid fa-chart-simple"></i>
-            </div>
-
-            <h3>
-                Statistics
-            </h3>
-
-            <p>
-                Data Analysis &amp; Insights
-            </p>
-
-        </div>
-
-
-
-        <!-- 10 Git & GitHub -->
-
-        <a
-            href="https://github.com/suraj-kumar21k"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="skill-card github-card"
-        >
-
-            <div class="skill-icon github">
-                <i class="fa-brands fa-github"></i>
-            </div>
-
-            <h3>
-                Git &amp; GitHub
-            </h3>
-
-            <p>
-                Version Control
-            </p>
-
-        </a>
-
-
-
-        <!-- 11 MS Office -->
-
-        <div class="skill-card">
-
-            <div class="skill-icon office">
-                <i class="fa-brands fa-microsoft"></i>
-            </div>
-
-            <h3>
-                MS Office
-            </h3>
-
-            <p>
-                Productivity Tools
-            </p>
-
-        </div>
-
-
-
-        <!-- 12 HTML & CSS -->
-
-        <div class="skill-card">
-
-            <div class="skill-icon html">
-                <i class="fa-brands fa-html5"></i>
-            </div>
-
-            <h3>
-                HTML &amp; CSS
-            </h3>
-
-            <p>
-                Web Design (Basic)
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
 
 </main>
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+            <a href="/" class="footer-logo">
+
+                <img
+                    src="/ASSETS/logo.png"
+                    alt="Suraj Kumar"
+                >
+
+            </a>
+
+            <h3>
+                Data Analyst
+                <span>|</span>
+                B.Tech CSE
+            </h3>
+
+            <p>
+                Building data-driven solutions
+                for a better tomorrow.
+            </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="/home">
+                About
+            </a>
+
+            <a href="/skills">
+                Skills
+            </a>
+
+            <a href="/projects">
+                Projects
+            </a>
+
+            <a href="/experience">
+                Experience
+            </a>
+
+            <a href="/education">
+                Education
+            </a>
+
+            <a href="/resume">
+                Resume
+            </a>
+
+            <a href="/contact">
+                Contact
+            </a>
+
+        </div>
+
+
+        <!-- CONNECT -->
+
+        <div class="footer-column footer-connect">
+
+            <h3>
+                Connect With Me
+            </h3>
+
+            <a
+                href="https://www.linkedin.com/in/suraj-kumar5204b0248/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="fa-brands fa-linkedin"></i>
+
+                <span>
+                    LinkedIn
+                </span>
+
+            </a>
+
+
+            <a
+                href="https://github.com/suraj-kumar21k"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="fa-brands fa-github"></i>
+
+                <span>
+                    GitHub
+                </span>
+
+            </a>
+
+
+            <a href="mailto:kumarsuraj2031@gmail.com">
+
+                <i class="fa-regular fa-envelope"></i>
+
+                <span>
+                    Email
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <!-- FOOTER QUOTE -->
+
+        <div class="footer-quote">
+
+            <p>
+                Turning Data into Insights
+            </p>
+
+            <strong>
+                • Insights into Decisions •
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2025 Suraj Kumar. All rights reserved.
+        </p>
+
+        <p>
+            Made with
+            <span>♥</span>
+            for Data &amp; Analytics
+        </p>
+
+    </div>
+
+</footer>
+
+
 </body>
+
 </html>

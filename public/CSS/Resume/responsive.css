@@ -1,0 +1,901 @@
+/* =====================================================
+   RESUME PAGE - RESPONSIVE CSS
+
+   Supported Displays:
+   1920 × 1080
+   1760 × 990
+   1680 × 1050
+   1600 × 900
+   1366 × 768
+   1280 × 1024
+   1280 × 720
+   1128 × 634
+   1024 × 768
+   800 × 600
+
+   Windows Scale:
+   100%
+   125%
+   150%
+   175%
+===================================================== */
+
+
+/* =====================================================
+   LARGE DESKTOP
+   1801px AND ABOVE
+===================================================== */
+
+@media (min-width: 1801px) {
+
+    .nav-container {
+        width: min(1800px, calc(100% - 100px));
+    }
+
+    .resume-container {
+        width: min(1700px, calc(100% - 100px));
+    }
+
+    .highlights-container {
+        width: min(1550px, calc(100% - 100px));
+    }
+
+    .footer-container {
+        width: min(1550px, calc(100% - 100px));
+    }
+
+    .logo-image {
+        width: 285px;
+    }
+
+    .nav-menu {
+        gap: 35px;
+    }
+
+    .nav-menu a {
+        font-size: 17px;
+    }
+
+    .resume-image-card {
+        width: 680px;
+        max-height: 700px;
+    }
+
+}
+
+
+/* =====================================================
+   1760 × 990
+===================================================== */
+
+@media (min-width: 1681px) and (max-width: 1800px) {
+
+    .nav-container {
+        width: calc(100% - 100px);
+    }
+
+    .resume-container {
+        width: calc(100% - 100px);
+    }
+
+    .highlights-container {
+        width: calc(100% - 100px);
+    }
+
+    .footer-container {
+        width: calc(100% - 100px);
+    }
+
+    .logo-image {
+        width: 270px;
+    }
+
+    .nav-menu {
+        gap: 30px;
+    }
+
+    .resume-image-card {
+        width: 620px;
+    }
+
+}
+
+
+/* =====================================================
+   1680 × 1050
+===================================================== */
+
+@media (min-width: 1601px) and (max-width: 1680px) {
+
+    .nav-container {
+        width: calc(100% - 90px);
+    }
+
+    .resume-container {
+        width: calc(100% - 90px);
+    }
+
+    .highlights-container {
+        width: calc(100% - 90px);
+    }
+
+    .footer-container {
+        width: calc(100% - 90px);
+    }
+
+    .logo-image {
+        width: 260px;
+    }
+
+    .nav-menu {
+        gap: 28px;
+    }
+
+    .nav-menu a {
+        font-size: 16px;
+    }
+
+    .resume-title {
+        font-size: 75px;
+    }
+
+    .resume-subtitle {
+        font-size: 23px;
+    }
+
+    .resume-description {
+        font-size: 18px;
+    }
+
+}
+
+
+/* =====================================================
+   1600 × 900
+===================================================== */
+
+@media (min-width: 1501px) and (max-width: 1600px) {
+
+    .nav-container {
+        width: calc(100% - 80px);
+    }
+
+    .resume-container {
+        width: calc(100% - 80px);
+    }
+
+    .highlights-container {
+        width: calc(100% - 80px);
+    }
+
+    .footer-container {
+        width: calc(100% - 80px);
+    }
+
+    .logo-image {
+        width: 250px;
+    }
+
+    .nav-menu {
+        gap: 26px;
+    }
+
+    .nav-menu a {
+        font-size: 16px;
+    }
+
+    .resume-title {
+        font-size: 70px;
+    }
+
+    .resume-subtitle {
+        font-size: 22px;
+    }
+
+    .resume-description {
+        font-size: 17px;
+    }
+
+    .resume-image-wrapper {
+        min-height: 570px;
+    }
+
+    .resume-image-card {
+        max-height: 570px;
+    }
+
+}
+
+
+/* =====================================================
+   1366 × 768
+===================================================== */
+
+@media (min-width: 1201px) and (max-width: 1500px) {
+
+    .nav-container {
+        width: calc(100% - 70px);
+        gap: 20px;
+    }
+
+    .resume-container {
+        width: calc(100% - 70px);
+        gap: 25px;
+    }
+
+    .highlights-container {
+        width: calc(100% - 70px);
+    }
+
+    .footer-container {
+        width: calc(100% - 70px);
+    }
+
+    .logo-image {
+        width: 220px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .nav-menu a {
+        font-size: 15px;
+    }
+
+    .resume-hero {
+        padding-top: 40px;
+    }
+
+    .resume-title {
+        font-size: 55px;
+    }
+
+    .resume-subtitle {
+        font-size: 19px;
+    }
+
+    .resume-description {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .resume-buttons {
+        margin-top: 23px;
+    }
+
+    .resume-btn {
+        min-height: 48px;
+        padding: 0 18px;
+        font-size: 13px;
+    }
+
+    .pdf-info {
+        margin-top: 18px;
+    }
+
+    .resume-image-wrapper {
+        min-height: 500px;
+    }
+
+    .resume-image-card {
+        width: 520px;
+        min-height: 450px;
+        max-height: 520px;
+    }
+
+    .resume-image {
+        max-height: 495px;
+    }
+
+    .highlights-container {
+        padding: 22px 20px 25px;
+    }
+
+    .highlight-card {
+        padding: 5px 15px;
+    }
+
+    .highlight-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 25px;
+    }
+
+    .highlight-card h3 {
+        font-size: 16px;
+    }
+
+    .highlight-card p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =====================================================
+   1280 × 1024
+   1280 × 720
+===================================================== */
+
+@media (min-width: 1101px) and (max-width: 1200px) {
+
+    .nav-container {
+        width: calc(100% - 50px);
+    }
+
+    .resume-container {
+        width: calc(100% - 50px);
+    }
+
+    .highlights-container {
+        width: calc(100% - 50px);
+    }
+
+    .footer-container {
+        width: calc(100% - 50px);
+    }
+
+    .logo-image {
+        width: 200px;
+    }
+
+    .nav-menu {
+        gap: 16px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+
+    .resume-title {
+        font-size: 48px;
+    }
+
+    .resume-subtitle {
+        font-size: 17px;
+    }
+
+    .resume-description {
+        font-size: 14px;
+    }
+
+    .resume-btn {
+        min-height: 45px;
+        padding: 0 15px;
+        font-size: 12px;
+    }
+
+    .resume-image-card {
+        width: 440px;
+        min-height: 400px;
+    }
+
+    .resume-image {
+        max-height: 450px;
+    }
+
+}
+
+
+/* =====================================================
+   1128 × 634
+===================================================== */
+
+@media (min-width: 1001px) and (max-width: 1100px) {
+
+    .nav-container {
+        width: calc(100% - 35px);
+    }
+
+    .resume-container {
+        width: calc(100% - 35px);
+        gap: 15px;
+    }
+
+    .highlights-container {
+        width: calc(100% - 35px);
+    }
+
+    .footer-container {
+        width: calc(100% - 35px);
+    }
+
+    .navbar {
+        height: 72px;
+    }
+
+    .logo-image {
+        width: 175px;
+    }
+
+    .nav-menu {
+        gap: 13px;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
+        padding: 25px 0 21px;
+    }
+
+    .resume-title {
+        font-size: 40px;
+    }
+
+    .resume-subtitle {
+        font-size: 15px;
+    }
+
+    .resume-description {
+        font-size: 12px;
+        margin-top: 17px;
+    }
+
+    .resume-buttons {
+        margin-top: 18px;
+    }
+
+    .resume-btn {
+        min-height: 40px;
+        padding: 0 12px;
+        font-size: 10px;
+    }
+
+    .resume-image-card {
+        width: 360px;
+        min-height: 350px;
+        max-height: 390px;
+    }
+
+    .resume-image {
+        max-height: 370px;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+   801px - 1000px
+===================================================== */
+
+@media (min-width: 801px) and (max-width: 1000px) {
+
+    .navbar {
+        height: auto;
+        min-height: 75px;
+    }
+
+    .nav-container {
+        width: calc(100% - 35px);
+        padding: 12px 0;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-image {
+        width: 210px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+        padding: 7px 0 11px;
+    }
+
+    .nav-menu a.active::after {
+        bottom: 0;
+    }
+
+    .resume-hero {
+        padding-top: 35px;
+    }
+
+    .resume-container {
+        width: calc(100% - 40px);
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .resume-content {
+        text-align: center;
+    }
+
+    .section-label {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .resume-title {
+        font-size: 58px;
+    }
+
+    .resume-subtitle {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 21px;
+    }
+
+    .resume-description {
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .resume-buttons {
+        justify-content: center;
+    }
+
+    .pdf-info {
+        justify-content: center;
+    }
+
+    .resume-note {
+        display: none;
+    }
+
+    .resume-image-wrapper {
+        min-height: auto;
+    }
+
+    .resume-image-card {
+        width: min(600px, 100%);
+        min-height: 450px;
+        max-height: 600px;
+    }
+
+    .resume-image {
+        max-height: 570px;
+    }
+
+    .highlights-container {
+        width: calc(100% - 40px);
+    }
+
+    .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .highlight-card {
+        border-right: none;
+        border-bottom: 1px solid #2474a8;
+        padding: 20px;
+    }
+
+    .highlight-card:last-child {
+        grid-column: 1 / -1;
+        border-bottom: none;
+    }
+
+    .footer-container {
+        width: calc(100% - 40px);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   401px - 800px
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .nav-container,
+    .resume-container,
+    .highlights-container,
+    .footer-container {
+        width: calc(100% - 28px);
+    }
+
+    .navbar {
+        height: auto;
+        min-height: 70px;
+    }
+
+    .nav-container {
+        padding: 10px 0;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-image {
+        width: 190px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
+        padding: 6px 0 10px;
+    }
+
+    .nav-menu a.active::after {
+        bottom: 0;
+        height: 3px;
+    }
+
+    .resume-hero {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .resume-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .resume-content {
+        padding: 5px 0;
+        text-align: center;
+    }
+
+    .section-label {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .resume-title {
+        margin-top: 20px;
+        font-size: 45px;
+    }
+
+    .resume-subtitle {
+        margin-top: 18px;
+        font-size: 18px;
+    }
+
+    .resume-description {
+        margin-top: 18px;
+        font-size: 14px;
+    }
+
+    .resume-buttons {
+        justify-content: center;
+        margin-top: 24px;
+    }
+
+    .resume-btn {
+        min-height: 46px;
+        padding: 0 15px;
+        font-size: 12px;
+    }
+
+    .pdf-info {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .resume-note {
+        display: none;
+    }
+
+    .resume-image-wrapper {
+        min-height: auto;
+    }
+
+    .resume-image-card {
+        width: 100%;
+        min-height: 300px;
+        max-height: none;
+        padding: 8px;
+        border-radius: 15px;
+    }
+
+    .resume-image {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+    }
+
+    .highlights-section {
+        padding-bottom: 40px;
+    }
+
+    .highlights-container {
+        padding: 20px 15px 25px;
+    }
+
+    .highlights-heading h2 {
+        font-size: 21px;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-card {
+        min-height: 160px;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 1px solid #2474a8;
+    }
+
+    .highlight-card:last-child {
+        border-bottom: none;
+    }
+
+    .resume-cta {
+        min-height: 270px;
+        padding: 50px 15px 60px;
+    }
+
+    .resume-cta h2 {
+        font-size: 29px;
+    }
+
+    .resume-cta p {
+        font-size: 15px;
+    }
+
+    .footer-container {
+        padding: 28px 0;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-brand,
+    .footer-column {
+        padding-right: 0;
+        padding-bottom: 20px;
+        border-right: none;
+        border-bottom: 1px solid #2474a8;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+    .footer-quote {
+        padding-top: 5px;
+    }
+
+    .footer-bottom {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+}
+
+
+/* =====================================================
+   EXTRA SMALL
+   400px AND BELOW
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .nav-container,
+    .resume-container,
+    .highlights-container,
+    .footer-container {
+        width: calc(100% - 20px);
+    }
+
+    .logo-image {
+        width: 170px;
+    }
+
+    .nav-menu {
+        gap: 9px;
+    }
+
+    .nav-menu a {
+        font-size: 11px;
+    }
+
+    .resume-title {
+        font-size: 37px;
+    }
+
+    .resume-subtitle {
+        font-size: 16px;
+    }
+
+    .resume-description {
+        font-size: 13px;
+    }
+
+    .resume-buttons {
+        flex-direction: column;
+    }
+
+    .resume-btn {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .resume-image-card {
+        min-height: 240px;
+        padding: 6px;
+    }
+
+    .highlights-heading h2 {
+        font-size: 19px;
+    }
+
+    .highlight-card {
+        padding: 17px 10px;
+    }
+
+    .highlight-card h3 {
+        font-size: 17px;
+    }
+
+    .highlight-card p {
+        font-size: 13px;
+    }
+
+    .resume-cta h2 {
+        font-size: 25px;
+    }
+
+    .resume-cta p {
+        font-size: 14px;
+    }
+
+    .footer-logo img {
+        width: 185px;
+    }
+
+}
+
+
+/* =====================================================
+   WINDOWS DISPLAY SCALE
+===================================================== */
+
+/*
+   Windows 100%, 125%, 150% and 175% scaling
+   automatically changes the CSS viewport width.
+
+   Therefore normal width media queries handle
+   different display scaling levels.
+
+   Do not use:
+
+   @media (scale: 125%)
+
+   @media (scale: 150%)
+
+   @media (scale: 175%)
+
+*/
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+    }
+
+}
