@@ -1,0 +1,1531 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #020d29;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    width: 100%;
+    min-height: 70px;
+
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #020d29;
+
+    border-bottom: 2px solid #008cff;
+
+    box-shadow:
+        0 0 12px #0077ff,
+        0 0 25px rgba(0, 119, 255, 0.4);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* =====================================================
+   NAVBAR LOGO
+===================================================== */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.brand a {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+
+    line-height: 0;
+}
+
+.brand img {
+    display: block;
+
+    width: 70px;
+    height: auto;
+
+    max-height: 52px;
+
+    object-fit: contain;
+
+    transition: 0.3s ease;
+}
+
+.brand img:hover {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    height: 100%;
+}
+
+.navbar nav a {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    color: #e9efff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #00d9ff;
+}
+
+.navbar nav a.active {
+    color: #00d9ff;
+    font-weight: bold;
+}
+
+.navbar nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 4px;
+
+    background: #00d9ff;
+
+    box-shadow:
+        0 0 10px #00d9ff,
+        0 0 20px #0077ff;
+
+    border-radius: 5px 5px 0 0;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 40px 25px 25px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 275px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.journey {
+    width: max-content;
+
+    padding: 9px 22px;
+
+    border: 2px solid #00d9ff;
+
+    border-radius: 30px;
+
+    color: #00d9ff;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 0 12px rgba(0, 217, 255, 0.4);
+}
+
+.journey span {
+    margin-right: 10px;
+}
+
+.hero h1 {
+    margin-top: 14px;
+
+    font-size: 68px;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    background: linear-gradient(
+        90deg,
+        #00d9ff,
+        #087dff,
+        #d000ff
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.hero p {
+    margin-top: 15px;
+
+    color: #e5ebff;
+
+    font-size: 18px;
+
+    line-height: 1.55;
+}
+
+.hero-line {
+    width: 98px;
+
+    height: 5px;
+
+    margin-top: 15px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #00d9ff,
+        #006eff,
+        #d000ff
+    );
+
+    box-shadow:
+        0 0 10px #00cfff;
+}
+
+
+/* =====================================================
+   HERO ART
+===================================================== */
+
+.hero-image {
+    width: 470px;
+    height: 260px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.briefcase {
+    width: 205px;
+    height: 140px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 95px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #00d9ff,
+        #146aff,
+        #b000ff
+    );
+
+    box-shadow:
+        0 0 15px #00d9ff,
+        0 0 35px #006eff,
+        0 0 60px rgba(150, 0, 255, 0.6);
+}
+
+.hero-dots {
+    position: absolute;
+
+    left: 35px;
+    top: 50px;
+
+    color: #00d9ff;
+
+    line-height: 17px;
+
+    letter-spacing: 5px;
+
+    font-size: 18px;
+
+    text-shadow: 0 0 10px #00d9ff;
+}
+
+.calendar {
+    position: absolute;
+
+    top: 20px;
+    right: 130px;
+
+    font-size: 60px;
+
+    filter:
+        drop-shadow(0 0 10px #00d9ff);
+}
+
+.future {
+    position: absolute;
+
+    right: 0;
+    top: 65px;
+
+    color: #00eaff;
+
+    font-size: 19px;
+
+    font-style: italic;
+
+    line-height: 1.4;
+
+    text-shadow: 0 0 8px #00d9ff;
+
+    transform: rotate(-8deg);
+}
+
+
+/* =====================================================
+   EXPERIENCE TIMELINE
+===================================================== */
+
+.experience-container {
+    position: relative;
+
+    padding-left: 40px;
+}
+
+.timeline-line {
+    position: absolute;
+
+    left: 9px;
+    top: 0;
+    bottom: 0;
+
+    width: 4px;
+
+    background: #00cfff;
+
+    box-shadow:
+        0 0 10px #00cfff,
+        0 0 20px #006eff;
+}
+
+
+/* =====================================================
+   EXPERIENCE CARD
+===================================================== */
+
+.experience-card {
+    min-height: 155px;
+
+    margin-bottom: 17px;
+
+    padding: 18px 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        105px
+        330px
+        2px
+        1fr
+        auto;
+
+    align-items: center;
+
+    gap: 18px;
+
+    position: relative;
+
+    border: 2px solid #007cff;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        110deg,
+        #031c45,
+        #031337
+    );
+
+    box-shadow:
+        0 0 10px rgba(0, 124, 255, 0.55),
+        inset 0 0 20px rgba(0, 100, 255, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #a500ff;
+
+    box-shadow:
+        0 0 15px #007cff,
+        0 0 25px rgba(165, 0, 255, 0.5);
+}
+
+
+/* =====================================================
+   TIMELINE DOT
+===================================================== */
+
+.timeline-dot {
+    position: absolute;
+
+    left: -50px;
+    top: 30px;
+
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    border: 4px solid #00d9ff;
+
+    background: #020d29;
+
+    box-shadow:
+        0 0 8px #00d9ff,
+        0 0 20px #006eff;
+
+    z-index: 2;
+}
+
+.timeline-dot::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    left: 5px;
+    top: 5px;
+
+    border-radius: 50%;
+
+    background: #d000ff;
+}
+
+
+/* =====================================================
+   COMPANY LOGOS
+===================================================== */
+
+.company-logo {
+    width: 104px;
+    height: 104px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    border: 2px solid #008cff;
+
+    background: #041333;
+
+    box-shadow:
+        0 0 12px #006eff,
+        inset 0 0 15px rgba(0, 119, 255, 0.2);
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   FINGRID LOGO
+===================================================== */
+
+.fingrid-logo strong {
+    font-size: 19px;
+
+    color: #ffffff;
+}
+
+.bars {
+    display: flex;
+
+    align-items: flex-end;
+
+    height: 28px;
+
+    gap: 3px;
+
+    margin-bottom: 4px;
+}
+
+.bars i {
+    width: 7px;
+
+    display: block;
+
+    background: #00d9ff;
+
+    border-radius: 2px 2px 0 0;
+}
+
+.bars i:nth-child(1) {
+    height: 12px;
+}
+
+.bars i:nth-child(2) {
+    height: 20px;
+}
+
+.bars i:nth-child(3) {
+    height: 28px;
+}
+
+
+/* =====================================================
+   SKH LOGO
+===================================================== */
+
+.skh-logo {
+    background: #ffffff;
+
+    border-color: #1768b5;
+
+    box-shadow:
+        0 0 12px rgba(23, 104, 181, 0.8);
+}
+
+.skh-logo strong {
+    color: #1768b5;
+
+    font-size: 25px;
+}
+
+.skh-logo span {
+    color: #1768b5;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   INTERPAY LOGO
+===================================================== */
+
+.interpay-logo {
+    color: #ffffff;
+
+    font-size: 19px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   JOB DETAILS
+===================================================== */
+
+.job-details {
+    min-width: 0;
+}
+
+.job-details h2 {
+    font-size: 21px;
+
+    margin-bottom: 6px;
+}
+
+.job-details h3 {
+    color: #00d9ff;
+
+    font-size: 16px;
+
+    margin-bottom: 12px;
+}
+
+.meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    color: #e5ebff;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.vertical-line {
+    height: 108px;
+
+    width: 2px;
+
+    background: #c8d5ff;
+
+    box-shadow:
+        0 0 3px #ffffff;
+}
+
+
+/* =====================================================
+   RESPONSIBILITIES
+===================================================== */
+
+.responsibilities {
+    min-width: 0;
+}
+
+.responsibilities h3 {
+    color: #00d9ff;
+
+    font-size: 15px;
+
+    margin-bottom: 7px;
+}
+
+.responsibilities ul {
+    list-style: none;
+}
+
+.responsibilities li {
+    color: #e5ebff;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    padding-left: 13px;
+
+    position: relative;
+}
+
+.responsibilities li::before {
+    content: "•";
+
+    position: absolute;
+
+    left: 0;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   TAG
+===================================================== */
+
+.tag {
+    padding: 9px 15px;
+
+    border: 1px solid #a500ff;
+
+    border-radius: 20px;
+
+    white-space: nowrap;
+
+    color: #dceaff;
+
+    font-size: 12px;
+
+    background: rgba(30, 50, 130, 0.35);
+
+    box-shadow:
+        0 0 10px rgba(150, 0, 255, 0.4);
+}
+
+
+/* =====================================================
+   NEXT STOP
+===================================================== */
+
+.next-stop {
+    min-height: 120px;
+
+    margin-top: 25px;
+
+    padding: 20px 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    border: 2px solid #007cff;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        100deg,
+        #042450,
+        #04183f
+    );
+
+    box-shadow:
+        0 0 12px rgba(0, 110, 255, 0.45);
+}
+
+.rocket {
+    font-size: 58px;
+
+    margin-right: 25px;
+}
+
+.next-stop h2 {
+    font-size: 25px;
+}
+
+.next-stop h2 span {
+    background: linear-gradient(
+        90deg,
+        #00d9ff,
+        #b000ff
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.next-stop p {
+    margin-top: 7px;
+
+    color: #e4ebff;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.arrow {
+    position: absolute;
+
+    right: 280px;
+
+    color: #a500ff;
+
+    font-size: 55px;
+
+    transform: rotate(-20deg);
+
+    text-shadow:
+        0 0 12px #a500ff;
+}
+
+.dream {
+    margin-left: auto;
+
+    color: #00eaff;
+
+    font-size: 19px;
+
+    font-style: italic;
+
+    text-align: center;
+
+    transform: rotate(-6deg);
+}
+
+.dream span {
+    color: #c500ff;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    margin-top: 25px;
+
+    border-top: 2px solid #006eff;
+
+    background: #020d29;
+}
+
+.footer-container {
+    min-height: 175px;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr
+        0.9fr
+        1fr
+        1fr;
+}
+
+
+/* =====================================================
+   FOOTER BRAND
+===================================================== */
+
+.footer-brand {
+    padding: 25px 25px 15px 5px;
+}
+
+.footer-name {
+    display: flex;
+
+    align-items: center;
+}
+
+.footer-name a {
+    display: flex;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    line-height: 0;
+}
+
+.footer-name img {
+    display: block;
+
+    width: 75px;
+
+    height: auto;
+
+    max-height: 55px;
+
+    object-fit: contain;
+
+    transition: 0.3s ease;
+}
+
+.footer-name img:hover {
+    transform: scale(1.05);
+}
+
+.footer-brand > p {
+    margin-top: 8px;
+
+    font-size: 14px;
+}
+
+.slogan {
+    margin-top: 15px;
+
+    color: #00eaff;
+
+    font-size: 16px;
+
+    font-style: italic;
+
+    text-decoration: underline;
+
+    text-decoration-color: #b000ff;
+
+    text-underline-offset: 8px;
+}
+
+
+/* =====================================================
+   FOOTER LINKS
+===================================================== */
+
+.footer-links {
+    padding: 18px 25px;
+
+    border-left: 1px solid #1262bb;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.footer-links h3 {
+    font-size: 14px;
+
+    margin-bottom: 3px;
+}
+
+.footer-links a {
+    color: #e2e9ff;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00d9ff;
+
+    transform: translateX(3px);
+}
+
+
+/* =====================================================
+   FOOTER MESSAGE
+===================================================== */
+
+.footer-message {
+    border-left: 1px solid #1262bb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.footer-message span {
+    color: #00eaff;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    text-align: center;
+
+    transform: rotate(-7deg);
+
+    text-decoration: underline;
+
+    text-decoration-color: #c000ff;
+
+    text-underline-offset: 10px;
+}
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.copyright {
+    min-height: 50px;
+
+    padding: 0 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-top: 1px solid #006eff;
+
+    color: #dbe5ff;
+
+    font-size: 12px;
+}
+
+.copyright b {
+    color: #ff00d4;
+}
+
+
+/* =====================================================
+   RESPONSIVE - 1100px
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding: 0 30px;
+    }
+
+    .navbar nav {
+        gap: 18px;
+    }
+
+    .navbar nav a {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-image {
+        width: 380px;
+    }
+
+    .experience-card {
+        grid-template-columns:
+            90px
+            260px
+            2px
+            1fr
+            auto;
+    }
+
+    .tag {
+        display: none;
+    }
+
+    .arrow {
+        display: none;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - 950px
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        padding: 0 25px;
+    }
+
+    .navbar nav {
+        gap: 14px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: auto;
+
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        width: 330px;
+        height: 230px;
+    }
+
+    .briefcase {
+        width: 170px;
+        height: 120px;
+
+        font-size: 75px;
+    }
+
+    .calendar {
+        right: 80px;
+
+        font-size: 48px;
+    }
+
+    .future {
+        right: 0;
+
+        font-size: 16px;
+    }
+
+    .experience-card {
+        grid-template-columns:
+            90px
+            1fr
+            2px
+            1fr;
+    }
+
+    .company-logo {
+        width: 85px;
+        height: 85px;
+    }
+
+    .vertical-line {
+        height: 100px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - 800px
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: auto;
+
+        min-height: 70px;
+
+        padding: 10px 20px;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .brand {
+        justify-content: center;
+
+        width: 100%;
+    }
+
+    .navbar nav {
+        width: 100%;
+
+        height: auto;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px 18px;
+    }
+
+    .navbar nav a {
+        height: auto;
+
+        padding: 5px 0;
+
+        font-size: 13px;
+    }
+
+    .navbar nav a.active::after {
+        bottom: -2px;
+
+        height: 3px;
+    }
+
+    main {
+        padding: 30px 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .journey {
+        margin: auto;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image {
+        width: 100%;
+
+        max-width: 470px;
+    }
+
+    .experience-container {
+        padding-left: 30px;
+    }
+
+    .timeline-line {
+        left: 4px;
+    }
+
+    .timeline-dot {
+        left: -39px;
+    }
+
+    .experience-card {
+        grid-template-columns:
+            85px
+            1fr;
+
+        gap: 15px;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+    .responsibilities {
+        grid-column: 1 / -1;
+
+        padding-top: 5px;
+    }
+
+    .company-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .meta {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .next-stop {
+        padding: 20px;
+
+        flex-wrap: wrap;
+    }
+
+    .dream {
+        width: 100%;
+
+        margin-top: 15px;
+    }
+
+    .footer-container {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 0;
+    }
+
+    .footer-message {
+        min-height: 120px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - 600px
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .brand img {
+        width: 65px;
+
+        max-height: 48px;
+    }
+
+    .navbar nav {
+        gap: 8px 14px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero p br {
+        display: none;
+    }
+
+    .hero-image {
+        height: 210px;
+    }
+
+    .briefcase {
+        width: 150px;
+        height: 105px;
+
+        font-size: 65px;
+    }
+
+    .hero-dots {
+        left: 10px;
+    }
+
+    .calendar {
+        right: 45px;
+    }
+
+    .future {
+        right: 5px;
+
+        font-size: 14px;
+    }
+
+    .experience-container {
+        padding-left: 25px;
+    }
+
+    .timeline-dot {
+        left: -34px;
+
+        width: 20px;
+        height: 20px;
+
+        border-width: 3px;
+    }
+
+    .timeline-dot::after {
+        width: 6px;
+        height: 6px;
+
+        left: 4px;
+        top: 4px;
+    }
+
+    .experience-card {
+        padding: 15px;
+
+        grid-template-columns:
+            70px
+            1fr;
+
+        border-radius: 15px;
+    }
+
+    .company-logo {
+        width: 65px;
+        height: 65px;
+    }
+
+    .fingrid-logo strong {
+        font-size: 14px;
+    }
+
+    .skh-logo strong {
+        font-size: 18px;
+    }
+
+    .skh-logo span {
+        font-size: 8px;
+    }
+
+    .interpay-logo {
+        font-size: 14px;
+    }
+
+    .job-details h2 {
+        font-size: 17px;
+    }
+
+    .job-details h3 {
+        font-size: 14px;
+    }
+
+    .meta {
+        font-size: 12px;
+    }
+
+    .responsibilities h3 {
+        font-size: 14px;
+    }
+
+    .responsibilities li {
+        font-size: 12px;
+    }
+
+    .next-stop {
+        text-align: center;
+
+        justify-content: center;
+    }
+
+    .rocket {
+        width: 100%;
+
+        margin-right: 0;
+
+        margin-bottom: 10px;
+    }
+
+    .next-stop h2 {
+        font-size: 21px;
+    }
+
+    .next-stop p br {
+        display: none;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        padding-bottom: 20px;
+    }
+
+    .footer-brand {
+        padding: 25px 20px;
+
+        text-align: center;
+    }
+
+    .footer-name {
+        justify-content: center;
+    }
+
+    .footer-links {
+        border-left: none;
+
+        border-top: 1px solid #1262bb;
+
+        padding: 20px;
+    }
+
+    .footer-message {
+        border-left: none;
+
+        border-top: 1px solid #1262bb;
+
+        min-height: 100px;
+
+        padding: 20px;
+    }
+
+    .copyright {
+        min-height: auto;
+
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - 400px
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .navbar nav {
+        gap: 7px 11px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .brand img {
+        width: 60px;
+        max-height: 45px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .journey {
+        padding: 7px 15px;
+
+        font-size: 13px;
+    }
+
+    .experience-card {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .company-logo {
+        margin: auto;
+    }
+
+    .meta {
+        align-items: center;
+    }
+
+    .responsibilities {
+        text-align: left;
+    }
+
+    .next-stop h2 {
+        font-size: 19px;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .footer-name {
+        justify-content: center;
+    }
+}

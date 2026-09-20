@@ -1,0 +1,432 @@
+/* =====================================================
+   EXPERIENCE PAGE
+   ANIMATIONS CSS
+===================================================== */
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    animation: navbarIn 0.8s ease both;
+}
+
+@keyframes navbarIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   HERO TEXT
+===================================================== */
+
+.hero-text {
+    animation: heroLeft 1s ease both;
+}
+
+@keyframes heroLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =====================================================
+   HERO IMAGE
+===================================================== */
+
+.hero-image {
+    animation: heroRight 1.2s ease both;
+}
+
+@keyframes heroRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =====================================================
+   JOURNEY BADGE
+===================================================== */
+
+.journey {
+    animation: journeyGlow 2s ease-in-out infinite;
+}
+
+@keyframes journeyGlow {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 7px rgba(0, 217, 255, 0.3);
+    }
+
+    50% {
+        box-shadow:
+            0 0 18px rgba(0, 217, 255, 0.8),
+            0 0 30px rgba(0, 100, 255, 0.3);
+    }
+
+}
+
+
+/* =====================================================
+   BRIEFCASE
+===================================================== */
+
+.briefcase {
+    animation: briefcaseFloat 3s ease-in-out infinite;
+}
+
+@keyframes briefcaseFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+
+/* =====================================================
+   CALENDAR
+===================================================== */
+
+.calendar {
+    animation: calendarFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes calendarFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+/* =====================================================
+   FUTURE TEXT
+===================================================== */
+
+.future {
+    animation: futureGlow 2s ease-in-out infinite;
+}
+
+@keyframes futureGlow {
+
+    0%,
+    100% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+
+        text-shadow:
+            0 0 10px #00d9ff,
+            0 0 20px #006eff;
+    }
+
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.timeline-line {
+    animation: timelineGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes timelineGlow {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 7px #00bfff,
+            0 0 15px #006eff;
+    }
+
+    50% {
+        box-shadow:
+            0 0 15px #00d9ff,
+            0 0 30px #006eff;
+    }
+
+}
+
+
+/* =====================================================
+   EXPERIENCE CARDS
+===================================================== */
+
+.experience-card {
+    animation: cardIn 0.8s ease both;
+}
+
+
+/* ---------- Card Delay ---------- */
+
+.experience-card:nth-of-type(1) {
+    animation-delay: 0.1s;
+}
+
+.experience-card:nth-of-type(2) {
+    animation-delay: 0.3s;
+}
+
+.experience-card:nth-of-type(3) {
+    animation-delay: 0.5s;
+}
+
+
+@keyframes cardIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =====================================================
+   TIMELINE DOTS
+===================================================== */
+
+.timeline-dot {
+    animation: dotPulse 2s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+}
+
+
+/* =====================================================
+   COMPANY LOGOS
+===================================================== */
+
+.company-logo {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.company-logo:hover {
+    transform: scale(1.08);
+}
+
+
+/* =====================================================
+   TAG
+===================================================== */
+
+.tag {
+    animation: tagGlow 3s ease-in-out infinite;
+}
+
+@keyframes tagGlow {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 5px rgba(150, 0, 255, 0.3);
+    }
+
+    50% {
+        box-shadow:
+            0 0 14px rgba(150, 0, 255, 0.8);
+    }
+
+}
+
+
+/* =====================================================
+   NEXT STOP
+===================================================== */
+
+.next-stop {
+    animation: nextStopIn 0.9s ease 0.7s both;
+}
+
+@keyframes nextStopIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   ROCKET
+===================================================== */
+
+.rocket {
+    animation: rocketFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes rocketFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-8px)
+            rotate(-4deg);
+    }
+
+}
+
+
+/* =====================================================
+   ARROW
+===================================================== */
+
+.arrow {
+    animation: arrowMove 2s ease-in-out infinite;
+}
+
+@keyframes arrowMove {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0)
+            rotate(-20deg);
+    }
+
+    50% {
+        transform:
+            translate(8px, -5px)
+            rotate(-20deg);
+    }
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer-container {
+    animation: footerIn 1s ease both;
+}
+
+@keyframes footerIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   LOGO HOVER
+===================================================== */
+
+.brand img,
+.footer-name img {
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.brand img:hover,
+.footer-name img:hover {
+    transform: scale(1.05);
+
+    filter:
+        drop-shadow(0 0 8px rgba(0, 217, 255, 0.7));
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+
+}

@@ -1,0 +1,766 @@
+/* =========================================================
+   EDUCATION PAGE - ANIMATIONS
+========================================================= */
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.nav-menu a {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-menu a:hover {
+    transform: translateY(-2px);
+}
+
+.nav-menu a.active {
+    transition: color 0.3s ease;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.education-content {
+    animation:
+        educationContent 0.8s ease-out both;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.education-hero-image {
+    animation:
+        educationImage 0.9s ease-out 0.1s both;
+}
+
+.education-hero-image img {
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+.education-hero-image:hover img {
+    transform: scale(1.04);
+
+    filter:
+        drop-shadow(
+            0 0 25px
+            rgba(0, 217, 255, 0.35)
+        );
+}
+
+
+/* =========================================================
+   SECTION BADGE
+========================================================= */
+
+.section-badge {
+    animation:
+        fadeUp 0.6s ease-out 0.1s both;
+}
+
+
+/* =========================================================
+   EDUCATION TITLE
+========================================================= */
+
+.education-title {
+    animation:
+        fadeUp 0.7s ease-out 0.2s both;
+}
+
+
+/* =========================================================
+   EDUCATION SUBTITLE
+========================================================= */
+
+.education-subtitle {
+    animation:
+        fadeUp 0.7s ease-out 0.3s both;
+}
+
+
+/* =========================================================
+   TITLE LINE
+========================================================= */
+
+.title-line {
+    transform-origin: left center;
+
+    animation:
+        lineGrow 0.7s ease-out 0.4s both;
+}
+
+
+/* =========================================================
+   EDUCATION INTRO
+========================================================= */
+
+.education-intro {
+    animation:
+        fadeUp 0.7s ease-out 0.5s both;
+}
+
+
+/* =========================================================
+   B.TECH CARD
+========================================================= */
+
+.degree-card {
+    animation:
+        fadeUp 0.8s ease-out 0.2s both;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.degree-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 30px
+        rgba(0, 150, 255, 0.25);
+}
+
+
+/* =========================================================
+   DEGREE HEADING
+========================================================= */
+
+.degree-heading {
+    animation:
+        fadeUp 0.6s ease-out 0.3s both;
+}
+
+
+/* =========================================================
+   DEGREE ICON
+========================================================= */
+
+.degree-icon {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.degree-heading:hover .degree-icon {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 217, 255, 0.45);
+}
+
+
+/* =========================================================
+   EDUCATION DETAILS
+========================================================= */
+
+.education-details {
+    animation:
+        fadeUp 0.7s ease-out 0.4s both;
+}
+
+
+/* =========================================================
+   DETAIL ROW
+========================================================= */
+
+.detail-row {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.detail-row:hover {
+    transform: translateX(5px);
+
+    background:
+        rgba(0, 150, 255, 0.06);
+}
+
+
+/* =========================================================
+   DETAIL ICON
+========================================================= */
+
+.detail-icon {
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.detail-row:hover .detail-icon {
+    transform: scale(1.1);
+
+    color: #00d9ff;
+}
+
+
+/* =========================================================
+   DEGREE DESCRIPTION
+========================================================= */
+
+.degree-description {
+    animation:
+        fadeUp 0.7s ease-out 0.5s both;
+}
+
+
+/* =========================================================
+   COLLEGE IMAGE
+========================================================= */
+
+.college-image-box {
+    animation:
+        imageReveal 0.8s ease-out 0.3s both;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.college-image-box:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 28px
+        rgba(0, 204, 255, 0.45);
+}
+
+.college-image-box img {
+    transition:
+        transform 0.5s ease;
+}
+
+.college-image-box:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   EDUCATION BUTTON
+========================================================= */
+
+.education-button {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.education-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 183, 255, 0.35);
+}
+
+.education-button i {
+    transition:
+        transform 0.3s ease;
+}
+
+.education-button:hover i:last-child {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   SCHOOL SECTION
+========================================================= */
+
+.school-card {
+    animation:
+        fadeUp 0.8s ease-out both;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.school-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.school-card:nth-child(2) {
+    animation-delay: 0.35s;
+}
+
+.school-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 28px
+        rgba(0, 150, 255, 0.25);
+}
+
+
+/* =========================================================
+   SCHOOL HEADING
+========================================================= */
+
+.school-heading {
+    animation:
+        fadeUp 0.6s ease-out 0.25s both;
+}
+
+
+/* =========================================================
+   DOCUMENT ICON
+========================================================= */
+
+.document-icon {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.school-card:hover .document-icon {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 18px
+        rgba(255, 60, 80, 0.35);
+}
+
+
+/* =========================================================
+   SCHOOL DETAILS
+========================================================= */
+
+.school-detail {
+    transition:
+        transform 0.3s ease;
+}
+
+.school-detail:hover {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   MARKSHEET IMAGE
+========================================================= */
+
+.marksheet-image {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.marksheet-image:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 22px
+        rgba(0, 200, 255, 0.35);
+}
+
+.marksheet-image img {
+    transition:
+        transform 0.5s ease;
+}
+
+.marksheet-image:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   SMALL BUTTON
+========================================================= */
+
+.small-button {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.small-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 7px 20px
+        rgba(0, 183, 255, 0.35);
+}
+
+.small-button i {
+    transition:
+        transform 0.3s ease;
+}
+
+.small-button:hover i:last-child {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   IDENTITY SECTION
+========================================================= */
+
+.identity-container {
+    animation:
+        fadeUp 0.8s ease-out 0.2s both;
+}
+
+
+/* =========================================================
+   IDENTITY HEADER
+========================================================= */
+
+.identity-header {
+    animation:
+        fadeUp 0.7s ease-out 0.25s both;
+}
+
+
+/* =========================================================
+   IDENTITY ICON
+========================================================= */
+
+.identity-icon {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.identity-header:hover .identity-icon {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 217, 255, 0.4);
+}
+
+
+/* =========================================================
+   IDENTITY LINE
+========================================================= */
+
+.identity-line {
+    transform-origin: left center;
+
+    animation:
+        lineGrow 0.8s ease-out 0.4s both;
+}
+
+
+/* =========================================================
+   IDENTITY CARDS
+========================================================= */
+
+.identity-card {
+    animation:
+        fadeUp 0.8s ease-out both;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.identity-card:nth-child(1) {
+    animation-delay: 0.25s;
+}
+
+.identity-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.identity-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 28px
+        rgba(0, 150, 255, 0.25);
+}
+
+
+/* =========================================================
+   IDENTITY CARD TITLE
+========================================================= */
+
+.identity-card-title {
+    transition:
+        transform 0.3s ease;
+}
+
+.identity-card:hover .identity-card-title {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   MINI ICON
+========================================================= */
+
+.mini-icon {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.identity-card:hover .mini-icon {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 18px
+        rgba(0, 217, 255, 0.35);
+}
+
+
+/* =========================================================
+   IDENTITY IMAGE
+========================================================= */
+
+.identity-image {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.identity-image:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 22px
+        rgba(0, 200, 255, 0.35);
+}
+
+.identity-image img {
+    transition:
+        transform 0.5s ease;
+}
+
+.identity-image:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   IDENTITY INFORMATION
+========================================================= */
+
+.identity-info > div {
+    transition:
+        transform 0.3s ease;
+}
+
+.identity-info > div:hover {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    animation:
+        fadeUp 0.8s ease-out 0.3s both;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.footer-column a {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.footer-column a:hover {
+    transform: translateX(5px);
+
+    color: #00d9ff;
+}
+
+.footer-column a i {
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.footer-column a:hover i {
+    transform: scale(1.1);
+
+    color: #c044ff;
+}
+
+
+/* =========================================================
+   FOOTER LOGO
+========================================================= */
+
+.footer-logo img {
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+.footer-logo:hover img {
+    transform: scale(1.04);
+
+    filter:
+        drop-shadow(
+            0 0 12px
+            rgba(0, 217, 255, 0.25)
+        );
+}
+
+
+/* =========================================================
+   KEYFRAME - HERO LEFT
+========================================================= */
+
+@keyframes educationContent {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+
+}
+
+
+/* =========================================================
+   KEYFRAME - HERO RIGHT
+========================================================= */
+
+@keyframes educationImage {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+
+}
+
+
+/* =========================================================
+   KEYFRAME - FADE UP
+========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   KEYFRAME - LINE
+========================================================= */
+
+@keyframes lineGrow {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scaleX(0);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scaleX(1);
+    }
+
+}
+
+
+/* =========================================================
+   KEYFRAME - IMAGE REVEAL
+========================================================= */
+
+@keyframes imageReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+        scroll-behavior:
+            auto !important;
+    }
+
+}

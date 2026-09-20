@@ -1,0 +1,1046 @@
+/* =====================================================
+   CONTACT PAGE ANIMATIONS
+   Neon Blue + Purple Premium Style
+===================================================== */
+
+
+/* =====================================================
+   1. PAGE LOAD
+===================================================== */
+
+.contact-page {
+    animation: pageAppear 0.8s ease-out both;
+}
+
+
+@keyframes pageAppear {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =====================================================
+   2. NAVBAR
+===================================================== */
+
+.navbar {
+    animation: navbarDrop 0.7s ease-out both;
+}
+
+
+@keyframes navbarDrop {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   3. NAVBAR ACTIVE LINE
+===================================================== */
+
+.nav-links a.active::after {
+
+    animation:
+        activeLineGlow 2s ease-in-out infinite alternate;
+
+}
+
+
+@keyframes activeLineGlow {
+
+    from {
+        box-shadow:
+            0 0 5px #00eaff;
+    }
+
+    to {
+        box-shadow:
+            0 0 18px #00eaff,
+            0 0 25px rgba(157, 0, 255, 0.7);
+    }
+
+}
+
+
+/* =====================================================
+   4. HERO LEFT
+===================================================== */
+
+.hero-content {
+
+    animation:
+        heroLeft 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+}
+
+
+@keyframes heroLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-45px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =====================================================
+   5. HERO BADGE
+===================================================== */
+
+.hero-badge {
+
+    animation:
+        badgeAppear 0.8s ease-out 0.25s both,
+        badgeGlow 2.5s ease-in-out 1.2s infinite alternate;
+
+}
+
+
+@keyframes badgeAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(-15px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+@keyframes badgeGlow {
+
+    from {
+        box-shadow:
+            0 0 8px rgba(0, 217, 255, 0.4),
+            inset 0 0 8px rgba(0, 217, 255, 0.05);
+    }
+
+    to {
+        box-shadow:
+            0 0 18px rgba(0, 217, 255, 0.8),
+            0 0 30px rgba(0, 100, 255, 0.25),
+            inset 0 0 12px rgba(0, 217, 255, 0.1);
+    }
+
+}
+
+
+/* =====================================================
+   6. HERO TITLE
+===================================================== */
+
+.hero-content h1 {
+
+    animation:
+        titleAppear 1s ease-out 0.35s both;
+
+}
+
+
+@keyframes titleAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+}
+
+
+/* =====================================================
+   7. HERO SUBTITLE
+===================================================== */
+
+.hero-content h2 {
+
+    animation:
+        textAppear 0.8s ease-out 0.55s both;
+
+}
+
+
+.hero-content p {
+
+    animation:
+        textAppear 0.8s ease-out 0.75s both;
+
+}
+
+
+@keyframes textAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   8. HERO LINE
+===================================================== */
+
+.hero-line {
+
+    transform-origin: left center;
+
+    animation:
+        lineGrow 0.8s ease-out 0.65s both,
+        lineGlow 2s ease-in-out 1.5s infinite alternate;
+
+}
+
+
+@keyframes lineGrow {
+
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 100px;
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes lineGlow {
+
+    from {
+        box-shadow:
+            0 0 5px #00eaff;
+    }
+
+    to {
+        box-shadow:
+            0 0 14px #00eaff,
+            0 0 20px #9d00ff;
+    }
+
+}
+
+
+/* =====================================================
+   9. HERO IMAGE
+===================================================== */
+
+.hero-image {
+
+    animation:
+        heroImageAppear 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+
+}
+
+
+.hero-image img {
+
+    animation:
+        heroFloat 4s ease-in-out 1.2s infinite;
+
+}
+
+
+@keyframes heroImageAppear {
+
+    from {
+        opacity: 0;
+        transform:
+            translateX(45px)
+            scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(0)
+            scale(1);
+    }
+
+}
+
+
+@keyframes heroFloat {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    25% {
+        transform:
+            translateY(-7px)
+            rotate(0.4deg);
+    }
+
+    50% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    75% {
+        transform:
+            translateY(7px)
+            rotate(-0.4deg);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+}
+
+
+/* =====================================================
+   10. CONTACT INFORMATION BOX
+===================================================== */
+
+.contact-information {
+
+    animation:
+        sectionReveal 0.9s ease-out 0.35s both;
+
+}
+
+
+@keyframes sectionReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   11. CONTACT CARD
+===================================================== */
+
+.contact-card {
+
+    animation:
+        cardAppear 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+}
+
+
+.contact-card:nth-child(1) {
+
+    animation-delay: 0.45s;
+
+}
+
+
+.contact-card:nth-child(2) {
+
+    animation-delay: 0.58s;
+
+}
+
+
+.contact-card:nth-child(3) {
+
+    animation-delay: 0.71s;
+
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(25px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   12. CONTACT CARD ICON
+===================================================== */
+
+.contact-card:hover .contact-icon {
+
+    animation:
+        iconPulse 0.7s ease-in-out;
+
+}
+
+
+@keyframes iconPulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   13. CONTACT CARD BORDER
+===================================================== */
+
+.contact-card:hover {
+
+    box-shadow:
+        0 0 15px rgba(0, 191, 255, 0.5),
+        0 0 30px rgba(100, 0, 255, 0.15);
+
+}
+
+
+/* =====================================================
+   14. SEND MESSAGE BOX
+===================================================== */
+
+.message-box {
+
+    animation:
+        messageBoxReveal
+        0.8s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        0.85s
+        both;
+
+}
+
+
+@keyframes messageBoxReveal {
+
+    from {
+        opacity: 0;
+        transform:
+            translateX(-35px)
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(0)
+            translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   15. LOCATION BOX
+===================================================== */
+
+.location-box {
+
+    animation:
+        locationBoxReveal
+        0.8s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        0.95s
+        both;
+
+}
+
+
+@keyframes locationBoxReveal {
+
+    from {
+        opacity: 0;
+        transform:
+            translateX(35px)
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(0)
+            translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   16. FORM FIELDS
+===================================================== */
+
+.form-group {
+
+    animation:
+        formFieldReveal
+        0.55s
+        ease-out
+        both;
+
+}
+
+
+.form-row .form-group:nth-child(1) {
+
+    animation-delay: 1.05s;
+
+}
+
+
+.form-row .form-group:nth-child(2) {
+
+    animation-delay: 1.12s;
+
+}
+
+
+.contact-form > .form-group:nth-of-type(2) {
+
+    animation-delay: 1.19s;
+
+}
+
+
+.contact-form > .form-group:nth-of-type(3) {
+
+    animation-delay: 1.26s;
+
+}
+
+
+@keyframes formFieldReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   17. INPUT FOCUS
+===================================================== */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    animation:
+        inputGlow 1.5s ease-in-out infinite alternate;
+
+}
+
+
+@keyframes inputGlow {
+
+    from {
+        box-shadow:
+            0 0 5px rgba(0, 217, 255, 0.2);
+    }
+
+    to {
+        box-shadow:
+            0 0 14px rgba(0, 217, 255, 0.45);
+    }
+
+}
+
+
+/* =====================================================
+   18. SEND BUTTON
+===================================================== */
+
+.send-button {
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation:
+        buttonAppear
+        0.7s
+        ease-out
+        1.35s
+        both;
+
+}
+
+
+@keyframes buttonAppear {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(15px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   19. SEND BUTTON SHINE
+===================================================== */
+
+.send-button::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 55%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.32),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    animation:
+        buttonShine
+        3.5s
+        ease-in-out
+        2s
+        infinite;
+
+}
+
+
+@keyframes buttonShine {
+
+    0% {
+        left: -120%;
+    }
+
+    35% {
+        left: 130%;
+    }
+
+    100% {
+        left: 130%;
+    }
+
+}
+
+
+/* =====================================================
+   20. BUTTON HOVER
+===================================================== */
+
+.send-button:hover {
+
+    animation:
+        buttonHover 0.35s ease-out;
+
+}
+
+
+@keyframes buttonHover {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-3px);
+    }
+
+}
+
+
+/* =====================================================
+   21. MAP APPEAR
+===================================================== */
+
+.map-container {
+
+    animation:
+        mapAppear
+        0.8s
+        ease-out
+        1.05s
+        both;
+
+}
+
+
+@keyframes mapAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   22. MAP GLOW
+===================================================== */
+
+.map-container {
+
+    animation:
+        mapAppear 0.8s ease-out 1.05s both,
+        mapGlow 3s ease-in-out 1.9s infinite alternate;
+
+}
+
+
+@keyframes mapGlow {
+
+    from {
+        box-shadow:
+            0 0 7px rgba(0, 153, 255, 0.25);
+    }
+
+    to {
+        box-shadow:
+            0 0 18px rgba(0, 217, 255, 0.5),
+            0 0 28px rgba(90, 0, 255, 0.15);
+    }
+
+}
+
+
+/* =====================================================
+   23. LOCATION STATUS
+===================================================== */
+
+.location-status {
+
+    animation:
+        statusAppear
+        0.6s
+        ease-out
+        1.25s
+        both;
+
+}
+
+
+@keyframes statusAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   24. GREEN LIVE DOT
+===================================================== */
+
+.status-dot {
+
+    animation:
+        liveDot 1.5s ease-in-out infinite;
+
+}
+
+
+@keyframes liveDot {
+
+    0% {
+        transform: scale(1);
+
+        box-shadow:
+            0 0 5px #18e66a;
+    }
+
+    50% {
+        transform: scale(1.18);
+
+        box-shadow:
+            0 0 15px #18e66a,
+            0 0 25px rgba(24, 230, 106, 0.45);
+    }
+
+    100% {
+        transform: scale(1);
+
+        box-shadow:
+            0 0 5px #18e66a;
+    }
+
+}
+
+
+/* =====================================================
+   25. GOOGLE MAP BUTTON
+===================================================== */
+
+.maps-button:hover {
+
+    animation:
+        mapsButtonPulse 0.5s ease-out;
+
+}
+
+
+@keyframes mapsButtonPulse {
+
+    0% {
+        box-shadow:
+            0 0 8px rgba(0, 217, 255, 0.3);
+    }
+
+    50% {
+        box-shadow:
+            0 0 20px rgba(0, 217, 255, 0.7);
+    }
+
+    100% {
+        box-shadow:
+            0 0 10px rgba(0, 217, 255, 0.4);
+    }
+
+}
+
+
+/* =====================================================
+   26. LOCATION NOTE
+===================================================== */
+
+.location-note {
+
+    animation:
+        noteAppear
+        0.6s
+        ease-out
+        1.4s
+        both;
+
+}
+
+
+@keyframes noteAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   27. LOCATION CROSSHAIR
+===================================================== */
+
+.location-note > i {
+
+    animation:
+        locationPulse
+        2s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes locationPulse {
+
+    0% {
+        transform: scale(1);
+
+        filter:
+            drop-shadow(0 0 3px #00eaff);
+    }
+
+    50% {
+        transform: scale(1.08);
+
+        filter:
+            drop-shadow(0 0 10px #00eaff);
+    }
+
+    100% {
+        transform: scale(1);
+
+        filter:
+            drop-shadow(0 0 3px #00eaff);
+    }
+
+}
+
+
+/* =====================================================
+   28. FOOTER
+===================================================== */
+
+.footer {
+
+    animation:
+        footerAppear
+        0.8s
+        ease-out
+        1.2s
+        both;
+
+}
+
+
+@keyframes footerAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   29. FOOTER LINKS
+===================================================== */
+
+.footer-column a:hover {
+
+    animation:
+        footerLinkMove
+        0.3s
+        ease-out;
+
+}
+
+
+@keyframes footerLinkMove {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(5px);
+    }
+
+}
+
+
+/* =====================================================
+   30. REDUCE MOTION
+   Accessibility
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+}
