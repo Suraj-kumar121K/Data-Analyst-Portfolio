@@ -4,10 +4,16 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    // =================================================
+    // GET CONTACT FORM
+    // =================================================
+
     const contactForm = document.querySelector(".contact-form");
 
     if (!contactForm) {
+
         console.error("Contact form not found.");
+
         return;
     }
 
@@ -21,31 +27,118 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
 
 
-        // Get form values
-        const name = contactForm.querySelector(
+        // =================================================
+        // GET FORM FIELDS
+        // =================================================
+
+        const nameInput = contactForm.querySelector(
             'input[name="name"]'
-        ).value.trim();
+        );
 
-        const email = contactForm.querySelector(
+        const emailInput = contactForm.querySelector(
             'input[name="email"]'
-        ).value.trim();
+        );
 
-        const subject = contactForm.querySelector(
+        const subjectInput = contactForm.querySelector(
             'select[name="subject"]'
-        ).value;
+        );
 
-        const message = contactForm.querySelector(
+        const messageInput = contactForm.querySelector(
             'textarea[name="message"]'
-        ).value.trim();
+        );
+
+
+        // =================================================
+        // CHECK FORM FIELDS
+        // =================================================
+
+        if (
+            !nameInput ||
+            !emailInput ||
+            !subjectInput ||
+            !messageInput
+        ) {
+
+            console.error("One or more contact form fields are missing.");
+
+            alert(
+                "Contact form configuration error. Please try again later."
+            );
+
+            return;
+        }
+
+
+        // =================================================
+        // GET VALUES
+        // =================================================
+
+        const name = nameInput.value.trim();
+
+        const email = emailInput.value.trim();
+
+        const subject = subjectInput.value.trim();
+
+        const message = messageInput.value.trim();
 
 
         // =================================================
         // VALIDATION
         // =================================================
 
-        if (!name || !email || !subject || !message) {
+        if (!name) {
 
-            alert("Please fill all required fields.");
+            alert("Please enter your name.");
+
+            nameInput.focus();
+
+            return;
+        }
+
+
+        if (!email) {
+
+            alert("Please enter your email address.");
+
+            emailInput.focus();
+
+            return;
+        }
+
+
+        if (!subject) {
+
+            alert("Please select a subject.");
+
+            subjectInput.focus();
+
+            return;
+        }
+
+
+        if (!message) {
+
+            alert("Please enter your message.");
+
+            messageInput.focus();
+
+            return;
+        }
+
+
+        // =================================================
+        // EMAIL VALIDATION
+        // =================================================
+
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+        if (!emailPattern.test(email)) {
+
+            alert("Please enter a valid email address.");
+
+            emailInput.focus();
 
             return;
         }
@@ -59,63 +152,120 @@ document.addEventListener("DOMContentLoaded", () => {
             ".send-button"
         );
 
-        const originalButtonHTML = sendButton.innerHTML;
 
+        if (!sendButton) {
+
+            console.error("Send button not found.");
+
+            return;
+        }
+
+
+        // Save original button
+        const originalButtonHTML =
+            sendButton.innerHTML;
+
+
+        // Disable button
         sendButton.disabled = true;
 
+
+        // Show sending status
         sendButton.innerHTML = `
             <i class="fa-solid fa-spinner fa-spin"></i>
             <span>Sending...</span>
         `;
 
 
+        // =================================================
+        // SEND DATA TO BACKEND
+        // =================================================
+
         try {
 
+            console.log("Sending contact form...");
+
+
+            const response = await fetch(
+                "/api/contact",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+
+                        name: name,
+
+                        email: email,
+
+                        subject: subject,
+
+                        message: message
+
+                    })
+                }
+            );
+
+
             // =================================================
-            // SEND DATA TO SERVER
+            // READ SERVER RESPONSE
             // =================================================
 
-            const response = await fetch("/api/contact", {
+            let result = {};
 
-                method: "POST",
+            try {
 
-                headers: {
-                    "Content-Type": "application/json"
-                },
+                result = await response.json();
 
-                body: JSON.stringify({
-                    name: name,
-                    email: email,
-                    subject: subject,
-                    message: message
-                })
+            } catch (jsonError) {
 
-            });
+                console.error(
+                    "Invalid server response:",
+                    jsonError
+                );
 
-
-            const result = await response.json();
+            }
 
 
             // =================================================
             // SUCCESS
             // =================================================
 
-            if (response.ok && result.success) {
+            if (
+                response.ok &&
+                result.success === true
+            ) {
+
+                console.log(
+                    "Contact message sent successfully."
+                );
+
 
                 alert(
                     "Message sent successfully! Thank you for contacting me."
                 );
 
+
+                // Clear form
                 contactForm.reset();
 
             }
 
 
             // =================================================
-            // ERROR
+            // SERVER ERROR
             // =================================================
 
             else {
+
+                console.error(
+                    "Server error:",
+                    result
+                );
+
 
                 alert(
                     result.message ||
@@ -127,13 +277,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } catch (error) {
 
+            // =================================================
+            // NETWORK ERROR
+            // =================================================
+
             console.error(
                 "Contact form error:",
                 error
             );
 
+
             alert(
-                "Server error. Please try again later."
+                "Unable to connect to the server. Please try again later."
             );
 
         }
@@ -145,7 +300,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         sendButton.disabled = false;
 
-        sendButton.innerHTML = originalButtonHTML;
+        sendButton.innerHTML =
+            originalButtonHTML;
 
     });
 

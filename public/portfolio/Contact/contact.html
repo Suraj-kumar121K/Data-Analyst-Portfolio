@@ -13,14 +13,20 @@
     <title>Contact | Suraj Kumar</title>
 
 
-    <!-- Font Awesome -->
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
 
-    <!-- Contact CSS -->
+    <!-- =====================================================
+         CONTACT CSS
+    ====================================================== -->
+
     <link
         rel="stylesheet"
         href="/CSS/Contact/style.css"
@@ -53,7 +59,10 @@
 
         <!-- LOGO -->
 
-        <a href="/" class="logo">
+        <a
+            href="/"
+            class="logo"
+        >
 
             <img
                 src="/ASSETS/logo.png"
@@ -227,63 +236,103 @@
         <div class="contact-cards">
 
 
-            <!-- PHONE -->
+            <!-- =================================================
+                 PHONE
+            ================================================= -->
+
             <div class="contact-card">
+
                 <div class="contact-icon">
+
                     <i class="fa-solid fa-phone"></i>
+
                 </div>
+
                 <h3>
                     Phone
                 </h3>
-                <a href="tel:+919876543210">
+
+                <a href="tel:+918447709678">
                     +91 8447709678
                 </a>
+
                 <p>
                     (Mon - Sat, 9:00 AM - 7:00 PM)
                 </p>
+
             </div>
 
-            <!-- EMAIL -->
+
+
+            <!-- =================================================
+                 EMAIL
+            ================================================= -->
+
             <div class="contact-card">
+
                 <div class="contact-icon">
+
                     <i class="fa-solid fa-envelope"></i>
+
                 </div>
+
                 <h3>
                     Email
                 </h3>
+
                 <a href="mailto:kumarsuraj2031k@gmail.com">
                     kumarsuraj2031k@gmail.com
                 </a>
 
                 <p>
+
                     I usually respond within
                     <br>
                     24 hours.
+
                 </p>
+
             </div>
 
-            <!-- LINKEDIN -->
+
+
+            <!-- =================================================
+                 LINKEDIN
+            ================================================= -->
+
             <div class="contact-card">
+
                 <div class="contact-icon linkedin-icon">
+
                     <i class="fa-brands fa-linkedin-in"></i>
+
                 </div>
+
                 <h3>
                     LinkedIn
                 </h3>
+
                 <a
                     href="https://www.linkedin.com/in/suraj-kumar5048bb248"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Linkdin
+                    LinkedIn
                 </a>
+
                 <p>
+
                     Let's connect
                     <br>
                     professionally.
+
                 </p>
+
             </div>
+
+
         </div>
+
     </section>
 
 
@@ -333,13 +382,22 @@
 
 
 
-            <form class="contact-form">
+            <!-- =================================================
+                 CONTACT FORM
+            ================================================= -->
+
+            <form
+                class="contact-form"
+                id="contactForm"
+            >
 
 
                 <!-- NAME + EMAIL -->
 
                 <div class="form-row">
 
+
+                    <!-- NAME -->
 
                     <div class="form-group">
 
@@ -357,12 +415,15 @@
                             type="text"
                             name="name"
                             placeholder="Enter your name"
+                            autocomplete="name"
                             required
                         >
 
                     </div>
 
 
+
+                    <!-- EMAIL -->
 
                     <div class="form-group">
 
@@ -380,6 +441,7 @@
                             type="email"
                             name="email"
                             placeholder="Enter your email"
+                            autocomplete="email"
                             required
                         >
 
@@ -390,7 +452,9 @@
 
 
 
-                <!-- SUBJECT -->
+                <!-- =================================================
+                     SUBJECT
+                ================================================= -->
 
                 <div class="form-group full-width">
 
@@ -409,23 +473,27 @@
                         required
                     >
 
-                        <option value="">
+                        <option
+                            value=""
+                            disabled
+                            selected
+                        >
                             Select subject
                         </option>
 
-                        <option value="job">
+                        <option value="Job Opportunity">
                             Job Opportunity
                         </option>
 
-                        <option value="project">
+                        <option value="Project Discussion">
                             Project Discussion
                         </option>
 
-                        <option value="collaboration">
+                        <option value="Collaboration">
                             Collaboration
                         </option>
 
-                        <option value="general">
+                        <option value="General Inquiry">
                             General Inquiry
                         </option>
 
@@ -435,7 +503,9 @@
 
 
 
-                <!-- MESSAGE -->
+                <!-- =================================================
+                     MESSAGE
+                ================================================= -->
 
                 <div class="form-group full-width">
 
@@ -452,6 +522,7 @@
                     <textarea
                         name="message"
                         placeholder="Type your message here..."
+                        rows="7"
                         required
                     ></textarea>
 
@@ -459,7 +530,9 @@
 
 
 
-                <!-- BUTTON -->
+                <!-- =================================================
+                     SEND BUTTON
+                ================================================= -->
 
                 <button
                     type="submit"
@@ -519,7 +592,9 @@
 
 
 
-            <!-- GOOGLE MAP -->
+            <!-- =================================================
+                 GOOGLE MAP
+            ================================================= -->
 
             <div class="map-container">
 
@@ -529,14 +604,15 @@
                     loading="lazy"
                     allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
-                >
-                </iframe>
+                ></iframe>
 
             </div>
 
 
 
-            <!-- LOCATION STATUS -->
+            <!-- =================================================
+                 LOCATION STATUS
+            ================================================= -->
 
             <div class="location-status">
 
@@ -584,7 +660,9 @@
 
 
 
-            <!-- LOCATION INFO -->
+            <!-- =================================================
+                 LOCATION INFO
+            ================================================= -->
 
             <div class="location-note">
 
@@ -598,8 +676,10 @@
                     </strong>
 
                     <p>
+
                         The map shows Sector 62, Noida.
                         Automatic device GPS requires JavaScript.
+
                     </p>
 
                 </div>
@@ -627,7 +707,9 @@
     <div class="footer-container">
 
 
-        <!-- BRAND -->
+        <!-- =================================================
+             BRAND
+        ================================================= -->
 
         <div class="footer-brand">
 
@@ -646,9 +728,11 @@
 
 
             <h3>
+
                 Data Analyst
                 <span>|</span>
                 B.Tech CSE
+
             </h3>
 
 
@@ -661,7 +745,9 @@
 
 
 
-        <!-- QUICK LINKS -->
+        <!-- =================================================
+             QUICK LINKS
+        ================================================= -->
 
         <div class="footer-column">
 
@@ -706,7 +792,9 @@
 
 
 
-        <!-- CONNECT -->
+        <!-- =================================================
+             CONNECT
+        ================================================= -->
 
         <div class="footer-column">
 
@@ -715,19 +803,25 @@
             </h3>
 
 
+            <!-- LINKEDIN -->
+
             <a
                 href="https://www.linkedin.com/in/suraj-kumar5048bb248"
                 target="_blank"
                 rel="noopener noreferrer"
             >
+
                 <i class="fa-brands fa-linkedin"></i>
+
                 LinkedIn
+
             </a>
 
 
-            <a
-                href="#"
-            >
+
+            <!-- GITHUB -->
+
+            <a href="#">
 
                 <i class="fa-brands fa-github"></i>
 
@@ -736,9 +830,10 @@
             </a>
 
 
-            <a
-                href="mailto:kumarsuraj2031k@gmail.com"
-            >
+
+            <!-- EMAIL -->
+
+            <a href="mailto:kumarsuraj2031k@gmail.com">
 
                 <i class="fa-solid fa-envelope"></i>
 
@@ -750,7 +845,9 @@
 
 
 
-        <!-- QUOTE -->
+        <!-- =================================================
+             QUOTE
+        ================================================= -->
 
         <div class="footer-quote">
 
@@ -769,24 +866,41 @@
 
 
 
-    <!-- FOOTER BOTTOM -->
+    <!-- =================================================
+         FOOTER BOTTOM
+    ================================================= -->
 
     <div class="footer-bottom">
 
-
         <p>
+
             © 2026 Suraj Kumar.
             All rights reserved.
+
         </p>
+
+
         <p>
+
             Made with
             <i class="fa-solid fa-heart"></i>
             for Data &amp; Analytics
+
         </p>
+
     </div>
+
 </footer>
+
+
+
+<!-- =====================================================
+     CONTACT JAVASCRIPT
+===================================================== -->
 
 <script src="/JavaScript/Contact/contact.js"></script>
 
+
 </body>
+
 </html>

@@ -1,8 +1,19 @@
+// =====================================================
+// IMPORT MODULES
+// =====================================================
+
+require("dotenv").config();
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 const nodemailer = require("nodemailer");
+
+
+// =====================================================
+// CREATE EXPRESS APP
+// =====================================================
 
 const app = express();
 
@@ -20,7 +31,12 @@ const HOST = process.env.HOST || "localhost";
 // =====================================================
 
 app.use(cors());
+
 app.use(bodyParser.json());
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 
 // =====================================================
@@ -65,7 +81,7 @@ app.use(
 );
 
 
-// Images / Assets / Other files
+// Assets / Images / Files
 app.use(
     "/ASSETS",
     express.static(assetsPath)
@@ -242,6 +258,7 @@ app.get("/contact", (req, res) => {
 
 });
 
+
 // =====================================================
 // CONTACT FORM - SEND EMAIL
 // =====================================================
@@ -249,6 +266,10 @@ app.get("/contact", (req, res) => {
 app.post("/api/contact", async (req, res) => {
 
     try {
+
+        // =================================================
+        // GET FORM DATA
+        // =================================================
 
         const {
             name,
@@ -258,12 +279,49 @@ app.post("/api/contact", async (req, res) => {
         } = req.body;
 
 
-        // Basic validation
-        if (!name || !email || !subject || !message) {
+        // =================================================
+        // VALIDATION
+        // =================================================
+
+        if (
+            !name ||
+            !email ||
+            !subject ||
+            !message
+        ) {
 
             return res.status(400).json({
+
                 success: false,
+
                 message: "All fields are required."
+
+            });
+
+        }
+
+
+        // =================================================
+        // CHECK EMAIL CONFIGURATION
+        // =================================================
+
+        if (
+            !process.env.EMAIL_USER ||
+            !process.env.EMAIL_APP_PASSWORD ||
+            !process.env.EMAIL_TO
+        ) {
+
+            console.error(
+                "Email environment variables are missing."
+            );
+
+            return res.status(500).json({
+
+                success: false,
+
+                message:
+                    "Email configuration is missing on the server."
+
             });
 
         }
@@ -278,108 +336,115 @@ app.post("/api/contact", async (req, res) => {
             service: "gmail",
 
             auth: {
+
                 user: process.env.EMAIL_USER,
+
                 pass: process.env.EMAIL_APP_PASSWORD
+
             }
 
         });
 
 
         // =================================================
-        // EMAIL
+        // VERIFY GMAIL CONNECTION
+        // =================================================
+
+        await transporter.verify();
+
+        console.log(
+            "Gmail connection successful."
+        );
+
+
+        // =================================================
+        // SEND EMAIL
         // =================================================
 
         await transporter.sendMail({
 
-            from: process.env.EMAIL_USER,
+            from:
+                `"Portfolio Website" <${process.env.EMAIL_USER}>`,
 
-            to: process.env.EMAIL_TO,
+            to:
+                process.env.EMAIL_TO,
 
-            replyTo: email,
+            replyTo:
+                email,
 
-            subject: `Portfolio Contact: ${subject}`,
+            subject:
+                `Portfolio Contact: ${subject}`,
 
-            html: `
-                <div style="
-                    font-family: Arial, sans-serif;
-                    padding: 20px;
-                    line-height: 1.6;
-                ">
+            text: `
+New Portfolio Message
+=====================
 
-                    <h2>New Portfolio Message</h2>
+Name: ${name}
 
-                    <hr>
+Email: ${email}
 
-                    <p>
-                        <strong>Name:</strong>
-                        ${name}
-                    </p>
+Subject: ${subject}
 
-                    <p>
-                        <strong>Email:</strong>
-                        ${email}
-                    </p>
+Message:
+${message}
 
-                    <p>
-                        <strong>Subject:</strong>
-                        ${subject}
-                    </p>
+=====================
 
-                    <p>
-                        <strong>Message:</strong>
-                    </p>
-
-                    <div style="
-                        padding: 15px;
-                        background: #f4f4f4;
-                        border-radius: 8px;
-                    ">
-                        ${message}
-                    </div>
-
-                    <hr>
-
-                    <p>
-                        This message was sent from your portfolio website.
-                    </p>
-
-                </div>
+This message was sent from your portfolio website.
             `
 
         });
 
 
         // =================================================
-        // SUCCESS RESPONSE
+        // SUCCESS
         // =================================================
 
-        res.status(200).json({
+        console.log(
+            "Email sent successfully."
+        );
+
+
+        return res.status(200).json({
 
             success: true,
 
-            message: "Message sent successfully."
+            message:
+                "Message sent successfully."
 
         });
 
+    }
 
-    } catch (error) {
+
+    // =====================================================
+    // ERROR
+    // =====================================================
+
+    catch (error) {
 
         console.error(
-            "Email sending error:",
+            "EMAIL ERROR:",
             error
         );
 
-        res.status(500).json({
+
+        return res.status(500).json({
 
             success: false,
 
-            message: "Failed to send message."
+            message:
+                "Failed to send message.",
+
+            error:
+                error.message
 
         });
 
     }
 
 });
+
 
 // =====================================================
 // 404 ERROR
@@ -416,7 +481,7 @@ if (require.main === module) {
 
 
 // =====================================================
-// VERCEL
+// VERCEL EXPORT
 // =====================================================
 
 module.exports = app;
