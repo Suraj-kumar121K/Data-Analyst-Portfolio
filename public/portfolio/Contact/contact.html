@@ -56,7 +56,6 @@
 
     <div class="navbar-container">
 
-
         <!-- LOGO -->
 
         <a
@@ -133,11 +132,9 @@
 
     <section class="contact-hero">
 
-
         <!-- LEFT -->
 
         <div class="hero-content">
-
 
             <div class="hero-badge">
 
@@ -178,7 +175,6 @@
 
             </p>
 
-
         </div>
 
 
@@ -194,7 +190,6 @@
 
         </div>
 
-
     </section>
 
 
@@ -205,9 +200,7 @@
 
     <section class="contact-information">
 
-
         <div class="section-heading">
-
 
             <div class="heading-icon">
 
@@ -228,7 +221,6 @@
 
             </div>
 
-
         </div>
 
 
@@ -236,9 +228,7 @@
         <div class="contact-cards">
 
 
-            <!-- =================================================
-                 PHONE
-            ================================================= -->
+            <!-- PHONE -->
 
             <div class="contact-card">
 
@@ -264,9 +254,7 @@
 
 
 
-            <!-- =================================================
-                 EMAIL
-            ================================================= -->
+            <!-- EMAIL -->
 
             <div class="contact-card">
 
@@ -296,9 +284,7 @@
 
 
 
-            <!-- =================================================
-                 LINKEDIN
-            ================================================= -->
+            <!-- LINKEDIN -->
 
             <div class="contact-card">
 
@@ -330,7 +316,6 @@
 
             </div>
 
-
         </div>
 
     </section>
@@ -350,9 +335,7 @@
 
         <div class="message-box">
 
-
             <div class="box-heading">
-
 
                 <div class="heading-icon">
 
@@ -376,7 +359,6 @@
                     </span>
 
                 </div>
-
 
             </div>
 
@@ -446,7 +428,6 @@
                         >
 
                     </div>
-
 
                 </div>
 
@@ -563,7 +544,6 @@
 
             <div class="box-heading">
 
-
                 <div class="heading-icon">
 
                     <i class="fa-solid fa-location-dot"></i>
@@ -578,7 +558,7 @@
                     </h2>
 
                     <p>
-                        My current location
+                        My location
                     </p>
 
                     <span>
@@ -586,7 +566,6 @@
                     </span>
 
                 </div>
-
 
             </div>
 
@@ -599,6 +578,7 @@
             <div class="map-container">
 
                 <iframe
+                    id="mapFrame"
                     src="https://www.google.com/maps?q=Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh%2C%20India&output=embed"
                     title="Sector 62 Noida Map"
                     loading="lazy"
@@ -624,11 +604,11 @@
 
                     <div>
 
-                        <strong>
+                        <strong id="locationStatus">
                             Currently in: Sector 62, Noida
                         </strong>
 
-                        <small>
+                        <small id="locationCountry">
                             Uttar Pradesh, India
                         </small>
 
@@ -661,7 +641,7 @@
 
 
             <!-- =================================================
-                 LOCATION INFO
+                 CURRENT LOCATION BUTTON
             ================================================= -->
 
             <div class="location-note">
@@ -672,15 +652,30 @@
                 <div>
 
                     <strong>
-                        Location displayed on map
+                        Find Your Current Location
                     </strong>
 
-                    <p>
+                    <p id="locationMessage">
 
-                        The map shows Sector 62, Noida.
-                        Automatic device GPS requires JavaScript.
+                        Click the button below to allow
+                        your browser to detect your location.
 
                     </p>
+
+
+                    <button
+                        type="button"
+                        id="getLocation"
+                        class="location-button"
+                    >
+
+                        <i class="fa-solid fa-location-crosshairs"></i>
+
+                        <span>
+                            Get My Location
+                        </span>
+
+                    </button>
 
                 </div>
 
@@ -707,12 +702,9 @@
     <div class="footer-container">
 
 
-        <!-- =================================================
-             BRAND
-        ================================================= -->
+        <!-- BRAND -->
 
         <div class="footer-brand">
-
 
             <a
                 href="/"
@@ -740,14 +732,11 @@
                 Turning Data into Insights
             </p>
 
-
         </div>
 
 
 
-        <!-- =================================================
-             QUICK LINKS
-        ================================================= -->
+        <!-- QUICK LINKS -->
 
         <div class="footer-column">
 
@@ -792,9 +781,7 @@
 
 
 
-        <!-- =================================================
-             CONNECT
-        ================================================= -->
+        <!-- CONNECT -->
 
         <div class="footer-column">
 
@@ -845,9 +832,7 @@
 
 
 
-        <!-- =================================================
-             QUOTE
-        ================================================= -->
+        <!-- QUOTE -->
 
         <div class="footer-quote">
 
@@ -866,9 +851,7 @@
 
 
 
-    <!-- =================================================
-         FOOTER BOTTOM
-    ================================================= -->
+    <!-- FOOTER BOTTOM -->
 
     <div class="footer-bottom">
 

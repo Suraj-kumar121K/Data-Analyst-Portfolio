@@ -1,5 +1,11 @@
 // =====================================================
-// IMPORT MODULES
+// SERVER.JS
+// Suraj Kumar | Data Analyst Portfolio
+// =====================================================
+
+
+// =====================================================
+// IMPORT PACKAGES
 // =====================================================
 
 require("dotenv").config();
@@ -34,9 +40,11 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(
+    bodyParser.urlencoded({
+        extended: true
+    })
+);
 
 
 // =====================================================
@@ -63,12 +71,18 @@ const assetsPath = path.join(
     "ASSETS"
 );
 
+// JavaScript folder
+const javascriptPath = path.join(
+    publicPath,
+    "JavaScript"
+);
+
 
 // =====================================================
 // STATIC FILES
 // =====================================================
 
-// Portfolio HTML / static files
+// Portfolio HTML files
 app.use(
     express.static(portfolioPath)
 );
@@ -81,10 +95,19 @@ app.use(
 );
 
 
-// Assets / Images / Files
+// Images / Assets
 app.use(
     "/ASSETS",
     express.static(assetsPath)
+);
+
+
+// JavaScript files
+// Example:
+// /JavaScript/Contact/contact.js
+app.use(
+    "/JavaScript",
+    express.static(javascriptPath)
 );
 
 
@@ -156,39 +179,45 @@ app.get("/projects", (req, res) => {
 
 
 // =====================================================
-// SALES DASHBOARD DETAILS PAGE
+// SALES DASHBOARD PROJECT
 // =====================================================
 
-app.get("/projects/sales-dashboard", (req, res) => {
+app.get(
+    "/projects/sales-dashboard",
+    (req, res) => {
 
-    res.sendFile(
-        path.join(
-            portfolioPath,
-            "Projects",
-            "ProjectDetails",
-            "sales-dashboard.html"
-        )
-    );
+        res.sendFile(
+            path.join(
+                portfolioPath,
+                "Projects",
+                "Sales_Dashboard",
+                "sales-dashboard.html"
+            )
+        );
 
-});
+    }
+);
 
 
 // =====================================================
-// SALES DASHBOARD LIVE PROJECT
+// SALES DASHBOARD LIVE
 // =====================================================
 
-app.get("/projects/sales-dashboard/live", (req, res) => {
+app.get(
+    "/projects/sales-dashboard/live",
+    (req, res) => {
 
-    res.sendFile(
-        path.join(
-            assetsPath,
-            "Projects",
-            "SalesDashboard",
-            "sales_chart.html"
-        )
-    );
+        res.sendFile(
+            path.join(
+                portfolioPath,
+                "Projects",
+                "Sales_Dashboard",
+                "live.html"
+            )
+        );
 
-});
+    }
+);
 
 
 // =====================================================
@@ -260,7 +289,7 @@ app.get("/contact", (req, res) => {
 
 
 // =====================================================
-// CONTACT FORM - SEND EMAIL
+// CONTACT FORM API
 // =====================================================
 
 app.post("/api/contact", async (req, res) => {
@@ -280,7 +309,7 @@ app.post("/api/contact", async (req, res) => {
 
 
         // =================================================
-        // VALIDATION
+        // CHECK REQUIRED FIELDS
         // =================================================
 
         if (
@@ -294,7 +323,8 @@ app.post("/api/contact", async (req, res) => {
 
                 success: false,
 
-                message: "All fields are required."
+                message:
+                    "All fields are required."
 
             });
 
@@ -328,22 +358,25 @@ app.post("/api/contact", async (req, res) => {
 
 
         // =================================================
-        // GMAIL TRANSPORTER
+        // CREATE GMAIL TRANSPORTER
         // =================================================
 
-        const transporter = nodemailer.createTransport({
+        const transporter =
+            nodemailer.createTransport({
 
-            service: "gmail",
+                service: "gmail",
 
-            auth: {
+                auth: {
 
-                user: process.env.EMAIL_USER,
+                    user:
+                        process.env.EMAIL_USER,
 
-                pass: process.env.EMAIL_APP_PASSWORD
+                    pass:
+                        process.env.EMAIL_APP_PASSWORD
 
-            }
+                }
 
-        });
+            });
 
 
         // =================================================
@@ -379,11 +412,14 @@ app.post("/api/contact", async (req, res) => {
 New Portfolio Message
 =====================
 
-Name: ${name}
+Name:
+${name}
 
-Email: ${email}
+Email:
+${email}
 
-Subject: ${subject}
+Subject:
+${subject}
 
 Message:
 ${message}
@@ -414,11 +450,11 @@ This message was sent from your portfolio website.
 
         });
 
+
     }
 
-
     // =====================================================
-    // ERROR
+    // EMAIL ERROR
     // =====================================================
 
     catch (error) {
@@ -434,10 +470,7 @@ This message was sent from your portfolio website.
             success: false,
 
             message:
-                "Failed to send message.",
-
-            error:
-                error.message
+                "Failed to send message."
 
         });
 
@@ -447,7 +480,7 @@ This message was sent from your portfolio website.
 
 
 // =====================================================
-// 404 ERROR
+// 404 PAGE
 // =====================================================
 
 app.use((req, res) => {
@@ -460,7 +493,14 @@ app.use((req, res) => {
 
 
 // =====================================================
-// LOCAL SERVER
+// VERCEL / SERVERLESS EXPORT
+// =====================================================
+
+module.exports = app;
+
+
+// =====================================================
+// START LOCAL SERVER
 // =====================================================
 
 if (require.main === module) {
@@ -478,10 +518,3 @@ if (require.main === module) {
     );
 
 }
-
-
-// =====================================================
-// VERCEL EXPORT
-// =====================================================
-
-module.exports = app;
