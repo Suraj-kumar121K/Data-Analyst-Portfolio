@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sales Dashboard | Live Project</title>
+<link rel="stylesheet" href="/ASSETS/Projects/SalesDashboard/dashboard.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <img src="/ASSETS/logo.png" alt="Suraj Kumar">
+        <div>
+            <strong>Sales Dashboard</strong>
+            <span>Live Analytics Project</span>
+        </div>
+    </div>
+    <a href="/projects/sales-dashboard" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i> Back to Project
+    </a>
+</header>
+
+<main class="dashboard-page">
+    <section class="dashboard-heading">
+        <div>
+            <span class="eyebrow">LIVE SALES ANALYTICS</span>
+            <h1>Sales Performance Dashboard</h1>
+            <p>Analyze sales, profit, orders, products and regional performance using an interactive dashboard.</p>
+        </div>
+        <div class="status"><span></span> Live</div>
+    </section>
+
+    <section class="filters">
+        <div class="filter-group">
+            <label for="regionFilter">Region</label>
+            <select id="regionFilter"><option value="All">All Regions</option></select>
+        </div>
+        <div class="filter-group">
+            <label for="categoryFilter">Category</label>
+            <select id="categoryFilter"><option value="All">All Categories</option></select>
+        </div>
+        <div class="filter-group">
+            <label for="yearFilter">Year</label>
+            <select id="yearFilter"><option value="All">All Years</option></select>
+        </div>
+        <button id="resetBtn" class="reset-btn">
+            <i class="fa-solid fa-rotate-left"></i> Reset
+        </button>
+    </section>
+
+    <section class="kpi-grid">
+        <article class="kpi-card"><div class="kpi-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div><div><span>Total Sales</span><strong id="totalSales">₹0</strong></div></article>
+        <article class="kpi-card"><div class="kpi-icon"><i class="fa-solid fa-chart-line"></i></div><div><span>Total Profit</span><strong id="totalProfit">₹0</strong></div></article>
+        <article class="kpi-card"><div class="kpi-icon"><i class="fa-solid fa-cart-shopping"></i></div><div><span>Total Orders</span><strong id="totalOrders">0</strong></div></article>
+        <article class="kpi-card"><div class="kpi-icon"><i class="fa-solid fa-users"></i></div><div><span>Customers</span><strong id="totalCustomers">0</strong></div></article>
+    </section>
+
+    <section class="charts-grid">
+        <article class="panel large-panel">
+            <div class="panel-header"><div><h2>Sales Trend</h2><p>Monthly sales performance</p></div></div>
+            <div class="line-chart-wrap">
+                <div id="yAxis" class="y-axis"></div>
+                <div class="line-chart">
+                    <div class="line-grid"></div>
+                    <svg id="salesLine" viewBox="0 0 900 300" preserveAspectRatio="none"></svg>
+                    <div id="xAxis" class="x-axis"></div>
+                </div>
+            </div>
+        </article>
+
+        <article class="panel"><div class="panel-header"><div><h2>Category Sales</h2><p>Sales by category</p></div></div><div id="categoryChart" class="bar-chart"></div></article>
+        <article class="panel"><div class="panel-header"><div><h2>Regional Sales</h2><p>Sales by region</p></div></div><div id="regionChart" class="bar-chart"></div></article>
+        <article class="panel"><div class="panel-header"><div><h2>Top Products</h2><p>Highest selling products</p></div></div><div id="productChart" class="bar-chart"></div></article>
+        <article class="panel"><div class="panel-header"><div><h2>Profit by Category</h2><p>Profit contribution</p></div></div><div id="profitChart" class="bar-chart"></div></article>
+    </section>
+
+    <section class="panel table-panel">
+        <div class="panel-header">
+            <div><h2>Sales Details</h2><p>Filtered transaction data</p></div>
+            <span id="rowCount" class="row-count">0 rows</span>
+        </div>
+        <div class="table-scroll">
+            <table>
+                <thead><tr><th>Date</th><th>Order</th><th>Customer</th><th>Product</th><th>Category</th><th>Region</th><th>Sales</th><th>Profit</th></tr></thead>
+                <tbody id="salesTable"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <span>Sales Dashboard</span>
+    <span>Built with HTML, CSS & JavaScript</span>
+</footer>
+
+<script src="/ASSETS/Projects/SalesDashboard/dashboard.js"></script>
+</body>
+</html>
