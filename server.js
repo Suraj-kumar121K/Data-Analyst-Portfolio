@@ -26,7 +26,10 @@ app.use(bodyParser.json());
 // PROJECT PATHS
 // =====================================================
 
-const publicPath = path.join(__dirname, "public");
+const publicPath = path.join(
+    __dirname,
+    "public"
+);
 
 const portfolioPath = path.join(
     publicPath,
@@ -48,7 +51,7 @@ const assetsPath = path.join(
 // STATIC FILES
 // =====================================================
 
-// Portfolio files
+// Portfolio HTML / static files
 app.use(
     express.static(portfolioPath)
 );
@@ -61,7 +64,7 @@ app.use(
 );
 
 
-// Assets / Images
+// Images / Assets / Other files
 app.use(
     "/ASSETS",
     express.static(assetsPath)
@@ -129,6 +132,42 @@ app.get("/projects", (req, res) => {
             portfolioPath,
             "Projects",
             "projects.html"
+        )
+    );
+
+});
+
+
+// =====================================================
+// SALES DASHBOARD DETAILS PAGE
+// =====================================================
+
+app.get("/projects/sales-dashboard", (req, res) => {
+
+    res.sendFile(
+        path.join(
+            portfolioPath,
+            "Projects",
+            "ProjectDetails",
+            "sales-dashboard.html"
+        )
+    );
+
+});
+
+
+// =====================================================
+// SALES DASHBOARD LIVE PROJECT
+// =====================================================
+
+app.get("/projects/sales-dashboard/live", (req, res) => {
+
+    res.sendFile(
+        path.join(
+            assetsPath,
+            "Projects",
+            "SalesDashboard",
+            "sales_chart.html"
         )
     );
 
@@ -222,13 +261,17 @@ app.use((req, res) => {
 
 if (require.main === module) {
 
-    app.listen(PORT, HOST, () => {
+    app.listen(
+        PORT,
+        HOST,
+        () => {
 
-        console.log(
-            `Server running at http://${HOST}:${PORT}`
-        );
+            console.log(
+                `Server running at http://${HOST}:${PORT}`
+            );
 
-    });
+        }
+    );
 
 }
 

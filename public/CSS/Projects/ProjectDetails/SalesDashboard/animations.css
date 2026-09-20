@@ -1,0 +1,513 @@
+/* =========================================================
+   SALES DASHBOARD - ANIMATIONS
+========================================================= */
+
+
+/* =========================================================
+   PAGE ENTRY
+========================================================= */
+
+.hero-left {
+    animation:
+        slideLeft 0.9s ease both;
+}
+
+.dashboard-side {
+    animation:
+        slideRight 1s ease 0.15s both;
+}
+
+
+/* =========================================================
+   HERO LEFT ANIMATION
+========================================================= */
+
+@keyframes slideLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================================================
+   DASHBOARD SIDE ANIMATION
+========================================================= */
+
+@keyframes slideRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================================================
+   DASHBOARD GLOW
+========================================================= */
+
+.dashboard-preview {
+    animation:
+        dashboardGlow 3s ease-in-out infinite;
+}
+
+@keyframes dashboardGlow {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 15px #006eff,
+            0 0 30px rgba(0, 110, 255, 0.30);
+    }
+
+    50% {
+        box-shadow:
+            0 0 25px #006eff,
+            0 0 50px rgba(0, 110, 255, 0.50);
+    }
+
+}
+
+
+/* =========================================================
+   KPI CARDS ENTRY
+========================================================= */
+
+.kpi-card {
+    animation:
+        kpiIn 0.7s ease both;
+}
+
+.kpi-card:nth-child(1) {
+    animation-delay: 0.30s;
+}
+
+.kpi-card:nth-child(2) {
+    animation-delay: 0.40s;
+}
+
+.kpi-card:nth-child(3) {
+    animation-delay: 0.50s;
+}
+
+.kpi-card:nth-child(4) {
+    animation-delay: 0.60s;
+}
+
+
+@keyframes kpiIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   LINE CHART ANIMATION
+========================================================= */
+
+.fake-line-chart span {
+    transform-origin: bottom;
+
+    animation:
+        chartGrow 0.9s ease both;
+}
+
+
+/* INDIVIDUAL BAR DELAYS */
+
+.fake-line-chart span:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.fake-line-chart span:nth-child(2) {
+    animation-delay: 0.20s;
+}
+
+.fake-line-chart span:nth-child(3) {
+    animation-delay: 0.25s;
+}
+
+.fake-line-chart span:nth-child(4) {
+    animation-delay: 0.30s;
+}
+
+.fake-line-chart span:nth-child(5) {
+    animation-delay: 0.35s;
+}
+
+.fake-line-chart span:nth-child(6) {
+    animation-delay: 0.40s;
+}
+
+.fake-line-chart span:nth-child(7) {
+    animation-delay: 0.45s;
+}
+
+.fake-line-chart span:nth-child(8) {
+    animation-delay: 0.50s;
+}
+
+
+@keyframes chartGrow {
+
+    from {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+}
+
+
+/* =========================================================
+   LIVE DEMO BUTTON
+========================================================= */
+
+.live-btn {
+    animation:
+        livePulse 2.5s ease-in-out infinite;
+}
+
+
+@keyframes livePulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 8px rgba(0, 217, 255, 0.40);
+    }
+
+    50% {
+        box-shadow:
+            0 0 18px rgba(0, 217, 255, 0.80),
+            0 0 32px rgba(0, 110, 255, 0.40);
+    }
+
+}
+
+
+/* =========================================================
+   LIVE BUTTON HOVER
+========================================================= */
+
+.live-btn:hover {
+    animation-play-state: paused;
+}
+
+
+/* =========================================================
+   DETAIL CARDS ENTRY
+========================================================= */
+
+.detail-card {
+    animation:
+        cardUp 0.8s ease both;
+}
+
+.overview-card {
+    animation-delay: 0.20s;
+}
+
+.screenshots-card {
+    animation-delay: 0.35s;
+}
+
+.tools-card {
+    animation-delay: 0.50s;
+}
+
+
+@keyframes cardUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   DETAIL CARD HOVER
+========================================================= */
+
+.detail-card {
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   SCREENSHOT HOVER
+========================================================= */
+
+.screenshot {
+    transition:
+        transform 0.3s ease;
+}
+
+.screenshot:hover {
+    transform: translateY(-4px);
+}
+
+
+.screenshot img {
+    transition:
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.screenshot:hover img {
+    box-shadow:
+        0 0 15px rgba(0, 140, 255, 0.70);
+}
+
+
+/* =========================================================
+   TOOLS HOVER
+========================================================= */
+
+.tool > i,
+.tool > b {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.tool:hover > i,
+.tool:hover > b {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 14px rgba(0, 140, 255, 0.70);
+}
+
+
+/* =========================================================
+   TECHNOLOGY HOVER
+========================================================= */
+
+.technology {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.technology:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   KPI HOVER
+========================================================= */
+
+.kpi-card {
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   BACK BUTTON HOVER
+========================================================= */
+
+.back-btn {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: translateX(-3px);
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.live-btn,
+.code-btn {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        color 0.3s ease;
+}
+
+.live-btn:hover,
+.code-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER ENTRY
+========================================================= */
+
+.footer-container {
+    animation:
+        footerIn 0.8s ease 0.5s both;
+}
+
+
+@keyframes footerIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.footer-links a,
+.footer-connect a {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-connect a:hover {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   SHARE BUTTONS
+========================================================= */
+
+.share-buttons a {
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.share-buttons a:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   SLIDER BUTTONS
+========================================================= */
+
+.slider-controls button {
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.slider-controls button:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   NAVBAR LOGO
+========================================================= */
+
+.brand img {
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.brand img:hover {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   NAVIGATION LINK
+========================================================= */
+
+.nav-menu a {
+    transition:
+        color 0.3s ease;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-delay: 0s !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+        transition-delay: 0s !important;
+
+        scroll-behavior: auto !important;
+    }
+
+}

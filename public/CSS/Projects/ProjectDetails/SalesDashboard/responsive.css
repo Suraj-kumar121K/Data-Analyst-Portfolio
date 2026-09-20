@@ -1,0 +1,513 @@
+/* =========================================================
+   SALES DASHBOARD - RESPONSIVE DESIGN
+   ========================================================= */
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1600px AND ABOVE
+   ========================================================= */
+
+@media (min-width: 1600px) {
+
+    .project-hero {
+        max-width: 1400px;
+
+        grid-template-columns:
+            0.9fr
+            1.4fr;
+    }
+
+    .details-grid,
+    .footer-container {
+        max-width: 1350px;
+    }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+   1001px - 1200px
+   ========================================================= */
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+
+    .navbar {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .project-hero {
+        padding-left: 25px;
+        padding-right: 25px;
+
+        gap: 25px;
+    }
+
+    .hero-left h1 {
+        font-size: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   801px - 1000px
+   ========================================================= */
+
+@media (min-width: 801px) and (max-width: 1000px) {
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .nav-menu {
+        gap: 13px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .project-hero {
+        grid-template-columns: 1fr;
+
+        padding: 30px 35px;
+    }
+
+    .hero-left {
+        text-align: center;
+    }
+
+    .back-btn,
+    .featured-badge {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .technology-list {
+        justify-content: center;
+    }
+
+    .project-info {
+        justify-content: center;
+    }
+
+
+    /* ---------- DASHBOARD ---------- */
+
+    .dashboard-side {
+        max-width: 800px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* ---------- DETAILS ---------- */
+
+    .details-grid {
+        grid-template-columns: 1fr 1fr;
+
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .tools-card {
+        grid-column: span 2;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-container {
+        grid-template-columns:
+            1fr
+            1fr
+            1fr;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   800px AND BELOW
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        height: auto;
+
+        min-height: 70px;
+
+        padding: 10px 20px;
+
+        flex-wrap: wrap;
+    }
+
+    .nav-menu {
+        width: 100%;
+
+        height: 35px;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 4px 15px;
+    }
+
+    .nav-menu a {
+        height: 32px;
+
+        font-size: 11px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .project-hero {
+        grid-template-columns: 1fr;
+
+        padding: 25px 20px;
+    }
+
+    .hero-left {
+        text-align: center;
+    }
+
+    .back-btn,
+    .featured-badge {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .technology-list {
+        justify-content: center;
+    }
+
+    .project-info {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    /* ---------- DETAILS ---------- */
+
+    .details-grid {
+        grid-template-columns: 1fr;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .tools-card {
+        grid-column: auto;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   601px - 800px
+   ========================================================= */
+
+@media (min-width: 601px) and (max-width: 800px) {
+
+    .hero-left h1 {
+        font-size: 42px;
+    }
+
+    .dashboard-side {
+        width: 100%;
+    }
+
+    .dashboard-preview {
+        width: 100%;
+    }
+
+    .screenshots-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns:
+            1fr
+            1fr;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   401px - 600px
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* ---------- LOGO ---------- */
+
+    .brand img {
+        width: 50px;
+        height: 45px;
+    }
+
+
+    /* ---------- NAVBAR ---------- */
+
+    .nav-menu {
+        gap: 2px 9px;
+    }
+
+    .nav-menu a {
+        font-size: 10px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero-left h1 {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+
+    /* ---------- PROJECT INFO ---------- */
+
+    .project-info {
+        gap: 12px;
+    }
+
+    .info-item {
+        padding-right: 10px;
+    }
+
+
+    /* ---------- DASHBOARD ---------- */
+
+    .dashboard-preview {
+        min-height: 320px;
+
+        padding: 8px;
+
+        border-radius: 13px;
+    }
+
+    .dashboard-main {
+        grid-template-columns:
+            70px
+            1fr;
+    }
+
+    .dashboard-menu div {
+        font-size: 7px;
+    }
+
+
+    /* ---------- KPI ---------- */
+
+    .kpi-card strong {
+        font-size: 11px;
+    }
+
+    .kpi-card small {
+        font-size: 6px;
+    }
+
+
+    /* ---------- BUTTONS ---------- */
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .live-btn,
+    .code-btn {
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+
+    /* ---------- SCREENSHOTS ---------- */
+
+    .screenshots-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .screenshot img {
+        height: 150px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        padding: 25px 20px;
+    }
+
+
+    /* ---------- COPYRIGHT ---------- */
+
+    .copyright {
+        min-height: 55px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 5px;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   400px AND BELOW
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    /* ---------- NAVBAR ---------- */
+
+    .nav-menu {
+        gap: 2px 6px;
+    }
+
+    .nav-menu a {
+        font-size: 9px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero-left h1 {
+        font-size: 32px;
+    }
+
+
+    /* ---------- TECHNOLOGY ---------- */
+
+    .technology {
+        min-width: 90px;
+
+        height: 38px;
+
+        font-size: 11px;
+    }
+
+
+    /* ---------- PROJECT INFO ---------- */
+
+    .project-info {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .info-item {
+        border-right: none;
+
+        border-bottom:
+            1px solid #164d83;
+
+        padding:
+            0 0 8px;
+    }
+
+    .info-item:last-child {
+        border-bottom: none;
+    }
+
+}
+
+
+/* =========================================================
+   SHORT DESKTOP
+   801px+ WIDTH / 800px- HEIGHT
+   ========================================================= */
+
+@media (min-width: 801px) and (max-height: 800px) {
+
+    .project-hero {
+        min-height: 430px;
+
+        padding-top: 25px;
+    }
+
+    .dashboard-preview {
+        min-height: 330px;
+    }
+
+    .dashboard-main {
+        min-height: 270px;
+    }
+
+}
+
+
+/* =========================================================
+   SHORT DESKTOP
+   801px+ WIDTH / 680px- HEIGHT
+   ========================================================= */
+
+@media (min-width: 801px) and (max-height: 680px) {
+
+    .navbar {
+        height: 62px;
+    }
+
+    .project-hero {
+        min-height: 380px;
+
+        padding-top: 18px;
+    }
+
+    .hero-left h1 {
+        font-size: 42px;
+    }
+
+    .dashboard-preview {
+        min-height: 300px;
+    }
+
+}

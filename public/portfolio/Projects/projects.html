@@ -2,30 +2,23 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>Projects | Suraj Kumar</title>
 
-    <title>Suraj Kumar | Projects</title>
+    <!-- ================= PROJECT CSS ================= -->
 
-    <!-- Main CSS -->
-    <link rel="stylesheet"
-          href="/CSS/Projects/style.css">
+    <link rel="stylesheet" href="/CSS/Projects/style.css">
+    <link rel="stylesheet" href="/CSS/Projects/animations.css">
+    <link rel="stylesheet" href="/CSS/Projects/responsive.css">
 
-    <!-- Animation CSS -->
-    <link rel="stylesheet"
-          href="/CSS/Projects/animations.css">
+    <!-- ================= FONT AWESOME ================= -->
 
-    <!-- Responsive CSS -->
-    <link rel="stylesheet"
-          href="/CSS/Projects/responsive.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 </head>
 
 
@@ -38,317 +31,907 @@
 
 <header class="navbar">
 
-    <div class="nav-container">
+    <div class="brand">
 
+        <a href="/" aria-label="Go to Home">
 
-        <!-- Logo -->
+            <img
+                src="/ASSETS/logo.png"
+                alt="Suraj Kumar Logo"
+            >
 
-        <a href="/" class="logo">
-            <span>Suraj</span> Kumar
         </a>
 
-
-        <!-- Navigation -->
-
-        <nav class="nav-menu">
-
-            <a href="/">
-                Home
-            </a>
-
-            <a href="/home">
-                About
-            </a>
-
-            <a href="/skills">
-                Skills
-            </a>
-
-            <a href="/projects" class="active">
-                Projects
-            </a>
-
-            <a href="/experience">
-                Experience
-            </a>
-
-            <a href="/education">
-                Education
-            </a>
-
-            <a href="/resume">
-                Resume
-            </a>
-
-            <a href="/contact">
-                Contact
-            </a>
-
-        </nav>
-
     </div>
+
+
+    <nav class="nav-menu">
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/home">
+            About
+        </a>
+
+        <a href="/skills">
+            Skills
+        </a>
+
+        <a href="/projects" class="active">
+            Projects
+        </a>
+
+        <a href="/experience">
+            Experience
+        </a>
+
+        <a href="/education">
+            Education
+        </a>
+
+        <a href="/resume">
+            Resume
+        </a>
+
+        <a href="/contact">
+            Contact
+        </a>
+
+    </nav>
 
 </header>
 
 
 
 <!-- =====================================================
-     PROJECT SECTION
+     HERO SECTION
 ===================================================== -->
 
-<main>
-
-<section class="projects-section">
+<section class="project-hero">
 
 
-    <!-- Heading -->
+    <!-- HERO TEXT -->
 
-    <div class="projects-heading">
+    <div class="hero-content">
+
+        <div class="hero-badge">
+
+            <i class="fa-solid fa-rocket"></i>
+
+            <span>
+                My Work
+            </span>
+
+        </div>
+
 
         <h1>
-            My Projects
+
+            Featured
+
+            <span>
+                Projects
+            </span>
+
         </h1>
 
+
         <p>
-            Here are some of the projects I have worked on
-            to showcase my data analysis skills.
+
+            Projects I've built while learning
+
+            <br>
+
+            Data Analytics, Python & Web Development.
+
         </p>
 
+
+        <div class="hero-line"></div>
+
     </div>
+
+
+
+    <!-- HERO VISUAL -->
+
+    <div class="hero-visual">
+
+
+        <div class="glow-circle circle-one"></div>
+
+        <div class="glow-circle circle-two"></div>
+
+
+
+        <!-- CODE WINDOW -->
+
+        <div class="code-window">
+
+
+            <div class="code-top">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+
+
+            <div class="code-lines">
+
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+            </div>
+
+
+
+            <div class="chart-bars">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PYTHON -->
+
+        <div class="tech-icon python-icon">
+
+            <i class="fa-brands fa-python"></i>
+
+        </div>
+
+
+
+        <!-- POWER BI -->
+
+        <div class="tech-icon powerbi-icon">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+        </div>
+
+
+
+        <!-- EXCEL -->
+
+        <div class="tech-icon excel-icon">
+
+            <i class="fa-solid fa-file-excel"></i>
+
+        </div>
+
+
+
+        <!-- WEB -->
+
+        <div class="tech-icon web-icon">
+
+            <i class="fa-solid fa-globe"></i>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- HERO SLOGAN -->
+
+    <div class="hero-slogan">
+
+        <span>
+            Build
+        </span>
+
+        <span>
+            Learn
+        </span>
+
+        <span>
+            Improve
+        </span>
+
+        <span>
+            Repeat
+        </span>
+
+        <div></div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS SECTION
+===================================================== -->
+
+<main class="projects-container">
 
 
 
     <!-- =================================================
-         PROJECT GRID
+         PROJECT 1
     ================================================== -->
 
-    <div class="projects-grid">
+    <article class="project-card">
 
 
-        <!-- =================================================
-             PROJECT 1
-        ================================================== -->
+        <div class="project-image">
 
-        <article class="project-card">
+            <img
+                src="/ASSETS/Projects/sales-dashboard.png"
+                alt="Sales Dashboard Project"
+            >
 
-            <div class="project-image">
-
-                <div class="excel-box">
-                    <i class="fa-solid fa-file-excel"></i>
-                </div>
-
-                <div class="chart-box">
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                </div>
-
-            </div>
+        </div>
 
 
-            <div class="project-content">
-
-                <h2>
-                    Sales Data Analysis
-                </h2>
-
-                <p>
-                    Analyzed sales data to identify key
-                    insights like top products, city-wise
-                    sales, category performance and trends.
-                </p>
+        <h2>
+            Sales Dashboard
+        </h2>
 
 
-                <div class="tags">
+        <p>
 
-                    <span>Excel</span>
-                    <span>SQL</span>
-                    <span>Python</span>
-                    <span>Power BI</span>
+            Interactive sales dashboard to analyze
+            revenue, performance and trends using
+            Power BI.
 
-                </div>
+        </p>
 
 
-                <a href="#" class="project-link">
-                    View Project
-                    <i class="fa-solid fa-arrow-right"></i>
+        <div class="tags">
+
+            <span>
+                Power BI
+            </span>
+
+            <span>
+                Excel
+            </span>
+
+            <span>
+                DAX
+            </span>
+
+        </div>
+
+
+        <div class="project-buttons">
+
+            <a
+                href="/projects/sales-dashboard"
+                class="btn primary-btn"
+            >
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                View Project
+
+            </a>
+
+
+            <a
+                href="#"
+                class="btn github-btn"
+            >
+
+                <i class="fa-brands fa-github"></i>
+
+                GitHub
+
+            </a>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =================================================
+         PROJECT 2
+    ================================================== -->
+
+    <article class="project-card">
+
+
+        <div class="project-image">
+
+            <img
+                src="/ASSETS/Projects/python-analysis.png"
+                alt="Python Data Analysis Project"
+            >
+
+        </div>
+
+
+        <h2>
+            Python Data Analysis
+        </h2>
+
+
+        <p>
+
+            Data analysis project using Python, Pandas
+            and Matplotlib to extract insights from
+            real-world data.
+
+        </p>
+
+
+        <div class="tags">
+
+            <span>
+                Python
+            </span>
+
+            <span>
+                Pandas
+            </span>
+
+            <span>
+                Matplotlib
+            </span>
+
+        </div>
+
+
+        <div class="project-buttons">
+
+            <a
+                href="#"
+                class="btn primary-btn"
+            >
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                View Project
+
+            </a>
+
+
+            <a
+                href="#"
+                class="btn github-btn"
+            >
+
+                <i class="fa-brands fa-github"></i>
+
+                GitHub
+
+            </a>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =================================================
+         PROJECT 3
+    ================================================== -->
+
+    <article class="project-card">
+
+
+        <div class="project-image">
+
+            <img
+                src="/ASSETS/Projects/portfolio-website.png"
+                alt="Portfolio Website Project"
+            >
+
+        </div>
+
+
+        <h2>
+            Portfolio Website
+        </h2>
+
+
+        <p>
+
+            Personal portfolio website built with
+            HTML and CSS with responsive design
+            and animations.
+
+        </p>
+
+
+        <div class="tags">
+
+            <span>
+                HTML
+            </span>
+
+            <span>
+                CSS
+            </span>
+
+            <span>
+                JavaScript
+            </span>
+
+        </div>
+
+
+        <div class="project-buttons">
+
+            <a
+                href="/"
+                class="btn primary-btn"
+            >
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                View Project
+
+            </a>
+
+
+            <a
+                href="#"
+                class="btn github-btn"
+            >
+
+                <i class="fa-brands fa-github"></i>
+
+                GitHub
+
+            </a>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =================================================
+         PROJECT 4
+    ================================================== -->
+
+    <article class="project-card">
+
+
+        <div class="project-image">
+
+            <img
+                src="/ASSETS/Projects/excel-dashboard.png"
+                alt="Excel Dashboard Project"
+            >
+
+        </div>
+
+
+        <h2>
+            Excel Dashboard
+        </h2>
+
+
+        <p>
+
+            Created an Excel dashboard with charts,
+            KPIs and dynamic insights for better
+            decision making.
+
+        </p>
+
+
+        <div class="tags">
+
+            <span>
+                Excel
+            </span>
+
+            <span>
+                Pivot Table
+            </span>
+
+            <span>
+                Charts
+            </span>
+
+        </div>
+
+
+        <div class="project-buttons">
+
+            <a
+                href="#"
+                class="btn primary-btn"
+            >
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                View Project
+
+            </a>
+
+
+            <a
+                href="#"
+                class="btn github-btn"
+            >
+
+                <i class="fa-brands fa-github"></i>
+
+                GitHub
+
+            </a>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =================================================
+         PROJECT 5
+    ================================================== -->
+
+    <article class="project-card">
+
+
+        <div class="project-image">
+
+            <img
+                src="/ASSETS/Projects/data-cleaning.png"
+                alt="Data Cleaning Project"
+            >
+
+        </div>
+
+
+        <h2>
+            Data Cleaning & Preparation
+        </h2>
+
+
+        <p>
+
+            Cleaned and transformed raw data using
+            Python to make it ready for analysis.
+
+        </p>
+
+
+        <div class="tags">
+
+            <span>
+                Python
+            </span>
+
+            <span>
+                Pandas
+            </span>
+
+            <span>
+                Data Cleaning
+            </span>
+
+        </div>
+
+
+        <div class="project-buttons">
+
+            <a
+                href="#"
+                class="btn primary-btn"
+            >
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                View Project
+
+            </a>
+
+
+            <a
+                href="#"
+                class="btn github-btn"
+            >
+
+                <i class="fa-brands fa-github"></i>
+
+                GitHub
+
+            </a>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =================================================
+         PROJECT 6 - COMING SOON
+    ================================================== -->
+
+    <article class="project-card coming-soon">
+
+
+        <div class="coming-icon">
+
+            <i class="fa-solid fa-rocket"></i>
+
+        </div>
+
+
+        <h2>
+            More Projects Coming Soon
+        </h2>
+
+
+        <p>
+
+            Currently working on more exciting projects
+            in Data Analytics, Machine Learning and
+            Web Development.
+
+        </p>
+
+
+        <div class="tags">
+
+            <span>
+                Data Analytics
+            </span>
+
+            <span>
+                ML
+            </span>
+
+            <span>
+                Web Dev
+            </span>
+
+        </div>
+
+
+        <div class="project-buttons single">
+
+            <a
+                href="#"
+                class="btn stay-btn"
+            >
+
+                <i class="fa-regular fa-clock"></i>
+
+                Stay Tuned
+
+            </a>
+
+        </div>
+
+    </article>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-container">
+
+
+        <!-- FOOTER BRAND -->
+
+        <div class="footer-brand">
+
+
+            <div class="footer-logo">
+
+                <a
+                    href="/"
+                    aria-label="Go to Home"
+                >
+
+                    <img
+                        src="/ASSETS/logo.png"
+                        alt="Suraj Kumar Logo"
+                    >
+
                 </a>
 
             </div>
 
-        </article>
+
+            <p>
+                Data Analyst | B.Tech CSE
+            </p>
+
+
+            <span class="footer-slogan">
+                Turning Data into Insights
+            </span>
+
+        </div>
 
 
 
-        <!-- =================================================
-             PROJECT 2
-        ================================================== -->
+        <!-- QUICK LINKS -->
 
-        <article class="project-card">
+        <div class="footer-links">
 
-            <div class="project-image">
+            <h3>
+                Quick Links
+            </h3>
 
-                <div class="database-icon">
-                    <i class="fa-solid fa-database"></i>
+
+            <div class="footer-columns">
+
+
+                <div>
+
+                    <a href="/">
+                        Home
+                    </a>
+
+                    <a href="/home">
+                        About
+                    </a>
+
+                    <a href="/skills">
+                        Skills
+                    </a>
+
+                    <a href="/projects">
+                        Projects
+                    </a>
+
                 </div>
 
-                <div class="clean-icon">
-                    <i class="fa-solid fa-broom"></i>
+
+                <div>
+
+                    <a href="/experience">
+                        Experience
+                    </a>
+
+                    <a href="/education">
+                        Education
+                    </a>
+
+                    <a href="/resume">
+                        Resume
+                    </a>
+
+                    <a href="/contact">
+                        Contact
+                    </a>
+
                 </div>
+
 
             </div>
 
-
-            <div class="project-content">
-
-                <h2>
-                    Data Cleaning Project
-                </h2>
-
-                <p>
-                    Cleaned and structured raw data,
-                    handled missing values, duplicates,
-                    converted data types and prepared
-                    data for analysis.
-                </p>
-
-
-                <div class="tags">
-
-                    <span>Excel</span>
-                    <span>Power Query</span>
-                    <span>Pandas</span>
-
-                </div>
-
-
-                <a href="#" class="project-link">
-                    View Project
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-            </div>
-
-        </article>
+        </div>
 
 
 
-        <!-- =================================================
-             PROJECT 3
-        ================================================== -->
+        <!-- SOCIAL LINKS -->
 
-        <article class="project-card">
+        <div class="connect">
 
-            <div class="project-image">
-
-                <div class="dashboard-icon">
-
-                    <i class="fa-solid fa-chart-line"></i>
-
-                    <div class="mini-bars">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                </div>
-
-            </div>
+            <h3>
+                Connect With Me
+            </h3>
 
 
-            <div class="project-content">
+            <a href="#">
 
-                <h2>
-                    Power BI Sales Dashboard
-                </h2>
+                <i class="fa-brands fa-linkedin"></i>
 
-                <p>
-                    Created an interactive dashboard to
-                    analyze sales, product performance,
-                    regional and monthly trends.
-                </p>
+                LinkedIn
+
+            </a>
 
 
-                <div class="tags">
+            <a href="#">
 
-                    <span>Power BI</span>
-                    <span>Power Query</span>
+                <i class="fa-brands fa-github"></i>
 
-                </div>
+                GitHub
+
+            </a>
 
 
-                <a href="#" class="project-link">
-                    View Project
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
+            <a href="#">
 
-            </div>
+                <i class="fa-brands fa-youtube"></i>
 
-        </article>
+                YouTube
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                Email
+
+            </a>
+
+        </div>
 
 
 
-        <!-- =================================================
-             PROJECT 4
-        ================================================== -->
+        <!-- FOOTER MESSAGE -->
 
-        <article class="project-card">
+        <div class="footer-message">
 
-            <div class="project-image">
-
-                <div class="visual-chart">
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                </div>
-
-            </div>
+            <i class="fa-solid fa-chart-simple"></i>
 
 
-            <div class="project-content">
+            <span>
 
-                <h2>
-                    Data Visualization
-                </h2>
+                Turning Data
 
-                <p>
-                    Built visualizations using Matplotlib
-                    and Seaborn to explore data, find
-                    patterns and present insights clearly.
-                </p>
+                <br>
 
+                into Insights
 
-                <div class="tags">
+            </span>
 
-                    <span>Python</span>
-                    <span>Matplotlib</span>
-                    <span>Seaborn</span>
-
-                </div>
-
-
-                <a href="#" class="project-link">
-                    View Project
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-            </div>
-
-        </article>
+        </div>
 
 
     </div>
 
-</section>
 
-</main>
+
+    <!-- COPYRIGHT -->
+
+    <div class="copyright">
+
+        <span>
+            © 2026 Suraj Kumar. All rights reserved.
+        </span>
+
+
+        <span>
+
+            Made with
+
+            <b>
+                ♥
+            </b>
+
+            for Data & Analytics
+
+        </span>
+
+    </div>
+
+
+</footer>
 
 
 </body>
