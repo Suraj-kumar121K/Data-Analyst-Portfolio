@@ -1,7 +1,7 @@
 /* =========================================================
-   EDUCATION PAGE - RESPONSIVE CSS
+   EDUCATION PAGE - COMPLETE RESPONSIVE CSS
 
-   Responsive widths:
+   Breakpoints:
    1600px+
    1200px - 1599px
    992px - 1199px
@@ -10,9 +10,6 @@
    400px - 575px
    350px - 399px
    Below 350px
-
-   Windows 100% / 125% / 150% / 175%
-   are automatically handled by CSS viewport width.
 ========================================================= */
 
 
@@ -22,6 +19,8 @@
 ========================================================= */
 
 @media (min-width: 1600px) {
+
+    /* ---------- CONTAINERS ---------- */
 
     .nav-container {
         width: min(1500px, calc(100% - 100px));
@@ -48,6 +47,9 @@
         width: min(1500px, calc(100% - 100px));
     }
 
+
+    /* ---------- NAVBAR ---------- */
+
     .logo-image {
         width: 250px;
     }
@@ -59,6 +61,9 @@
     .nav-menu a {
         font-size: 16px;
     }
+
+
+    /* ---------- HERO ---------- */
 
     .education-container {
         gap: 65px;
@@ -73,6 +78,9 @@
         max-height: 500px;
     }
 
+
+    /* ---------- DEGREE ---------- */
+
     .degree-card {
         min-height: 480px;
     }
@@ -81,14 +89,19 @@
         height: 350px;
     }
 
+
+    /* ---------- SCHOOL ---------- */
+
     .marksheet-image {
         height: 245px;
     }
 
+
+    /* ---------- IDENTITY ---------- */
+
     .identity-image {
         height: 185px;
     }
-
 }
 
 
@@ -98,6 +111,8 @@
 ========================================================= */
 
 @media (min-width: 1200px) and (max-width: 1599px) {
+
+    /* ---------- CONTAINERS ---------- */
 
     .nav-container {
         width: calc(100% - 70px);
@@ -205,7 +220,6 @@
     .identity-image {
         height: 165px;
     }
-
 }
 
 
@@ -215,6 +229,8 @@
 ========================================================= */
 
 @media (min-width: 992px) and (max-width: 1199px) {
+
+    /* ---------- CONTAINERS ---------- */
 
     .nav-container {
         width: calc(100% - 40px);
@@ -339,7 +355,6 @@
     .identity-image {
         height: 140px;
     }
-
 }
 
 
@@ -350,11 +365,13 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
 
-    /* ---------- NAVBAR ---------- */
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
 
     .navbar {
         height: auto;
-        min-height: 75px;
+        min-height: 0;
     }
 
     .nav-container {
@@ -362,37 +379,67 @@
 
         padding: 12px 0;
 
+        display: flex;
         flex-direction: column;
+        align-items: center;
 
         gap: 10px;
     }
 
+    .logo {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .logo-image {
         width: 205px;
+        height: auto;
+        display: block;
     }
 
     .nav-menu {
         width: 100%;
 
+        display: flex;
         justify-content: center;
+        align-items: center;
 
         flex-wrap: wrap;
 
         gap: 8px 17px;
+
+        margin: 0;
+        padding: 0;
     }
 
     .nav-menu a {
+        position: relative;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
         padding: 6px 0 11px;
 
         font-size: 13px;
+        line-height: 1;
+
+        white-space: nowrap;
     }
 
     .nav-menu a.active::after {
         bottom: 0;
+        height: 3px;
+        width: 100%;
     }
 
 
-    /* ---------- HERO ---------- */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .education-hero {
         padding: 35px 0 30px;
@@ -410,9 +457,7 @@
 
     .education-content {
         display: flex;
-
         flex-direction: column;
-
         align-items: center;
     }
 
@@ -455,14 +500,15 @@
 
     .education-hero-image img {
         width: 100%;
-
         height: 100%;
 
         object-fit: contain;
     }
 
 
-    /* ---------- DEGREE ---------- */
+    /* =====================================================
+       DEGREE
+    ===================================================== */
 
     .degree-section {
         padding-top: 15px;
@@ -482,7 +528,6 @@
         padding-bottom: 22px;
 
         border-right: none;
-
         border-bottom: 1px solid #0077bd;
     }
 
@@ -498,7 +543,9 @@
     }
 
 
-    /* ---------- SCHOOL ---------- */
+    /* =====================================================
+       SCHOOL
+    ===================================================== */
 
     .school-grid {
         width: calc(100% - 40px);
@@ -517,7 +564,9 @@
     }
 
 
-    /* ---------- IDENTITY ---------- */
+    /* =====================================================
+       IDENTITY
+    ===================================================== */
 
     .identity-container {
         width: calc(100% - 40px);
@@ -538,14 +587,14 @@
     }
 
 
-    /* ---------- FOOTER ---------- */
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     .footer-container {
         width: calc(100% - 40px);
 
-        grid-template-columns:
-            1.2fr
-            1fr;
+        grid-template-columns: 1.2fr 1fr;
 
         gap: 30px;
     }
@@ -561,10 +610,7 @@
 
         min-height: auto;
 
-        padding:
-            25px
-            0
-            0;
+        padding: 25px 0 0;
 
         border-left: none;
 
@@ -573,14 +619,12 @@
 
     .footer-quote::before {
         left: 0;
-
         top: 10px;
     }
 
     .footer-bottom {
         width: calc(100% - 40px);
     }
-
 }
 
 
@@ -591,52 +635,85 @@
 
 @media (min-width: 576px) and (max-width: 767px) {
 
-    /* ---------- NAVBAR ---------- */
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
 
     .navbar {
         height: auto;
-
-        min-height: 70px;
+        min-height: 0;
     }
 
     .nav-container {
         width: calc(100% - 28px);
 
-        padding: 10px 0;
+        padding: 10px 0 12px;
 
+        display: flex;
         flex-direction: column;
+        align-items: center;
 
         gap: 10px;
     }
 
+    .logo {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .logo-image {
-        width: 185px;
+        width: 175px;
+        height: auto;
+
+        display: block;
     }
 
     .nav-menu {
         width: 100%;
 
+        display: flex;
         justify-content: center;
+        align-items: center;
 
         flex-wrap: wrap;
 
-        gap: 8px 14px;
+        gap: 6px 14px;
+
+        margin: 0;
+        padding: 0;
     }
 
     .nav-menu a {
-        padding: 6px 0 10px;
+        position: relative;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 5px 0 9px;
 
         font-size: 11px;
+
+        line-height: 1;
+
+        white-space: nowrap;
     }
 
     .nav-menu a.active::after {
         bottom: 0;
 
-        height: 3px;
+        height: 2px;
+
+        width: 100%;
     }
 
 
-    /* ---------- HERO ---------- */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .education-hero {
         padding: 28px 0 25px;
@@ -654,9 +731,7 @@
 
     .education-content {
         display: flex;
-
         flex-direction: column;
-
         align-items: center;
     }
 
@@ -682,7 +757,6 @@
 
     .education-intro {
         font-size: 13px;
-
         line-height: 1.65;
     }
 
@@ -699,14 +773,15 @@
 
     .education-hero-image img {
         width: 100%;
-
         height: 100%;
 
         object-fit: contain;
     }
 
 
-    /* ---------- DEGREE ---------- */
+    /* =====================================================
+       DEGREE
+    ===================================================== */
 
     .degree-card {
         width: calc(100% - 28px);
@@ -736,7 +811,6 @@
 
     .degree-badge {
         width: 100%;
-
         text-align: center;
     }
 
@@ -745,45 +819,183 @@
     }
 
 
-    /* ---------- SCHOOL ---------- */
+    /* =====================================================
+       10TH + 12TH
+       ONE BELOW ANOTHER
+    ===================================================== */
 
     .school-grid {
         width: calc(100% - 28px);
 
-        grid-template-columns: 1fr;
+        display: grid;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 22px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .school-card {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        margin: 0;
+
+        padding: 18px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .school-heading {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 5px;
+
+        text-align: left;
+    }
+
+    .school-heading h2,
+    .school-heading p {
+        margin: 0;
     }
 
     .school-content {
-        grid-template-columns: 1fr;
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 18px;
+
+        align-items: start;
+    }
+
+    .school-details {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+    .marksheet-wrapper,
+    .marksheet-box {
+        width: 100%;
+
+        min-width: 0;
+
+        margin: 0 auto;
     }
 
     .marksheet-image {
-        height: 200px;
+        width: 100%;
+
+        height: auto;
+
+        max-height: 220px;
+
+        object-fit: contain;
+
+        display: block;
+
+        margin: 0 auto;
     }
 
 
-    /* ---------- IDENTITY ---------- */
+    /* =====================================================
+       IDENTITY
+       ONE BELOW ANOTHER
+    ===================================================== */
 
     .identity-container {
         width: calc(100% - 28px);
+
+        box-sizing: border-box;
+
+        margin-left: auto;
+        margin-right: auto;
 
         padding: 20px;
     }
 
     .identity-grid {
-        grid-template-columns: 1fr;
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 20px;
+
+        margin: 0;
     }
 
     .identity-content {
-        grid-template-columns: 1fr;
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 18px;
+
+        align-items: start;
+    }
+
+    .identity-card {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        margin: 0;
+
+        padding: 18px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 14px;
     }
 
     .identity-image {
-        height: 190px;
+        width: 100%;
+
+        height: auto;
+
+        max-height: 200px;
+
+        object-fit: contain;
+
+        display: block;
+
+        margin: 0 auto;
+    }
+
+    .identity-header {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .identity-header h2,
+    .identity-header p {
+        margin-left: 0;
+        margin-right: 0;
     }
 
 
-    /* ---------- BUTTONS ---------- */
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
 
     .education-button,
     .small-button {
@@ -791,7 +1003,9 @@
     }
 
 
-    /* ---------- FOOTER ---------- */
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     .footer-container {
         width: calc(100% - 28px);
@@ -831,10 +1045,7 @@
 
         min-height: auto;
 
-        padding:
-            25px
-            0
-            5px;
+        padding: 25px 0 5px;
 
         align-items: center;
 
@@ -864,7 +1075,6 @@
 
         gap: 6px;
     }
-
 }
 
 
@@ -875,29 +1085,110 @@
 
 @media (min-width: 400px) and (max-width: 575px) {
 
-    /* ---------- NAVBAR ---------- */
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    .navbar {
+        height: auto;
+        min-height: 0;
+    }
 
     .nav-container {
         width: calc(100% - 20px);
+
+        padding: 9px 0 11px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 9px;
+    }
+
+    .logo {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .logo-image {
-        width: 170px;
+        width: 160px;
+        height: auto;
+        display: block;
     }
 
     .nav-menu {
-        gap: 7px 11px;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 6px 11px;
+
+        margin: 0;
+        padding: 0;
     }
 
     .nav-menu a {
+        position: relative;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 5px 0 8px;
+
         font-size: 10px;
+
+        line-height: 1;
+
+        white-space: nowrap;
+    }
+
+    .nav-menu a.active::after {
+        bottom: 0;
+
+        height: 2px;
+
+        width: 100%;
     }
 
 
-    /* ---------- HERO ---------- */
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .education-hero {
+        padding: 24px 0 22px;
+    }
 
     .education-container {
         width: calc(100% - 20px);
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+        text-align: center;
+    }
+
+    .education-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-badge {
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 11px;
     }
 
     .education-title {
@@ -908,21 +1199,59 @@
         font-size: 17px;
     }
 
-    .education-intro {
-        font-size: 12px;
+    .title-line {
+        margin-left: auto;
+        margin-right: auto;
     }
 
+    .education-intro {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+
+    /* ---------- HERO IMAGE ---------- */
+
     .education-hero-image {
+        width: 100%;
+
+        min-height: 0;
+
         height: 195px;
     }
 
+    .education-hero-image img {
+        width: 100%;
+        height: 100%;
 
-    /* ---------- DEGREE ---------- */
+        object-fit: contain;
+    }
+
+
+    /* =====================================================
+       DEGREE
+    ===================================================== */
 
     .degree-card {
         width: calc(100% - 20px);
 
+        grid-template-columns: 1fr;
+
         padding: 15px;
+
+        gap: 18px;
+    }
+
+    .degree-left {
+        padding-bottom: 16px;
+
+        border-right: none;
+
+        border-bottom: 1px solid #0077bd;
+    }
+
+    .degree-heading {
+        gap: 8px;
     }
 
     .degree-heading h2 {
@@ -931,14 +1260,17 @@
 
     .degree-icon {
         width: 52px;
-
         height: 52px;
 
         font-size: 22px;
     }
 
     .degree-badge {
+        width: 100%;
+
         font-size: 11px;
+
+        text-align: center;
     }
 
     .detail-row p {
@@ -950,35 +1282,140 @@
     }
 
 
-    /* ---------- SCHOOL ---------- */
+    /* =====================================================
+       10TH + 12TH
+    ===================================================== */
 
     .school-grid {
         width: calc(100% - 20px);
+
+        display: grid;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 18px;
+
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .school-card {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        margin: 0;
+
         padding: 18px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 15px;
     }
 
-    .school-heading h2 {
-        font-size: 18px;
+    .school-heading {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+        text-align: left;
     }
 
+    .school-heading h2,
     .school-heading p {
-        font-size: 11px;
+        margin: 0;
+    }
+
+    .school-content {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 15px;
+    }
+
+    .school-details {
+        width: 100%;
     }
 
     .marksheet-image {
-        height: 160px;
+        width: 100%;
+
+        height: auto;
+
+        max-height: 190px;
+
+        object-fit: contain;
+
+        display: block;
+
+        margin: 0 auto;
     }
 
 
-    /* ---------- IDENTITY ---------- */
+    /* =====================================================
+       IDENTITY
+    ===================================================== */
 
     .identity-container {
         width: calc(100% - 20px);
 
+        box-sizing: border-box;
+
         padding: 17px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .identity-grid {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 16px;
+    }
+
+    .identity-content {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 15px;
+    }
+
+    .identity-card {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        margin: 0;
+
+        padding: 16px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .identity-header {
+        width: 100%;
+
+        text-align: center;
     }
 
     .identity-header h2 {
@@ -990,18 +1427,51 @@
     }
 
     .identity-image {
-        height: 160px;
+        width: 100%;
+
+        height: auto;
+
+        max-height: 170px;
+
+        object-fit: contain;
+
+        display: block;
+
+        margin: 0 auto;
     }
 
 
-    /* ---------- FOOTER ---------- */
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     .footer-container {
         width: calc(100% - 20px);
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        text-align: center;
+    }
+
+    .footer-brand {
+        padding-right: 0;
+
+        padding-bottom: 18px;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(0, 191, 255, 0.2);
+
+        align-items: center;
     }
 
     .footer-logo img {
         width: 160px;
+
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .footer-brand h3 {
@@ -1012,12 +1482,38 @@
         font-size: 11px;
     }
 
+    .footer-column {
+        align-items: center;
+    }
+
     .footer-column h3 {
         font-size: 14px;
     }
 
     .footer-column a {
         font-size: 11px;
+    }
+
+    .footer-quote {
+        grid-column: auto;
+
+        min-height: auto;
+
+        padding: 23px 0 5px;
+
+        align-items: center;
+
+        border-left: none;
+
+        border-top: 1px solid rgba(0, 191, 255, 0.2);
+    }
+
+    .footer-quote::before {
+        left: 50%;
+
+        top: 8px;
+
+        transform: translateX(-50%);
     }
 
     .footer-quote p {
@@ -1029,13 +1525,22 @@
     }
 
     .footer-bottom {
+        width: 100%;
+
         padding: 11px 10px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 5px;
     }
 
     .footer-bottom p {
         font-size: 9px;
     }
-
 }
 
 
@@ -1046,29 +1551,110 @@
 
 @media (max-width: 399px) {
 
-    /* ---------- NAVBAR ---------- */
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    .navbar {
+        height: auto;
+        min-height: 0;
+    }
 
     .nav-container {
         width: calc(100% - 16px);
+
+        padding: 8px 0 10px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 8px;
+    }
+
+    .logo {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .logo-image {
-        width: 150px;
+        width: 145px;
+        height: auto;
+        display: block;
     }
 
     .nav-menu {
-        gap: 6px 9px;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 6px 8px;
+
+        margin: 0;
+        padding: 0;
     }
 
     .nav-menu a {
+        position: relative;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 5px 0 8px;
+
         font-size: 9px;
+
+        line-height: 1;
+
+        white-space: nowrap;
+    }
+
+    .nav-menu a.active::after {
+        bottom: 0;
+
+        height: 2px;
+
+        width: 100%;
     }
 
 
-    /* ---------- HERO ---------- */
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .education-hero {
+        padding: 21px 0 20px;
+    }
 
     .education-container {
         width: calc(100% - 16px);
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+        text-align: center;
+    }
+
+    .education-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-badge {
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 10px;
     }
 
     .education-title {
@@ -1079,21 +1665,59 @@
         font-size: 16px;
     }
 
-    .education-intro {
-        font-size: 11px;
+    .title-line {
+        margin-left: auto;
+        margin-right: auto;
     }
 
+    .education-intro {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+
+    /* ---------- HERO IMAGE ---------- */
+
     .education-hero-image {
+        width: 100%;
+
+        min-height: 0;
+
         height: 175px;
     }
 
+    .education-hero-image img {
+        width: 100%;
+        height: 100%;
 
-    /* ---------- DEGREE ---------- */
+        object-fit: contain;
+    }
+
+
+    /* =====================================================
+       DEGREE
+    ===================================================== */
 
     .degree-card {
         width: calc(100% - 16px);
 
+        grid-template-columns: 1fr;
+
         padding: 12px;
+
+        gap: 16px;
+    }
+
+    .degree-left {
+        padding-bottom: 14px;
+
+        border-right: none;
+
+        border-bottom: 1px solid #0077bd;
+    }
+
+    .degree-heading {
+        gap: 7px;
     }
 
     .degree-heading h2 {
@@ -1102,14 +1726,19 @@
 
     .degree-icon {
         width: 48px;
-
         height: 48px;
 
         font-size: 20px;
     }
 
     .degree-badge {
+        width: 100%;
+
         font-size: 10px;
+
+        padding: 7px 9px;
+
+        text-align: center;
     }
 
     .detail-row p {
@@ -1121,55 +1750,181 @@
     }
 
 
-    /* ---------- SCHOOL ---------- */
+    /* =====================================================
+       10TH + 12TH
+    ===================================================== */
 
     .school-grid {
         width: calc(100% - 16px);
+
+        display: grid;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 15px;
+
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .school-card {
-        padding: 15px;
+        width: 100%;
+
+        box-sizing: border-box;
+
+        margin: 0;
+
+        padding: 14px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 13px;
+    }
+
+    .school-heading {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 4px;
+
+        text-align: left;
     }
 
     .school-heading h2 {
         font-size: 16px;
+
+        margin: 0;
     }
 
     .school-heading p {
         font-size: 10px;
+
+        margin: 0;
+    }
+
+    .school-content {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 13px;
+    }
+
+    .school-details {
+        width: 100%;
+
+        min-width: 0;
     }
 
     .marksheet-image {
-        height: 135px;
+        width: 100%;
+
+        height: auto;
+
+        max-height: 165px;
+
+        object-fit: contain;
+
+        display: block;
+
+        margin: 0 auto;
     }
 
 
-    /* ---------- IDENTITY ---------- */
+    /* =====================================================
+       IDENTITY
+    ===================================================== */
 
     .identity-container {
         width: calc(100% - 16px);
 
         padding: 14px;
+
+        box-sizing: border-box;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .identity-grid {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 14px;
+    }
+
+    .identity-content {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 13px;
+    }
+
+    .identity-card {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        margin: 0;
+
+        padding: 14px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .identity-header {
+        width: 100%;
+
+        text-align: center;
     }
 
     .identity-header h2 {
         font-size: 17px;
+
+        margin: 0;
     }
 
     .identity-header p {
         font-size: 9px;
+
+        margin: 5px 0 0;
     }
 
     .identity-image {
-        height: 135px;
+        width: 100%;
+
+        height: auto;
+
+        max-height: 150px;
+
+        object-fit: contain;
+
+        display: block;
+
+        margin: 0 auto;
     }
 
-    .identity-card {
-        padding: 14px;
-    }
 
-
-    /* ---------- BUTTONS ---------- */
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
 
     .education-button,
     .small-button {
@@ -1178,27 +1933,46 @@
         min-height: 40px;
 
         padding-left: 10px;
-
         padding-right: 10px;
 
         font-size: 11px;
     }
 
 
-    /* ---------- FOOTER ---------- */
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     .footer-container {
         width: calc(100% - 16px);
 
+        grid-template-columns: 1fr;
+
         gap: 22px;
 
         padding-top: 28px;
-
         padding-bottom: 24px;
+
+        text-align: center;
+    }
+
+    .footer-brand {
+        padding-right: 0;
+
+        padding-bottom: 18px;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(0, 191, 255, 0.2);
+
+        align-items: center;
     }
 
     .footer-logo img {
         width: 145px;
+
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .footer-brand h3 {
@@ -1209,12 +1983,38 @@
         font-size: 10px;
     }
 
+    .footer-column {
+        align-items: center;
+    }
+
     .footer-column h3 {
         font-size: 13px;
     }
 
     .footer-column a {
         font-size: 10px;
+    }
+
+    .footer-quote {
+        grid-column: auto;
+
+        min-height: auto;
+
+        padding: 22px 0 5px;
+
+        align-items: center;
+
+        border-left: none;
+
+        border-top: 1px solid rgba(0, 191, 255, 0.2);
+    }
+
+    .footer-quote::before {
+        left: 50%;
+
+        top: 7px;
+
+        transform: translateX(-50%);
     }
 
     .footer-quote p {
@@ -1226,13 +2026,22 @@
     }
 
     .footer-bottom {
+        width: 100%;
+
         padding: 10px 8px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 5px;
     }
 
     .footer-bottom p {
         font-size: 8px;
     }
-
 }
 
 
@@ -1247,10 +2056,14 @@
 
     .nav-container {
         width: calc(100% - 12px);
+
+        padding: 7px 0 9px;
+
+        gap: 7px;
     }
 
     .logo-image {
-        width: 135px;
+        width: 130px;
     }
 
     .nav-menu {
@@ -1259,13 +2072,25 @@
 
     .nav-menu a {
         font-size: 8px;
+
+        padding: 4px 0 7px;
+    }
+
+    .nav-menu a.active::after {
+        height: 2px;
     }
 
 
     /* ---------- HERO ---------- */
 
+    .education-hero {
+        padding: 18px 0 18px;
+    }
+
     .education-container {
         width: calc(100% - 12px);
+
+        gap: 12px;
     }
 
     .education-title {
@@ -1285,12 +2110,20 @@
     }
 
 
-    /* ---------- DEGREE ---------- */
+    /* =====================================================
+       DEGREE
+    ===================================================== */
 
     .degree-card {
         width: calc(100% - 12px);
 
         padding: 10px;
+
+        gap: 14px;
+    }
+
+    .degree-heading {
+        gap: 6px;
     }
 
     .degree-heading h2 {
@@ -1299,7 +2132,6 @@
 
     .degree-icon {
         width: 44px;
-
         height: 44px;
 
         font-size: 18px;
@@ -1320,14 +2152,22 @@
     }
 
 
-    /* ---------- SCHOOL ---------- */
+    /* =====================================================
+       10TH + 12TH
+    ===================================================== */
 
     .school-grid {
         width: calc(100% - 12px);
+
+        grid-template-columns: 1fr !important;
+
+        gap: 13px;
     }
 
     .school-card {
-        padding: 12px;
+        padding: 11px;
+
+        gap: 11px;
     }
 
     .school-heading h2 {
@@ -1338,17 +2178,43 @@
         font-size: 9px;
     }
 
+    .school-content {
+        grid-template-columns: 1fr !important;
+
+        gap: 11px;
+    }
+
     .marksheet-image {
-        height: 120px;
+        max-height: 145px;
     }
 
 
-    /* ---------- IDENTITY ---------- */
+    /* =====================================================
+       IDENTITY
+    ===================================================== */
 
     .identity-container {
         width: calc(100% - 12px);
 
         padding: 11px;
+    }
+
+    .identity-grid {
+        grid-template-columns: 1fr !important;
+
+        gap: 12px;
+    }
+
+    .identity-content {
+        grid-template-columns: 1fr !important;
+
+        gap: 11px;
+    }
+
+    .identity-card {
+        padding: 11px;
+
+        gap: 9px;
     }
 
     .identity-header h2 {
@@ -1360,14 +2226,38 @@
     }
 
     .identity-image {
-        height: 120px;
+        max-height: 135px;
     }
 
 
-    /* ---------- FOOTER ---------- */
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
+
+    .education-button,
+    .small-button {
+        width: 100%;
+
+        min-height: 38px;
+
+        padding: 8px;
+
+        font-size: 10px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     .footer-container {
         width: calc(100% - 12px);
+
+        gap: 20px;
+
+        padding-top: 25px;
+
+        padding-bottom: 22px;
     }
 
     .footer-logo img {
@@ -1398,24 +2288,108 @@
         font-size: 9px;
     }
 
+    .footer-bottom {
+        padding: 9px 6px;
+    }
+
     .footer-bottom p {
         font-size: 7px;
     }
+}
 
+
+/* =========================================================
+   MOBILE LANDSCAPE
+========================================================= */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .nav-container {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    .logo-image {
+        width: 125px;
+    }
+
+    .nav-menu {
+        gap: 5px 10px;
+    }
+
+    .nav-menu a {
+        font-size: 9px;
+
+        padding: 4px 0 6px;
+    }
+
+    .education-hero {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .education-hero-image {
+        height: 180px;
+    }
+}
+
+
+/* =========================================================
+   GLOBAL MOBILE OVERFLOW PROTECTION
+========================================================= */
+
+html,
+body {
+    max-width: 100%;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   PAGE SECTION OVERFLOW PROTECTION
+========================================================= */
+
+.navbar,
+.education-page,
+.education-hero,
+.degree-section,
+.school-section,
+.identity-section,
+.footer {
+    max-width: 100%;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   IMAGE PROTECTION
+========================================================= */
+
+@media (max-width: 767px) {
+
+    img {
+        max-width: 100%;
+    }
+
+    .education-hero-image img,
+    .college-image-box img,
+    .marksheet-image,
+    .identity-image {
+        max-width: 100%;
+    }
 }
 
 
 /* =========================================================
    WINDOWS DISPLAY SCALING
 
-   No separate CSS is required for:
-
    100%
    125%
    150%
    175%
 
-   Windows scaling changes the CSS viewport width
-   automatically. The breakpoints above respond to
-   that resulting viewport.
+   CSS viewport automatically changes according
+   to the available CSS width.
 ========================================================= */
