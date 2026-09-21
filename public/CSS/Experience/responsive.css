@@ -431,10 +431,6 @@
         justify-content: center;
         align-items: center;
 
-        /*
-         * Tablet me wrap allowed hai
-         * kyunki screen width mobile se badi hai.
-         */
         flex-wrap: wrap;
 
         gap: 7px 17px;
@@ -672,7 +668,6 @@
 
     /* =================================================
        NAVBAR
-       IMPORTANT:
        ALL 8 LINKS MUST STAY ON ONE LINE
     ================================================= */
 
@@ -720,13 +715,6 @@
         object-fit: contain;
     }
 
-
-    /*
-       VERY IMPORTANT:
-       flex-wrap: nowrap prevents Contact
-       from moving to second line.
-    */
-
     .navbar nav {
         width: 100%;
 
@@ -751,12 +739,7 @@
         overflow: hidden;
     }
 
-
     .navbar nav a {
-        /*
-           Equal width for all 8 links.
-        */
-
         flex: 1 1 0;
 
         min-width: 0;
@@ -786,7 +769,6 @@
 
         overflow: hidden;
     }
-
 
     .navbar nav a.active::after {
         bottom: 0;
@@ -1272,10 +1254,6 @@
         max-height: 47px;
     }
 
-    /*
-       8 links = one line
-    */
-
     .navbar nav {
         width: 100%;
 
@@ -1691,7 +1669,7 @@ img {
    MOBILE NAVBAR FINAL OVERRIDE
    600px AND BELOW
 
-   THIS IS THE IMPORTANT FIX
+   ALL 8 LINKS ONE LINE
 ===================================================== */
 
 @media (max-width: 600px) {
@@ -1746,10 +1724,15 @@ img {
 
 /* =====================================================
    FOOTER SOCIAL FINAL ALIGNMENT
+   ONLY CONTACT / SOCIAL LINKS
 ===================================================== */
 
 .footer-links.social {
     box-sizing: border-box;
+
+    min-width: 0;
+
+    overflow: hidden;
 }
 
 
@@ -1757,16 +1740,25 @@ img {
     box-sizing: border-box;
 
     text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 0;
+
+    white-space: nowrap;
 }
 
 
-/* FONT AWESOME ICONS */
+/* ---------- SOCIAL ICON ---------- */
 
 .footer-links.social a i {
-    flex-shrink: 0;
+    flex: 0 0 28px;
 
     width: 28px;
-
     min-width: 28px;
 
     height: 28px;
@@ -1774,19 +1766,191 @@ img {
     display: inline-flex;
 
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
 
     font-size: 17px;
+
+    line-height: 1;
+
+    color: #00d9ff;
 }
 
 
+/* ---------- SOCIAL TEXT ---------- */
+
 .footer-links.social a span {
-    display: inline-block;
+    display: block;
+
+    flex: 0 1 auto;
+
+    min-width: 0;
 
     white-space: nowrap;
+
+    line-height: 1.2;
+
+    overflow: visible;
+}
+
+
+/* ---------- HOVER ---------- */
+
+.footer-links.social a:hover i {
+    color: #00eaff;
+}
+
+
+/* =====================================================
+   SOCIAL LINKS - TABLET
+===================================================== */
+
+@media (max-width: 850px) and (min-width: 601px) {
+
+    .footer-links.social {
+        width: 100%;
+
+        padding-left: 20px;
+        padding-right: 15px;
+    }
+
+    .footer-links.social a {
+        width: 100%;
+
+        min-height: 30px;
+
+        justify-content: flex-start;
+
+        margin: 2px 0;
+    }
+}
+
+
+/* =====================================================
+   SOCIAL LINKS - MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .footer-links.social {
+        width: 100%;
+
+        padding-left: 15px;
+        padding-right: 15px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        text-align: left;
+    }
+
+    .footer-links.social h3 {
+        width: 100%;
+
+        margin-bottom: 8px;
+
+        text-align: center;
+    }
+
+    .footer-links.social a {
+        width: 150px;
+
+        min-width: 150px;
+
+        min-height: 34px;
+
+        margin: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        gap: 10px;
+
+        text-align: left;
+    }
+
+    .footer-links.social a i {
+        flex: 0 0 28px;
+
+        width: 28px;
+        min-width: 28px;
+
+        height: 28px;
+
+        font-size: 17px;
+    }
+
+    .footer-links.social a span {
+        white-space: nowrap;
+
+        overflow: visible;
+
+        text-overflow: clip;
+    }
+}
+
+
+/* =====================================================
+   SOCIAL LINKS - SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .footer-links.social {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .footer-links.social a {
+        width: 140px;
+
+        min-width: 140px;
+    }
+}
+
+
+/* =====================================================
+   SOCIAL LINKS - VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 320px) {
+
+    .footer-links.social {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .footer-links.social a {
+        width: 130px;
+
+        min-width: 130px;
+
+        min-height: 32px;
+
+        gap: 8px;
+    }
+
+    .footer-links.social a i {
+        flex-basis: 26px;
+
+        width: 26px;
+        min-width: 26px;
+
+        height: 26px;
+
+        font-size: 16px;
+    }
 }
 
 
