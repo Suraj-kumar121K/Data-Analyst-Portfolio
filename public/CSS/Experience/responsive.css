@@ -1,6 +1,6 @@
 /* =====================================================
    EXPERIENCE PAGE
-   RESPONSIVE CSS
+   COMPLETE RESPONSIVE CSS
 ===================================================== */
 
 
@@ -11,23 +11,32 @@
 
 @media (max-width: 1500px) {
 
+    /* ---------- NAVBAR ---------- */
+
     .navbar {
         padding-left: 35px;
         padding-right: 35px;
     }
 
     .navbar nav {
-        gap: 25px;
+        gap: 22px;
     }
 
     .navbar nav a {
         font-size: 14px;
+        white-space: nowrap;
     }
+
+
+    /* ---------- MAIN ---------- */
 
     main {
         padding-left: 25px;
         padding-right: 25px;
     }
+
+
+    /* ---------- HERO ---------- */
 
     .hero h1 {
         font-size: 58px;
@@ -36,6 +45,9 @@
     .hero-image {
         transform: scale(0.95);
     }
+
+
+    /* ---------- EXPERIENCE ---------- */
 
     .experience-container {
         max-width: 1250px;
@@ -50,6 +62,20 @@
             1fr
             auto;
     }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-container {
+        width: calc(100% - 70px);
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .copyright {
+        width: calc(100% - 70px);
+        margin: 0 auto;
+    }
 }
 
 
@@ -59,23 +85,32 @@
 
 @media (max-width: 1200px) {
 
+    /* ---------- NAVBAR ---------- */
+
     .navbar {
         padding-left: 25px;
         padding-right: 25px;
     }
 
     .navbar nav {
-        gap: 18px;
+        gap: 17px;
     }
 
     .navbar nav a {
         font-size: 13px;
+        white-space: nowrap;
     }
+
+
+    /* ---------- MAIN ---------- */
 
     main {
         padding-left: 22px;
         padding-right: 22px;
     }
+
+
+    /* ---------- HERO ---------- */
 
     .hero h1 {
         font-size: 52px;
@@ -84,6 +119,9 @@
     .hero-image {
         transform: scale(0.90);
     }
+
+
+    /* ---------- EXPERIENCE ---------- */
 
     .experience-card {
         grid-template-columns:
@@ -96,6 +134,17 @@
     .tag {
         display: none;
     }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-container {
+        width: calc(100% - 50px);
+    }
+
+    .copyright {
+        width: calc(100% - 50px);
+    }
 }
 
 
@@ -105,20 +154,39 @@
 
 @media (max-width: 1100px) {
 
+    /* ---------- NAVBAR ---------- */
+
     .navbar nav {
-        gap: 16px;
+        gap: 14px;
     }
 
     .navbar nav a {
-        font-size: 13px;
+        font-size: 12px;
     }
+
+
+    /* ---------- HERO ---------- */
 
     .hero h1 {
         font-size: 50px;
     }
 
+
+    /* ---------- EXPERIENCE ---------- */
+
     .experience-card {
         gap: 12px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-container {
+        width: calc(100% - 40px);
+    }
+
+    .copyright {
+        width: calc(100% - 40px);
     }
 }
 
@@ -130,18 +198,23 @@
 
 @media (max-width: 1000px) and (min-width: 851px) {
 
+    /* ---------- NAVBAR ---------- */
+
     .navbar {
         padding-left: 20px;
         padding-right: 20px;
     }
 
     .navbar nav {
-        gap: 13px;
+        gap: 11px;
     }
 
     .navbar nav a {
-        font-size: 12px;
+        font-size: 11px;
     }
+
+
+    /* ---------- HERO ---------- */
 
     .hero h1 {
         font-size: 48px;
@@ -150,6 +223,9 @@
     .hero-image {
         width: 350px;
     }
+
+
+    /* ---------- EXPERIENCE ---------- */
 
     .experience-card {
         grid-template-columns:
@@ -163,6 +239,17 @@
         width: 75px;
         height: 75px;
     }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-container {
+        width: calc(100% - 40px);
+    }
+
+    .copyright {
+        width: calc(100% - 40px);
+    }
 }
 
 
@@ -173,38 +260,55 @@
 
 @media (max-width: 850px) and (min-width: 601px) {
 
-    /* ---------- NAVBAR ---------- */
+    /* =================================================
+       NAVBAR
+    ================================================= */
 
     .navbar {
+        width: 100%;
+
         height: auto;
+        min-height: 0;
 
-        min-height: 70px;
+        padding: 12px 20px;
 
-        padding: 10px 20px;
+        box-sizing: border-box;
+
+        display: flex;
 
         flex-direction: column;
 
         justify-content: center;
 
+        align-items: center;
+
         gap: 10px;
     }
+
 
     .brand {
         width: 100%;
 
+        display: flex;
+
         justify-content: center;
+
+        align-items: center;
     }
 
-    /* Keep logo aspect ratio */
+
     .brand img {
-        width: 65px;
+        width: 170px;
 
         height: auto;
 
-        max-height: 50px;
+        max-height: 55px;
+
+        display: block;
 
         object-fit: contain;
     }
+
 
     .navbar nav {
         width: 100%;
@@ -219,32 +323,54 @@
 
         flex-wrap: wrap;
 
-        gap: 8px 15px;
+        gap: 7px 17px;
+
+        margin: 0;
+
+        padding: 0;
     }
+
 
     .navbar nav a {
         height: auto;
 
-        padding: 5px 0;
+        padding: 6px 0 10px;
 
         font-size: 12px;
+
+        line-height: 1;
+
+        white-space: nowrap;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
     }
+
 
     .navbar nav a.active::after {
-        bottom: -3px;
+        bottom: 0;
 
         height: 3px;
+
+        width: 100%;
     }
 
 
-    /* ---------- MAIN ---------- */
+    /* =================================================
+       MAIN
+    ================================================= */
 
     main {
         padding: 30px 20px;
     }
 
 
-    /* ---------- HERO ---------- */
+    /* =================================================
+       HERO
+    ================================================= */
 
     .hero {
         min-height: auto;
@@ -258,27 +384,33 @@
         gap: 20px;
     }
 
+
     .hero-text {
         width: 100%;
     }
+
 
     .journey {
         margin-left: auto;
         margin-right: auto;
     }
 
+
     .hero h1 {
         font-size: 44px;
     }
+
 
     .hero p {
         font-size: 15px;
     }
 
+
     .hero-line {
         margin-left: auto;
         margin-right: auto;
     }
+
 
     .hero-image {
         width: 100%;
@@ -291,19 +423,25 @@
     }
 
 
-    /* ---------- EXPERIENCE ---------- */
+    /* =================================================
+       EXPERIENCE
+    ================================================= */
 
     .experience-container {
         padding-left: 30px;
+        padding-right: 10px;
     }
+
 
     .timeline-line {
         left: 5px;
     }
 
+
     .timeline-dot {
         left: -38px;
     }
+
 
     .experience-card {
         grid-template-columns:
@@ -313,9 +451,11 @@
         gap: 15px;
     }
 
+
     .vertical-line {
         display: none;
     }
+
 
     .responsibilities {
         grid-column: 1 / -1;
@@ -323,13 +463,16 @@
         padding-top: 5px;
     }
 
+
     .company-logo {
         width: 75px;
         height: 75px;
     }
 
 
-    /* ---------- NEXT STOP ---------- */
+    /* =================================================
+       NEXT STOP
+    ================================================= */
 
     .next-stop {
         padding: 20px;
@@ -341,9 +484,11 @@
         text-align: center;
     }
 
+
     .rocket {
         margin-right: 15px;
     }
+
 
     .dream {
         width: 100%;
@@ -354,14 +499,69 @@
     }
 
 
-    /* ---------- FOOTER ---------- */
+    /* =================================================
+       FOOTER
+    ================================================= */
 
     .footer-container {
+        width: calc(100% - 40px);
+
         grid-template-columns: 1fr 1fr;
+
+        gap: 25px;
+
+        margin-left: auto;
+        margin-right: auto;
     }
 
+
+    .footer-brand {
+        padding-right: 20px;
+
+        border-right: 1px solid #1262bb;
+    }
+
+
+    .footer-links {
+        padding-left: 20px;
+
+        border-left: none;
+    }
+
+
     .footer-message {
-        min-height: 120px;
+        grid-column: 1 / -1;
+
+        min-height: 110px;
+
+        padding: 25px 0;
+
+        border-left: none;
+
+        border-top: 1px solid #1262bb;
+
+        text-align: center;
+    }
+
+
+    .copyright {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 15px 20px;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 8px;
+
+        text-align: center;
     }
 }
 
@@ -373,45 +573,118 @@
 
 @media (max-width: 600px) {
 
-    /* ---------- NAVBAR ---------- */
+    /* =================================================
+       NAVBAR
+    ================================================= */
 
     .navbar {
-        padding: 10px 15px;
-    }
-
-    /*
-       Important:
-       Don't use fixed height here.
-       It keeps logo ratio correct.
-    */
-
-    .brand img {
-        width: 62px;
+        width: 100%;
 
         height: auto;
 
-        max-height: 48px;
+        min-height: 0;
+
+        padding: 10px 12px;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 9px;
+    }
+
+
+    .brand {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+    }
+
+
+    .brand img {
+        width: 155px;
+
+        height: auto;
+
+        max-height: 52px;
+
+        display: block;
 
         object-fit: contain;
     }
 
+
     .navbar nav {
-        gap: 8px 13px;
+        width: 100%;
+
+        height: auto;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 7px 12px;
+
+        margin: 0;
+
+        padding: 0;
     }
+
 
     .navbar nav a {
-        font-size: 12px;
+        height: auto;
+
+        padding: 5px 0 8px;
+
+        font-size: 11px;
+
+        line-height: 1;
+
+        white-space: nowrap;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
     }
 
 
-    /* ---------- MAIN ---------- */
+    .navbar nav a.active::after {
+        bottom: 0;
+
+        height: 2px;
+
+        width: 100%;
+    }
+
+
+    /* =================================================
+       MAIN
+    ================================================= */
 
     main {
         padding: 25px 15px;
     }
 
 
-    /* ---------- HERO ---------- */
+    /* =================================================
+       HERO
+    ================================================= */
 
     .hero h1 {
         font-size: 40px;
@@ -419,21 +692,25 @@
         letter-spacing: -1px;
     }
 
+
     .hero p {
         font-size: 15px;
 
         line-height: 1.5;
     }
 
+
     .hero p br {
         display: none;
     }
+
 
     .journey {
         padding: 8px 17px;
 
         font-size: 13px;
     }
+
 
     .hero-image {
         width: 100%;
@@ -443,6 +720,7 @@
         transform: none;
     }
 
+
     .briefcase {
         width: 150px;
 
@@ -451,11 +729,13 @@
         font-size: 65px;
     }
 
+
     .hero-dots {
         left: 10px;
 
         font-size: 15px;
     }
+
 
     .calendar {
         top: 15px;
@@ -464,6 +744,7 @@
 
         font-size: 45px;
     }
+
 
     .future {
         right: 0;
@@ -474,15 +755,20 @@
     }
 
 
-    /* ---------- EXPERIENCE ---------- */
+    /* =================================================
+       EXPERIENCE
+    ================================================= */
 
     .experience-container {
         padding-left: 25px;
+        padding-right: 5px;
     }
+
 
     .timeline-line {
         left: 3px;
     }
+
 
     .timeline-dot {
         left: -32px;
@@ -494,6 +780,7 @@
         border-width: 3px;
     }
 
+
     .timeline-dot::after {
         width: 6px;
 
@@ -503,6 +790,7 @@
 
         top: 4px;
     }
+
 
     .experience-card {
         grid-template-columns:
@@ -516,6 +804,7 @@
         border-radius: 15px;
     }
 
+
     .company-logo {
         width: 65px;
 
@@ -523,26 +812,33 @@
     }
 
 
-    /* ---------- COMPANY LOGOS ---------- */
+    /* =================================================
+       COMPANY LOGOS
+    ================================================= */
 
     .fingrid-logo strong {
         font-size: 14px;
     }
 
+
     .skh-logo strong {
         font-size: 18px;
     }
 
+
     .skh-logo span {
         font-size: 8px;
     }
+
 
     .interpay-logo {
         font-size: 14px;
     }
 
 
-    /* ---------- JOB DETAILS ---------- */
+    /* =================================================
+       JOB DETAILS
+    ================================================= */
 
     .job-details h2 {
         font-size: 17px;
@@ -550,9 +846,11 @@
         line-height: 1.3;
     }
 
+
     .job-details h3 {
         font-size: 14px;
     }
+
 
     .meta {
         font-size: 12px;
@@ -561,11 +859,14 @@
     }
 
 
-    /* ---------- RESPONSIBILITIES ---------- */
+    /* =================================================
+       RESPONSIBILITIES
+    ================================================= */
 
     .responsibilities h3 {
         font-size: 14px;
     }
+
 
     .responsibilities li {
         font-size: 12px;
@@ -574,7 +875,9 @@
     }
 
 
-    /* ---------- NEXT STOP ---------- */
+    /* =================================================
+       NEXT STOP
+    ================================================= */
 
     .next-stop {
         padding: 20px 15px;
@@ -582,84 +885,179 @@
         text-align: center;
     }
 
+
     .rocket {
         width: 100%;
 
         margin: 0 0 10px;
     }
 
+
     .next-stop h2 {
         font-size: 21px;
     }
+
 
     .next-stop p {
         font-size: 13px;
     }
 
+
     .next-stop p br {
         display: none;
     }
+
 
     .dream {
         font-size: 16px;
     }
 
 
-    /* ---------- FOOTER ---------- */
+    /* =================================================
+       FOOTER
+    ================================================= */
+
+    .footer {
+        width: 100%;
+
+        overflow: hidden;
+    }
+
 
     .footer-container {
+        width: calc(100% - 24px);
+
+        max-width: none;
+
+        margin: 0 auto;
+
+        display: grid;
+
         grid-template-columns: 1fr;
 
         gap: 0;
     }
 
+
     .footer-brand {
-        padding: 25px 20px;
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 22px 15px;
 
         text-align: center;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-right: none;
+
+        border-bottom: 1px solid #1262bb;
     }
+
 
     .footer-name {
+        width: 100%;
+
+        display: flex;
+
         justify-content: center;
+
+        align-items: center;
+
+        gap: 8px;
     }
 
-    /* Footer logo */
+
     .footer-name img {
-        width: 70px;
+        width: 125px;
 
         height: auto;
 
-        max-height: 52px;
+        max-height: 48px;
+
+        display: block;
 
         object-fit: contain;
     }
 
+
     .footer-links {
-        padding: 20px;
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 18px 15px;
 
         border-left: none;
 
-        border-top: 1px solid #1262bb;
+        border-top: none;
+
+        border-bottom: 1px solid #1262bb;
+
+        text-align: center;
     }
+
+
+    .footer-links a {
+        display: inline-block;
+
+        margin: 4px 7px;
+    }
+
 
     .footer-message {
-        min-height: 100px;
+        width: 100%;
 
-        padding: 20px;
+        min-height: auto;
+
+        box-sizing: border-box;
+
+        padding: 20px 15px;
 
         border-left: none;
 
-        border-top: 1px solid #1262bb;
+        border-top: none;
+
+        border-bottom: 1px solid #1262bb;
+
+        text-align: center;
     }
 
+
+    .footer-message span {
+        display: block;
+
+        font-size: 16px;
+
+        line-height: 1.5;
+    }
+
+
     .copyright {
+        width: 100%;
+
         min-height: auto;
 
-        padding: 15px 20px;
+        box-sizing: border-box;
+
+        padding: 13px 10px;
+
+        display: flex;
 
         flex-direction: column;
 
-        gap: 8px;
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 6px;
 
         text-align: center;
 
@@ -675,24 +1073,31 @@
 
 @media (max-width: 400px) {
 
+    /* ---------- NAVBAR ---------- */
+
     .navbar {
-        padding: 10px 12px;
+        padding: 9px 10px;
+
+        gap: 8px;
     }
+
 
     .brand img {
-        width: 58px;
+        width: 145px;
 
-        height: auto;
-
-        max-height: 45px;
+        max-height: 48px;
     }
+
 
     .navbar nav {
-        gap: 7px 10px;
+        gap: 6px 10px;
     }
 
+
     .navbar nav a {
-        font-size: 11px;
+        font-size: 10px;
+
+        padding: 5px 0 8px;
     }
 
 
@@ -702,15 +1107,18 @@
         font-size: 34px;
     }
 
+
     .journey {
         padding: 7px 14px;
 
         font-size: 12px;
     }
 
+
     .hero-image {
         height: 190px;
     }
+
 
     .briefcase {
         width: 130px;
@@ -720,11 +1128,13 @@
         font-size: 55px;
     }
 
+
     .calendar {
         right: 25px;
 
         font-size: 38px;
     }
+
 
     .future {
         font-size: 12px;
@@ -739,15 +1149,18 @@
         text-align: center;
     }
 
+
     .company-logo {
         margin-left: auto;
 
         margin-right: auto;
     }
 
+
     .meta {
         align-items: center;
     }
+
 
     .responsibilities {
         text-align: left;
@@ -760,6 +1173,7 @@
         font-size: 18px;
     }
 
+
     .next-stop p {
         font-size: 12px;
     }
@@ -769,18 +1183,30 @@
 
     .footer-brand {
         text-align: center;
+
+        padding: 20px 12px;
     }
+
 
     .footer-name {
         justify-content: center;
     }
 
-    .footer-message span {
-        font-size: 16px;
+
+    .footer-name img {
+        width: 115px;
     }
+
+
+    .footer-message span {
+        font-size: 15px;
+    }
+
 
     .copyright {
         font-size: 11px;
+
+        padding: 12px 8px;
     }
 }
 
@@ -792,40 +1218,103 @@
 
 @media (max-width: 320px) {
 
-    .navbar nav {
-        gap: 6px 8px;
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        padding: 8px 8px;
+
+        gap: 7px;
     }
 
-    .navbar nav a {
-        font-size: 10px;
-    }
 
     .brand img {
-        width: 55px;
+        width: 135px;
 
-        height: auto;
-
-        max-height: 43px;
+        max-height: 45px;
     }
+
+
+    .navbar nav {
+        gap: 5px 8px;
+    }
+
+
+    .navbar nav a {
+        font-size: 9px;
+
+        padding: 4px 0 7px;
+    }
+
+
+    /* ---------- HERO ---------- */
 
     .hero h1 {
         font-size: 30px;
     }
 
+
+    /* ---------- EXPERIENCE ---------- */
+
     .experience-container {
         padding-left: 22px;
+
+        padding-right: 3px;
     }
+
 
     .timeline-dot {
         left: -29px;
     }
 
+
     .experience-card {
         padding: 12px;
     }
 
+
+    /* ---------- NEXT STOP ---------- */
+
     .next-stop {
         padding: 18px 12px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-container {
+        width: calc(100% - 16px);
+    }
+
+
+    .footer-brand {
+        padding: 18px 8px;
+    }
+
+
+    .footer-name img {
+        width: 105px;
+    }
+
+
+    .footer-links {
+        padding: 16px 8px;
+    }
+
+
+    .footer-message {
+        padding: 18px 8px;
+    }
+
+
+    .footer-message span {
+        font-size: 14px;
+    }
+
+
+    .copyright {
+        padding: 10px 6px;
+
+        font-size: 10px;
     }
 }
 
@@ -840,13 +1329,16 @@
         min-height: 480px;
     }
 
+
     .hero h1 {
         font-size: 55px;
     }
 
+
     .hero-image {
         transform: scale(0.9);
     }
+
 
     .experience-card {
         padding-top: 20px;
@@ -866,13 +1358,16 @@
         min-height: 65px;
     }
 
+
     .hero {
         min-height: 430px;
     }
 
+
     .hero h1 {
         font-size: 50px;
     }
+
 
     .hero-image {
         transform: scale(0.85);
@@ -890,13 +1385,42 @@
         min-height: 380px;
     }
 
+
     .hero h1 {
         font-size: 44px;
     }
 
+
     .hero-image {
         transform: scale(0.75);
     }
+}
+
+
+/* =====================================================
+   GLOBAL OVERFLOW PROTECTION
+===================================================== */
+
+html,
+body {
+    max-width: 100%;
+
+    overflow-x: hidden;
+}
+
+
+.navbar,
+main,
+.experience-container,
+.footer {
+    max-width: 100%;
+
+    overflow-x: hidden;
+}
+
+
+img {
+    max-width: 100%;
 }
 
 
