@@ -1,6 +1,11 @@
-/* =====================================================
-   RESET
-===================================================== */
+/* =========================================================
+   RESUME PAGE — STYLE.CSS
+   ========================================================= */
+
+
+/* =========================================================
+   1. RESET
+   ========================================================= */
 
 * {
     margin: 0;
@@ -8,791 +13,1169 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    color: #ffffff;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
     background:
         radial-gradient(
-            circle at 80% 25%,
-            rgba(0, 95, 255, 0.16),
+            circle at 12% 20%,
+            rgba(0, 183, 255, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 88% 40%,
+            rgba(139, 92, 246, 0.10),
             transparent 32%
         ),
-        #03132f;
-    color: #ffffff;
+        #020b18;
+
     overflow-x: hidden;
 }
 
 
-a {
-    text-decoration: none;
-}
-
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-
-/* =====================================================
-   NAVBAR
-===================================================== */
+/* =========================================================
+   2. NAVBAR
+   ========================================================= */
 
 .navbar {
     width: 100%;
-    height: 76px;
-    background: rgba(3, 16, 52, 0.97);
-    border-bottom: 2px solid #00bfff;
-    box-shadow: 0 0 22px rgba(0, 132, 255, 0.25);
+    height: 70px;
+
     position: relative;
-    z-index: 100;
+    z-index: 1000;
+
+    background: rgba(2, 11, 24, 0.96);
+
+    border-bottom:
+        1px solid
+        rgba(0, 194, 255, 0.20);
+
+    backdrop-filter: blur(12px);
 }
 
-
-.nav-container {
-    width: min(1800px, calc(100% - 100px));
+.navbar-container {
+    width: 100%;
+    max-width: 1500px;
     height: 100%;
+
     margin: auto;
+    padding: 0 30px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 30px;
 }
 
+
+/* =========================================================
+   3. LOGO
+   ========================================================= */
 
 .logo {
     display: flex;
     align-items: center;
+
     flex-shrink: 0;
+
+    text-decoration: none;
 }
 
-
 .logo-image {
-    width: 285px;
-    height: auto;
+    width: auto;
+    height: 48px;
+
+    max-width: 220px;
+
+    display: block;
+
     object-fit: contain;
 }
 
 
-.nav-menu {
+/* =========================================================
+   4. NAV LINKS
+   ========================================================= */
+
+.nav-links {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 35px;
-    flex: 1;
+
+    gap: 25px;
+
+    flex-wrap: nowrap;
 }
 
-
-.nav-menu a {
+.nav-links a {
     position: relative;
-    color: #f1f5ff;
-    font-size: 17px;
+
+    padding: 25px 0;
+
+    color: #c7d7e7;
+
+    text-decoration: none;
+
+    font-size: 14px;
     font-weight: 500;
-    padding: 28px 0 24px;
+
     white-space: nowrap;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
-
-.nav-menu a:hover {
-    color: #00d9ff;
-}
-
-
-.nav-menu a.active {
-    color: #00d9ff;
-}
-
-
-.nav-menu a.active::after {
+.nav-links a::after {
     content: "";
+
     position: absolute;
+
     left: 0;
-    right: 0;
-    bottom: 12px;
-    height: 4px;
+    bottom: 17px;
+
+    width: 0;
+    height: 2px;
+
     border-radius: 10px;
-    background: #00d9ff;
-    box-shadow: 0 0 12px #00d9ff;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00c2ff,
+            #8b5cf6
+        );
+
+    transition:
+        width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00c2ff;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a.active {
+    color: #00c2ff;
 }
 
 
-/* =====================================================
-   RESUME HERO
-===================================================== */
+/* =========================================================
+   5. RESUME PAGE
+   ========================================================= */
 
 .resume-page {
     width: 100%;
+    min-height: 100vh;
+
+    position: relative;
 }
 
+
+/* =========================================================
+   6. HERO
+   ========================================================= */
 
 .resume-hero {
     width: 100%;
-    padding: 58px 0 45px;
-}
+    min-height: 680px;
 
+    padding: 85px 30px 90px;
 
-.resume-container {
-    width: min(1600px, calc(100% - 100px));
-    min-height: 620px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 46% 54%;
-    align-items: center;
-    gap: 30px;
-}
-
-
-/* =====================================================
-   RESUME CONTENT
-===================================================== */
-
-.resume-content {
-    position: relative;
-    z-index: 2;
-    padding: 15px 0;
-}
-
-
-.section-label {
-    width: fit-content;
-    min-width: 158px;
-    height: 44px;
-    padding: 0 18px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border: 2px solid #00d9ff;
-    border-radius: 25px;
-    background: rgba(0, 183, 255, 0.05);
-    box-shadow:
-        0 0 12px rgba(0, 217, 255, 0.25),
-        inset 0 0 12px rgba(0, 217, 255, 0.05);
+
+    position: relative;
+
+    overflow: hidden;
 }
 
+.resume-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    left: -180px;
+    top: 100px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 194, 255, 0.06);
+
+    filter: blur(65px);
+}
+
+.resume-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    right: -160px;
+    bottom: 20px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(139, 92, 246, 0.07);
+
+    filter: blur(65px);
+}
+
+
+/* =========================================================
+   7. RESUME CONTAINER
+   ========================================================= */
+
+.resume-container {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(380px, 0.85fr);
+
+    align-items: center;
+
+    gap: 80px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   8. RESUME CONTENT
+   ========================================================= */
+
+.resume-content {
+    width: 100%;
+    max-width: 650px;
+}
+
+
+/* =========================================================
+   9. SECTION LABEL
+   ========================================================= */
+
+.section-label {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
 
 .section-label span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #00d9ff;
-    box-shadow: 0 0 12px #00d9ff;
-}
+    width: 35px;
+    height: 2px;
 
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00c2ff,
+            #8b5cf6
+        );
+}
 
 .section-label i {
-    color: #00d9ff;
-    font-size: 19px;
+    color: #00c2ff;
+    font-size: 15px;
 }
-
 
 .section-label p {
-    color: #00d9ff;
-    font-size: 15px;
-    font-weight: 600;
+    color: #72dcff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
 }
 
+
+/* =========================================================
+   10. TITLE
+   ========================================================= */
 
 .resume-title {
-    margin-top: 25px;
-    color: #ffffff;
-    font-size: clamp(58px, 5.5vw, 88px);
-    line-height: 1;
-    font-weight: 700;
-}
+    margin-bottom: 15px;
 
+    color: #ffffff;
+
+    font-size: clamp(
+        48px,
+        5vw,
+        76px
+    );
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
 
 .resume-title span {
     background:
         linear-gradient(
             90deg,
-            #00e5ff,
-            #188dff,
-            #9c36ff
+            #00c2ff,
+            #795cff
         );
+
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+
+    -webkit-text-fill-color: transparent;
 }
 
+
+/* =========================================================
+   11. SUBTITLE
+   ========================================================= */
 
 .resume-subtitle {
-    max-width: 650px;
-    margin-top: 24px;
-    color: #e4edff;
-    font-size: 25px;
-    line-height: 1.35;
-    font-weight: 400;
-}
+    max-width: 620px;
 
+    margin-bottom: 18px;
 
-.resume-description {
-    max-width: 580px;
-    margin-top: 28px;
-    color: #d6e2f5;
-    font-size: 19px;
-    line-height: 1.55;
-}
+    color: #dce8f4;
 
+    font-size: 22px;
 
-.resume-buttons {
-    margin-top: 32px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-}
+    line-height: 1.45;
 
-
-.resume-btn {
-    min-height: 56px;
-    padding: 0 25px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    border-radius: 30px;
-    font-size: 16px;
     font-weight: 600;
 }
 
 
-.primary-btn {
-    color: #ffffff;
-    background:
-        linear-gradient(
-            90deg,
-            #00cfff,
-            #237dff,
-            #c331ff
-        );
-    box-shadow:
-        0 8px 25px rgba(0, 183, 255, 0.3);
+/* =========================================================
+   12. DESCRIPTION
+   ========================================================= */
+
+.resume-description {
+    max-width: 600px;
+
+    margin-bottom: 30px;
+
+    color: #8da4ba;
+
+    font-size: 15px;
+
+    line-height: 1.8;
 }
 
 
-.secondary-btn {
-    min-width: 180px;
-    color: #ffffff;
-    border: 2px solid #00cfff;
-    background: rgba(0, 160, 255, 0.04);
-}
+/* =========================================================
+   13. BUTTONS
+   ========================================================= */
 
-
-.primary-btn i,
-.secondary-btn i {
-    color: #ffffff;
-}
-
-
-.pdf-info {
-    margin-top: 28px;
+.resume-buttons {
     display: flex;
     align-items: center;
-    gap: 12px;
-    color: #dbe7f8;
-    font-size: 15px;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 22px;
+}
+
+.resume-btn {
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.resume-btn i {
+    font-size: 14px;
 }
 
 
+/* =========================================================
+   14. PRIMARY BUTTON
+   ========================================================= */
+
+.primary-btn {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00aef0,
+            #006eff
+        );
+
+    border:
+        1px solid
+        rgba(0, 194, 255, 0.50);
+
+    box-shadow:
+        0 8px 30px
+        rgba(0, 174, 240, 0.18);
+}
+
+.primary-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 38px
+        rgba(0, 194, 255, 0.30);
+}
+
+
+/* =========================================================
+   15. SECONDARY BUTTON
+   ========================================================= */
+
+.secondary-btn {
+    color: #d5e5f4;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border:
+        1px solid
+        rgba(0, 194, 255, 0.25);
+}
+
+.secondary-btn:hover {
+    color: #ffffff;
+
+    background:
+        rgba(0, 194, 255, 0.08);
+
+    border-color:
+        rgba(0, 194, 255, 0.65);
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   16. PDF INFO
+   ========================================================= */
+
+.pdf-info {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+
+    color: #7890a7;
+
+    font-size: 12px;
+}
+
 .pdf-icon {
-    width: 34px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #00d9ff;
-    font-size: 27px;
+
+    border-radius: 6px;
+
+    background:
+        rgba(255, 70, 70, 0.10);
+
+    border:
+        1px solid
+        rgba(255, 90, 90, 0.20);
 }
 
+.pdf-icon i {
+    color: #ff6060;
+}
 
 .pdf-divider {
-    color: #5e84ad;
+    color: #43576b;
 }
 
+
+/* =========================================================
+   17. RESUME NOTE
+   ========================================================= */
 
 .resume-note {
+    width: fit-content;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1px;
+
+    position: relative;
+
+    padding-left: 15px;
+
+    color: #6f8499;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.resume-note::before {
+    content: "";
+
     position: absolute;
-    left: 315px;
-    bottom: -25px;
-    width: 170px;
-    transform: rotate(-8deg);
-    color: #75a9ff;
-    font-family: cursive;
-    font-size: 20px;
-    line-height: 1.05;
+
+    left: 0;
+    top: 3px;
+
+    width: 2px;
+    height: 92%;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #00c2ff,
+            #8b5cf6
+        );
 }
-
-
-.resume-note span {
-    display: block;
-}
-
 
 .resume-note span:nth-child(2) {
-    color: #7e5aff;
+    color: #9db0c3;
 }
-
 
 .resume-note span:nth-child(3) {
-    text-align: center;
+    color: #00c2ff;
 }
-
 
 .resume-note i {
     position: absolute;
-    right: -20px;
-    bottom: -8px;
-    color: #9a42ff;
-    font-size: 28px;
-    transform: rotate(25deg);
+
+    right: -35px;
+    bottom: 2px;
+
+    color: #00c2ff;
+
+    font-size: 17px;
+
+    transform: rotate(-15deg);
 }
 
 
-/* =====================================================
-   RESUME IMAGE
-===================================================== */
+/* =========================================================
+   18. RESUME IMAGE
+   ========================================================= */
 
 .resume-image-wrapper {
-    position: relative;
-    width: 100%;
-    min-height: 620px;
+    min-height: 520px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
+    position: relative;
+}
 
 .image-glow {
     position: absolute;
+
     width: 75%;
     height: 75%;
-    background: #006eff;
-    filter: blur(90px);
-    opacity: 0.28;
-    z-index: 0;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 194, 255, 0.22),
+            rgba(124, 92, 255, 0.10),
+            transparent 70%
+        );
+
+    filter: blur(35px);
 }
 
-
 .resume-image-card {
+    width: min(390px, 100%);
+
     position: relative;
     z-index: 2;
-    width: min(650px, 100%);
-    min-height: 500px;
-    max-height: 650px;
-    padding: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #00cfff;
-    border-radius: 20px;
+
+    padding: 10px;
+
+    border-radius: 15px;
+
     background:
         linear-gradient(
             145deg,
-            rgba(5, 37, 83, 0.9),
-            rgba(3, 18, 50, 0.9)
+            rgba(255, 255, 255, 0.13),
+            rgba(255, 255, 255, 0.025)
         );
+
+    border:
+        1px solid
+        rgba(0, 194, 255, 0.35);
+
     box-shadow:
-        0 0 25px rgba(0, 204, 255, 0.55),
-        inset 0 0 25px rgba(0, 120, 255, 0.18);
+        0 25px 70px
+        rgba(0, 0, 0, 0.50),
+
+        0 0 40px
+        rgba(0, 194, 255, 0.10);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
 }
 
+.resume-image-card:hover {
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.55),
+
+        0 0 50px
+        rgba(0, 194, 255, 0.18);
+}
 
 .resume-image {
     width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 620px;
+    height: auto;
+
+    display: block;
+
+    border-radius: 8px;
+
     object-fit: contain;
-    object-position: center;
-    border-radius: 10px;
+
+    background: #ffffff;
+}
+
+.resume-image-shadow {
+    position: absolute;
+
+    width: 70%;
+    height: 25px;
+
+    left: 15%;
+    bottom: 35px;
+
+    background:
+        rgba(0, 0, 0, 0.60);
+
+    filter: blur(18px);
+
+    border-radius: 50%;
 }
 
 
-/* =====================================================
-   HIGHLIGHTS
-===================================================== */
+/* =========================================================
+   19. HIGHLIGHTS
+   ========================================================= */
 
 .highlights-section {
     width: 100%;
-    padding: 10px 0 65px;
-}
 
+    padding: 80px 30px;
+
+    border-top:
+        1px solid
+        rgba(0, 194, 255, 0.08);
+
+    background:
+        rgba(1, 8, 20, 0.45);
+}
 
 .highlights-container {
-    width: min(1450px, calc(100% - 100px));
-    margin: auto;
-    padding: 28px 30px 35px;
-    border: 2px solid #008dff;
-    border-radius: 20px;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(7, 37, 82, 0.92),
-            rgba(3, 23, 55, 0.95)
-        );
-    box-shadow: 0 0 22px rgba(0, 125, 255, 0.18);
-}
+    width: 100%;
+    max-width: 1250px;
 
+    margin: 0 auto;
+}
 
 .highlights-heading {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 28px;
-}
+    justify-content: center;
 
+    gap: 10px;
+
+    margin-bottom: 40px;
+}
 
 .highlights-heading i {
-    color: #00d9ff;
-    font-size: 30px;
-    text-shadow: 0 0 12px #00d9ff;
+    color: #00c2ff;
 }
-
 
 .highlights-heading h2 {
     color: #ffffff;
-    font-size: 25px;
+
+    font-size: 28px;
 }
 
+
+/* =========================================================
+   20. HIGHLIGHT GRID
+   ========================================================= */
 
 .highlights-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 18px;
 }
 
+
+/* =========================================================
+   21. HIGHLIGHT CARD
+   ========================================================= */
 
 .highlight-card {
-    min-height: 185px;
-    padding: 5px 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border-right: 1px solid #2474a8;
+    min-height: 205px;
+
+    padding: 25px 20px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.018)
+        );
+
+    border:
+        1px solid
+        rgba(0, 194, 255, 0.13);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(0, 194, 255, 0.40);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.30);
 }
 
 
-.highlight-card:last-child {
-    border-right: none;
-}
-
+/* =========================================================
+   22. HIGHLIGHT ICON
+   ========================================================= */
 
 .highlight-icon {
-    width: 68px;
-    height: 68px;
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 18px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #00d9ff;
-    border-radius: 18px;
-    color: #00d9ff;
-    font-size: 29px;
-    box-shadow: 0 0 14px rgba(0, 217, 255, 0.25);
+
+    border-radius: 10px;
+
+    color: #00c2ff;
+
+    background:
+        rgba(0, 194, 255, 0.09);
+
+    border:
+        1px solid
+        rgba(0, 194, 255, 0.18);
+}
+
+.highlight-icon i {
+    font-size: 19px;
+}
+
+.purple-icon {
+    color: #a78bfa;
+
+    background:
+        rgba(139, 92, 246, 0.10);
+
+    border-color:
+        rgba(139, 92, 246, 0.22);
 }
 
 
-.highlight-icon.purple-icon {
-    color: #c044ff;
-    border-color: #c044ff;
-    box-shadow: 0 0 14px rgba(192, 68, 255, 0.25);
-}
-
+/* =========================================================
+   23. HIGHLIGHT TEXT
+   ========================================================= */
 
 .highlight-card h3 {
-    margin-top: 17px;
-    color: #ffffff;
-    font-size: 18px;
-    line-height: 1.2;
-}
+    margin-bottom: 10px;
 
+    color: #eaf4ff;
+
+    font-size: 15px;
+}
 
 .highlight-card p {
-    max-width: 190px;
-    margin-top: 12px;
-    color: #d8e4f5;
-    font-size: 14px;
-    line-height: 1.45;
+    color: #8196aa;
+
+    font-size: 12px;
+
+    line-height: 1.7;
 }
 
 
-/* =====================================================
-   CTA
-===================================================== */
+/* =========================================================
+   24. CTA
+   ========================================================= */
 
 .resume-cta {
-    position: relative;
-    width: 100%;
     min-height: 330px;
-    padding: 65px 20px 75px;
-    overflow: hidden;
+
+    padding: 70px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
     text-align: center;
+
+    border-top:
+        1px solid
+        rgba(0, 194, 255, 0.08);
+
     background:
         radial-gradient(
-            ellipse at 20% 100%,
-            rgba(0, 73, 255, 0.3),
-            transparent 45%
-        ),
-        radial-gradient(
-            ellipse at 80% 100%,
-            rgba(146, 0, 255, 0.28),
-            transparent 45%
+            circle at center,
+            rgba(0, 194, 255, 0.09),
+            transparent 55%
         );
 }
 
-
-.resume-cta::before {
-    content: "";
-    position: absolute;
-    left: -5%;
-    bottom: -95px;
-    width: 110%;
-    height: 150px;
-    border-top: 3px solid #235eff;
-    border-radius: 50%;
-    box-shadow:
-        0 -18px 0 rgba(72, 42, 255, 0.5),
-        0 -35px 0 rgba(0, 172, 255, 0.35);
-    transform: rotate(-3deg);
-}
-
-
 .cta-decoration {
-    position: relative;
-    z-index: 2;
+    width: 55px;
+    height: 55px;
+
     margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #00c2ff;
+
+    background:
+        rgba(0, 194, 255, 0.08);
+
+    border:
+        1px solid
+        rgba(0, 194, 255, 0.22);
 }
-
-
-.cta-decoration i {
-    color: #00d9ff;
-    font-size: 31px;
-    text-shadow: 0 0 12px #00d9ff;
-}
-
 
 .resume-cta h2 {
-    position: relative;
-    z-index: 2;
-    color: #ffffff;
-    font-size: 38px;
-}
+    margin-bottom: 12px;
 
+    color: #ffffff;
+
+    font-size: clamp(
+        30px,
+        4vw,
+        48px
+    );
+
+    line-height: 1.2;
+}
 
 .resume-cta h2 span {
     background:
         linear-gradient(
             90deg,
-            #00d9ff,
-            #227cff,
-            #a33aff
+            #00c2ff,
+            #8b5cf6
         );
+
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
-}
 
+    -webkit-text-fill-color: transparent;
+}
 
 .resume-cta p {
-    position: relative;
-    z-index: 2;
-    margin-top: 15px;
-    color: #d9e7fa;
-    font-size: 18px;
-}
+    margin-bottom: 25px;
 
+    color: #8498ad;
+
+    font-size: 14px;
+}
 
 .cta-arrow {
-    position: relative;
-    z-index: 2;
-    margin-top: 28px;
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #00c2ff;
+
+    background:
+        rgba(0, 194, 255, 0.05);
+
+    border:
+        1px solid
+        rgba(0, 194, 255, 0.20);
 }
 
 
-.cta-arrow i {
-    color: #00d9ff;
-    font-size: 28px;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
+/* =========================================================
+   25. FOOTER
+   ========================================================= */
 
 .footer {
     width: 100%;
-    border-top: 2px solid #00bfff;
-    background:
-        radial-gradient(
-            circle at 15% 100%,
-            rgba(0, 76, 255, 0.18),
-            transparent 30%
-        ),
-        #031743;
-}
 
+    padding-top: 55px;
+
+    background: #010713;
+
+    border-top:
+        1px solid
+        rgba(0, 194, 255, 0.15);
+}
 
 .footer-container {
-    width: min(1450px, calc(100% - 100px));
-    min-height: 190px;
-    margin: auto;
-    padding: 28px 0;
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding: 0 30px 45px;
+
     display: grid;
-    grid-template-columns: 1.2fr 0.9fr 0.9fr 1fr;
-    gap: 35px;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1fr
+        1.3fr;
+
+    gap: 45px;
 }
 
+.footer-logo {
+    display: inline-flex;
 
-.footer-brand {
-    padding-right: 25px;
-    border-right: 1px solid #2474a8;
+    margin-bottom: 15px;
 }
-
 
 .footer-logo img {
-    width: 215px;
-    height: auto;
-}
+    height: 48px;
+    width: auto;
 
+    max-width: 210px;
+}
 
 .footer-brand h3 {
-    margin-top: 12px;
-    color: #ffffff;
-    font-size: 16px;
+    margin-bottom: 8px;
+
+    color: #dceaf7;
+
+    font-size: 15px;
 }
 
-
 .footer-brand h3 span {
-    color: #00d9ff;
+    color: #00c2ff;
+
     margin: 0 5px;
 }
 
-
 .footer-brand p {
-    max-width: 250px;
-    margin-top: 12px;
-    color: #d5e4f5;
-    font-size: 14px;
-    line-height: 1.45;
-}
+    color: #71879c;
 
+    font-size: 13px;
+}
 
 .footer-column {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    padding-right: 25px;
-    border-right: 1px solid #2474a8;
-}
 
+    align-items: flex-start;
+
+    gap: 9px;
+}
 
 .footer-column h3 {
-    margin-bottom: 8px;
-    color: #ffffff;
-    font-size: 17px;
-}
+    margin-bottom: 10px;
 
+    color: #ffffff;
+
+    font-size: 15px;
+}
 
 .footer-column a {
-    color: #dce7f8;
-    font-size: 14px;
-}
-
-
-.footer-column a:hover {
-    color: #00d9ff;
-}
-
-
-.connect-column a {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 7px;
+
+    gap: 9px;
+
+    color: #758ca1;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
+.footer-column a i {
+    width: 15px;
 
-.connect-column i {
-    width: 25px;
-    color: #00d9ff;
-    font-size: 22px;
-}
+    color: #00b7ff;
 
-
-.footer-quote {
-    padding-top: 12px;
     text-align: center;
 }
 
+.footer-column a:hover {
+    color: #00c2ff;
+
+    transform: translateX(4px);
+}
 
 .footer-quote p {
-    color: #00cfff;
-    font-family: cursive;
-    font-size: 18px;
-    font-style: italic;
-}
+    margin-bottom: 10px;
 
+    color: #dceaf7;
+
+    font-size: 16px;
+    font-weight: 600;
+}
 
 .footer-quote span {
-    display: block;
-    margin-top: 6px;
-    color: #b23cff;
-    font-family: cursive;
-    font-size: 17px;
-    font-style: italic;
+    color: #61778d;
+
+    font-size: 11px;
 }
-
-
-.footer-quote div {
-    width: 190px;
-    height: 2px;
-    margin: 10px auto;
-    background: linear-gradient(
-        90deg,
-        #00d9ff,
-        #a33aff
-    );
-}
-
 
 .footer-bottom {
-    min-height: 52px;
-    padding: 0 50px;
+    min-height: 55px;
+
+    padding: 15px 30px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid #1263a0;
-    color: #d5e4f5;
-    font-size: 13px;
-}
 
+    gap: 15px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    color: #566b7f;
+
+    font-size: 11px;
+}
 
 .footer-bottom i {
-    margin: 0 5px;
-    color: #c13cff;
+    color: #ff4d67;
 }
 
 
-/* =====================================================
-   ACCESSIBILITY
-===================================================== */
+/* =========================================================
+   26. SCROLLBAR
+   ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
+::-webkit-scrollbar {
+    width: 7px;
+}
 
-    *,
-    *::before,
-    *::after {
+::-webkit-scrollbar-track {
+    background: #010713;
+}
 
-        animation-duration: 0.01ms !important;
+::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(
+            180deg,
+            #00b7ff,
+            #7357ff
+        );
 
-        animation-iteration-count: 1 !important;
+    border-radius: 10px;
+}
 
-        transition-duration: 0.01ms !important;
 
-    }
+/* =========================================================
+   27. SELECTION
+   ========================================================= */
+
+::selection {
+    color: #ffffff;
+
+    background:
+        rgba(0, 194, 255, 0.35);
 }

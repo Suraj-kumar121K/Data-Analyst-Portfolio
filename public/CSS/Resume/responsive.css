@@ -1,867 +1,1087 @@
-/* =====================================================
-   RESUME PAGE - RESPONSIVE CSS
-   =====================================================
-
-   Supported Displays:
-   1920 × 1080
-   1760 × 990
-   1680 × 1050
-   1600 × 900
-   1366 × 768
-   1280 × 1024
-   1280 × 720
-   1128 × 634
-   1024 × 768
-   800 × 600
-
-   Windows Scale:
-   100%
-   125%
-   150%
-   175%
-
-   Mobile:
-   768px
-   600px
-   480px
-   400px
-   360px
-===================================================== */
+/* =========================================================
+   RESUME PAGE — RESPONSIVE.CSS
+   ========================================================= */
 
 
-/* =====================================================
+/* =========================================================
+   1600px+
    LARGE DESKTOP
-===================================================== */
+   ========================================================= */
 
 @media (min-width: 1600px) {
 
-    main {
-        max-width: 1400px;
+    .navbar-container {
+        max-width: 1500px;
     }
 
-    .hero h1 {
-        font-size: 72px;
-    }
-
-    .hero-image {
-        width: 500px;
-    }
-
-    .experience-card {
-        min-height: 165px;
+    .resume-container,
+    .highlights-container {
+        max-width: 1250px;
     }
 
     .footer-container {
-        max-width: 1400px;
+        max-width: 1500px;
     }
+
 }
 
 
-/* =====================================================
+/* =========================================================
+   1200px – 1599px
    DESKTOP
-===================================================== */
+   ========================================================= */
 
-@media (max-width: 1599px) and (min-width: 1201px) {
+@media (min-width: 1200px) and (max-width: 1599px) {
 
-    main {
-        max-width: 1200px;
+    .navbar-container {
+        padding: 0 25px;
     }
 
-    .navbar {
-        padding: 0 45px;
+    .nav-links {
+        gap: 20px;
     }
 
-    .navbar nav {
-        gap: 30px;
+    .nav-links a {
+        font-size: 13px;
     }
 
-    .hero h1 {
-        font-size: 64px;
+    .resume-container {
+        gap: 60px;
     }
 
-    .hero-image {
-        width: 450px;
+    .resume-hero {
+        padding:
+            75px
+            25px
+            80px;
     }
 
-    .experience-card {
-        grid-template-columns:
-            100px
-            320px
-            2px
-            1fr
-            auto;
-    }
-}
-
-
-/* =====================================================
-   1280px
-===================================================== */
-
-@media (max-width: 1280px) {
-
-    .navbar {
-        padding: 0 30px;
-    }
-
-    .navbar nav {
-        gap: 22px;
-    }
-
-    .navbar nav a {
-        font-size: 15px;
-    }
-
-    main {
+    .highlights-section {
         padding-left: 25px;
         padding-right: 25px;
     }
 
-    .hero h1 {
-        font-size: 58px;
-    }
-
-    .hero-image {
-        width: 400px;
-    }
-
-    .experience-card {
-        grid-template-columns:
-            90px
-            280px
-            2px
-            1fr
-            auto;
-    }
-
-    .responsibilities li {
-        font-size: 12px;
-    }
-
-    .tag {
-        font-size: 11px;
-    }
-}
-
-
-/* =====================================================
-   1128px
-===================================================== */
-
-@media (max-width: 1128px) {
-
-    .navbar {
-        padding: 0 20px;
-    }
-
-    .navbar nav {
-        gap: 17px;
-    }
-
-    .navbar nav a {
-        font-size: 14px;
-    }
-
-    .hero h1 {
-        font-size: 52px;
-    }
-
-    .hero-image {
-        width: 360px;
-    }
-
-    .experience-card {
-        grid-template-columns:
-            85px
-            250px
-            2px
-            1fr;
-    }
-
-    .tag {
-        display: none;
-    }
-
     .footer-container {
-        padding: 0 20px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
+
 }
 
 
-/* =====================================================
-   1024px - TABLET LANDSCAPE
-===================================================== */
+/* =========================================================
+   992px – 1199px
+   LAPTOP
+   ========================================================= */
 
-@media (max-width: 1024px) {
+@media (min-width: 992px) and (max-width: 1199px) {
 
-    .navbar {
-        height: auto;
+    /* NAVBAR */
 
-        min-height: 65px;
-
-        padding: 12px 20px;
+    .navbar-container {
+        padding: 0 20px;
     }
 
-    .brand span {
-        font-size: 25px;
+    .logo-image {
+        max-width: 190px;
     }
 
-    .brand img {
-        width: 58px;
-    }
-
-    .navbar nav {
-        gap: 13px;
-    }
-
-    .navbar nav a {
-        font-size: 13px;
-    }
-
-    .hero {
-        min-height: 250px;
-    }
-
-    .hero h1 {
-        font-size: 47px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .hero-image {
-        width: 330px;
-        transform: scale(.9);
-    }
-
-    .experience-container {
-        padding-left: 35px;
-    }
-
-    .experience-card {
-        grid-template-columns:
-            85px
-            1fr
-            1fr;
-
+    .nav-links {
         gap: 15px;
     }
 
-    .vertical-line {
-        display: none;
+    .nav-links a {
+        font-size: 12px;
     }
 
-    .responsibilities {
-        grid-column: 3;
+
+    /* HERO */
+
+    .resume-hero {
+        min-height: 620px;
+
+        padding:
+            65px
+            20px
+            70px;
     }
 
-    .tag {
-        display: none;
+    .resume-container {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(330px, 0.8fr);
+
+        gap: 45px;
     }
+
+    .resume-title {
+        font-size: 55px;
+    }
+
+    .resume-subtitle {
+        font-size: 19px;
+    }
+
+    .resume-description {
+        font-size: 14px;
+    }
+
+    .resume-image-wrapper {
+        min-height: 450px;
+    }
+
+    .resume-image-card {
+        width: 340px;
+    }
+
+
+    /* HIGHLIGHTS */
+
+    .highlights-section {
+        padding:
+            65px
+            20px;
+    }
+
+    .highlights-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    /* FOOTER */
 
     .footer-container {
         grid-template-columns:
-            1.2fr
-            1fr
-            1fr;
+            repeat(3, 1fr);
+
+        gap: 35px;
+
+        padding:
+            0 20px
+            40px;
     }
 
-    .footer-message {
-        display: none;
+    .footer-quote {
+        grid-column: 1 / -1;
     }
+
 }
 
 
-/* =====================================================
-   800px - TABLET / SMALL LAPTOP
-===================================================== */
+/* =========================================================
+   768px – 991px
+   TABLET
+   ========================================================= */
 
-@media (max-width: 850px) {
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* NAVBAR */
 
     .navbar {
-        flex-direction: column;
-
         height: auto;
-
-        padding: 15px 20px;
-
-        gap: 12px;
     }
 
-    .navbar nav {
-        width: 100%;
+    .navbar-container {
+        min-height: 70px;
+
+        padding:
+            12px 20px;
 
         flex-wrap: wrap;
 
         justify-content: center;
 
-        gap: 10px 18px;
+        gap: 10px;
     }
 
-    .navbar nav a {
-        height: 30px;
-
-        font-size: 13px;
-    }
-
-    .hero {
-        flex-direction: column;
-
-        min-height: auto;
-    }
-
-    .hero h1 {
-        font-size: 48px;
-    }
-
-    .hero-image {
+    .logo {
         width: 100%;
-        height: 230px;
+
+        justify-content: center;
     }
 
-    .experience-container {
-        padding-left: 25px;
+    .logo-image {
+        max-width: 175px;
     }
 
-    .timeline-line {
-        left: 0;
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap:
+            5px 18px;
     }
 
-    .timeline-dot {
-        left: -38px;
+    .nav-links a {
+        padding: 7px 0;
+
+        font-size: 12px;
     }
 
-    .experience-card {
+    .nav-links a::after {
+        bottom: 1px;
+    }
+
+
+    /* HERO */
+
+    .resume-hero {
+        min-height: auto;
+
+        padding:
+            60px 25px
+            65px;
+    }
+
+    .resume-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        text-align: center;
+    }
+
+    .resume-content {
+        max-width: 700px;
+
+        margin: auto;
+    }
+
+    .section-label {
+        justify-content: center;
+    }
+
+    .resume-title {
+        font-size: 52px;
+    }
+
+    .resume-subtitle,
+    .resume-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .resume-buttons {
+        justify-content: center;
+    }
+
+    .pdf-info {
+        justify-content: center;
+    }
+
+    .resume-note {
+        margin: auto;
+    }
+
+    .resume-image-wrapper {
+        min-height: auto;
+
+        padding-top: 10px;
+    }
+
+    .resume-image-card {
+        width: 360px;
+    }
+
+
+    /* HIGHLIGHTS */
+
+    .highlights-section {
+        padding:
+            60px 25px;
+    }
+
+    .highlights-grid {
         grid-template-columns:
-            85px
-            1fr;
-
-        gap: 15px;
+            repeat(2, 1fr);
     }
 
-    .vertical-line {
-        display: none;
+    .highlight-card:last-child {
+        grid-column:
+            1 / -1;
+
+        max-width:
+            50%;
+
+        width: 100%;
+
+        margin: auto;
     }
 
-    .responsibilities {
-        grid-column: 2;
+
+    /* CTA */
+
+    .resume-cta {
+        min-height: 290px;
+
+        padding:
+            60px 25px;
     }
 
-    .tag {
-        display: block;
 
-        grid-column: 2;
-
-        width: max-content;
-    }
+    /* FOOTER */
 
     .footer-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 35px 25px;
+
+        padding:
+            0 25px
+            40px;
     }
 
-    .footer-message {
-        display: none;
+    .footer-brand {
+        grid-column:
+            1 / -1;
     }
+
+    .footer-bottom {
+        padding:
+            15px 25px;
+    }
+
 }
 
 
-/* =====================================================
-   768px - TABLET PORTRAIT
-===================================================== */
+/* =========================================================
+   576px – 767px
+   MOBILE / LARGE
+   ========================================================= */
 
-@media (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 767px) {
 
-    main {
-        padding: 25px 18px;
+    /* NAVBAR */
+
+    .navbar {
+        height: auto;
     }
 
-    .hero h1 {
+    .navbar-container {
+        height: auto;
+
+        padding:
+            12px 18px;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .logo-image {
+        max-width: 165px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap:
+            5px 13px;
+    }
+
+    .nav-links a {
+        padding: 5px 0;
+
+        font-size: 11px;
+    }
+
+    .nav-links a::after {
+        bottom: 0;
+    }
+
+
+    /* HERO */
+
+    .resume-hero {
+        min-height: auto;
+
+        padding:
+            50px 20px
+            55px;
+    }
+
+    .resume-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        text-align: center;
+    }
+
+    .resume-content {
+        margin: auto;
+    }
+
+    .section-label {
+        justify-content: center;
+    }
+
+    .resume-title {
         font-size: 43px;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    .hero-image {
-        transform: scale(.9);
-        transform-origin: center;
-    }
-
-    .experience-card {
-        padding: 18px;
-    }
-
-    .job-details h2 {
-        font-size: 19px;
-    }
-
-    .job-details h3 {
-        font-size: 15px;
-    }
-
-    .responsibilities li {
-        font-size: 12px;
-    }
-
-    .next-stop {
-        padding: 20px;
-    }
-
-    .next-stop h2 {
-        font-size: 23px;
-    }
-}
-
-
-/* =====================================================
-   600px - MOBILE
-===================================================== */
-
-@media (max-width: 600px) {
-
-    main {
-        padding: 22px 15px;
-    }
-
-
-    /* ---------- NAVBAR ---------- */
-
-    .brand span {
-        font-size: 22px;
-    }
-
-    .brand img {
-        width: 52px;
-    }
-
-    .navbar nav {
-        gap: 8px 12px;
-    }
-
-    .navbar nav a {
-        font-size: 12px;
-    }
-
-
-    /* ---------- HERO ---------- */
-
-    .hero h1 {
-        font-size: 38px;
 
         letter-spacing: -1px;
     }
 
-    .hero p {
-        font-size: 14px;
-
-        line-height: 1.5;
+    .resume-subtitle {
+        font-size: 17px;
     }
 
-    .hero p br {
-        display: none;
-    }
-
-    .hero-image {
-        width: 100%;
-
-        height: 200px;
-
-        transform: scale(.75);
-    }
-
-    .journey {
-        padding: 8px 16px;
-
+    .resume-description {
         font-size: 13px;
     }
 
-
-    /* ---------- EXPERIENCE ---------- */
-
-    .experience-container {
-        padding-left: 22px;
+    .resume-buttons {
+        justify-content: center;
     }
 
-    .timeline-line {
-        left: 0;
+    .pdf-info {
+        justify-content: center;
     }
 
-    .timeline-dot {
-        left: -34px;
-
-        width: 22px;
-        height: 22px;
+    .resume-note {
+        margin: auto;
     }
 
-    .timeline-dot::after {
-        width: 6px;
-        height: 6px;
-
-        left: 4px;
-        top: 4px;
+    .resume-image-wrapper {
+        min-height: auto;
     }
 
-    .experience-card {
-        grid-template-columns: 1fr;
-
-        padding: 18px;
-
-        margin-bottom: 15px;
+    .resume-image-card {
+        width: 320px;
     }
 
-    .company-logo {
-        width: 85px;
-        height: 85px;
 
-        justify-self: start;
+    /* HIGHLIGHTS */
+
+    .highlights-section {
+        padding:
+            50px 20px;
     }
 
-    .job-details {
+    .highlights-heading {
+        margin-bottom: 30px;
+    }
+
+    .highlights-heading h2 {
+        font-size: 24px;
+    }
+
+    .highlights-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+    .highlight-card {
+        min-height: 190px;
+
+        padding: 20px 17px;
+    }
+
+    .highlight-card:last-child {
+        grid-column:
+            1 / -1;
+
+        max-width:
+            50%;
+
         width: 100%;
-    }
 
-    .job-details h2 {
-        font-size: 18px;
-    }
-
-    .job-details h3 {
-        font-size: 14px;
-    }
-
-    .meta {
-        flex-direction: column;
-
-        gap: 6px;
-
-        font-size: 12px;
-    }
-
-    .responsibilities {
-        grid-column: auto;
-    }
-
-    .responsibilities h3 {
-        font-size: 14px;
-    }
-
-    .responsibilities li {
-        font-size: 12px;
-
-        line-height: 1.6;
-    }
-
-    .tag {
-        grid-column: auto;
-
-        font-size: 11px;
+        margin: auto;
     }
 
 
-    /* ---------- NEXT STOP ---------- */
+    /* CTA */
 
-    .next-stop {
-        padding: 18px;
+    .resume-cta {
+        min-height: 270px;
 
-        flex-wrap: wrap;
-
-        gap: 10px;
+        padding:
+            50px 20px;
     }
 
-    .rocket {
-        font-size: 45px;
-    }
-
-    .next-stop h2 {
-        font-size: 20px;
-    }
-
-    .next-stop p {
-        font-size: 12px;
-    }
-
-    .next-stop p br {
-        display: none;
-    }
-
-    .arrow {
-        display: none;
-    }
-
-    .dream {
-        margin-left: 0;
-
-        font-size: 15px;
+    .resume-cta h2 {
+        font-size: 32px;
     }
 
 
-    /* ---------- FOOTER ---------- */
+    /* FOOTER */
 
     .footer-container {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            30px 20px;
+
+        padding:
+            0 20px
+            35px;
+
+        text-align: center;
     }
 
     .footer-brand {
-        padding: 22px 20px;
+        grid-column:
+            1 / -1;
     }
 
-    .footer-links {
-        border-left: none;
-
-        border-top: 1px solid #1262bb;
-
-        padding: 18px 20px;
+    .footer-column {
+        align-items: center;
     }
 
-    .footer-message {
-        display: none;
+    .footer-quote {
+        grid-column:
+            1 / -1;
     }
 
-    .copyright {
-        min-height: auto;
+    .footer-bottom {
+        flex-direction: column;
 
-        padding: 12px 15px;
+        justify-content: center;
+
+        text-align: center;
+
+        padding:
+            15px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   381px – 575px
+   SMALL MOBILE
+   ========================================================= */
+
+@media (min-width: 381px) and (max-width: 575px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        height: auto;
+    }
+
+    .navbar-container {
+        height: auto;
+
+        padding:
+            10px 15px;
 
         flex-direction: column;
 
         gap: 7px;
-
-        text-align: center;
-
-        font-size: 11px;
-    }
-}
-
-
-/* =====================================================
-   480px - SMALL MOBILE
-===================================================== */
-
-@media (max-width: 480px) {
-
-    .navbar {
-        padding: 12px 10px;
     }
 
-    .brand span {
-        font-size: 20px;
+    .logo-image {
+        max-width: 155px;
     }
 
-    .brand img {
-        width: 48px;
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap:
+            4px 10px;
     }
 
-    .navbar nav {
-        gap: 7px 10px;
-    }
+    .nav-links a {
+        padding: 4px 0;
 
-    .navbar nav a {
-        font-size: 11px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 13px;
-    }
-
-    .hero-image {
-        transform: scale(.65);
-    }
-
-    .experience-container {
-        padding-left: 20px;
-    }
-
-    .timeline-dot {
-        left: -32px;
-    }
-
-    .experience-card {
-        padding: 15px;
-    }
-
-    .company-logo {
-        width: 75px;
-        height: 75px;
-    }
-
-    .job-details h2 {
-        font-size: 16px;
-    }
-
-    .job-details h3 {
-        font-size: 13px;
-    }
-
-    .responsibilities li {
-        font-size: 11px;
-    }
-
-    .next-stop h2 {
-        font-size: 18px;
-    }
-
-    .next-stop p {
-        font-size: 11px;
-    }
-}
-
-
-/* =====================================================
-   400px - VERY SMALL MOBILE
-===================================================== */
-
-@media (max-width: 400px) {
-
-    main {
-        padding: 20px 10px;
-    }
-
-    .brand img {
-        width: 45px;
-    }
-
-    .brand span {
-        font-size: 18px;
-    }
-
-    .navbar nav {
-        gap: 6px 8px;
-    }
-
-    .navbar nav a {
         font-size: 10px;
     }
 
-    .hero h1 {
-        font-size: 29px;
+    .nav-links a::after {
+        bottom: 0;
     }
 
-    .journey {
-        font-size: 12px;
 
-        padding: 7px 13px;
+    /* HERO */
+
+    .resume-hero {
+        padding:
+            40px 15px
+            45px;
     }
 
-    .hero-image {
-        transform: scale(.55);
+    .resume-container {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        text-align: center;
     }
 
-    .experience-container {
-        padding-left: 18px;
+    .section-label {
+        justify-content: center;
+
+        gap: 7px;
     }
 
-    .timeline-dot {
-        left: -30px;
-
-        width: 20px;
-        height: 20px;
+    .section-label p {
+        font-size: 10px;
     }
 
-    .experience-card {
-        padding: 13px;
+    .resume-title {
+        font-size: 34px;
+
+        letter-spacing: -1px;
     }
 
-    .company-logo {
-        width: 70px;
-        height: 70px;
-    }
-
-    .job-details h2 {
+    .resume-subtitle {
         font-size: 15px;
     }
 
-    .job-details h3 {
+    .resume-description {
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+    .resume-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .resume-btn {
+        width: 100%;
+        max-width: 280px;
+
+        margin: auto;
+    }
+
+    .pdf-info {
+        justify-content: center;
+    }
+
+    .resume-note {
+        margin: auto;
+    }
+
+    .resume-image-card {
+        width: min(
+            300px,
+            100%
+        );
+    }
+
+
+    /* HIGHLIGHTS */
+
+    .highlights-section {
+        padding:
+            40px 15px;
+    }
+
+    .highlights-heading {
+        margin-bottom: 25px;
+    }
+
+    .highlights-heading h2 {
+        font-size: 21px;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .highlight-card {
+        min-height: auto;
+
+        padding: 20px;
+    }
+
+    .highlight-card:last-child {
+        grid-column: auto;
+
+        max-width: none;
+
+        width: auto;
+    }
+
+
+    /* CTA */
+
+    .resume-cta {
+        min-height: 250px;
+
+        padding:
+            45px 15px;
+    }
+
+    .cta-decoration {
+        width: 48px;
+        height: 48px;
+    }
+
+    .resume-cta h2 {
+        font-size: 28px;
+    }
+
+    .resume-cta p {
         font-size: 12px;
     }
 
-    .meta {
-        font-size: 11px;
+
+    /* FOOTER */
+
+    .footer {
+        padding-top: 40px;
     }
 
-    .responsibilities li {
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding:
+            0 15px
+            30px;
+
+        text-align: center;
+    }
+
+    .footer-brand,
+    .footer-column,
+    .footer-quote {
+        grid-column: auto;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding:
+            13px 15px;
+
         font-size: 10px;
     }
 
-    .tag {
-        font-size: 10px;
-    }
-
-    .next-stop {
-        padding: 15px;
-    }
-
-    .rocket {
-        font-size: 38px;
-    }
-
-    .next-stop h2 {
-        font-size: 16px;
-    }
-
-    .dream {
-        font-size: 13px;
-    }
 }
 
 
-/* =====================================================
-   360px - EXTRA SMALL MOBILE
-===================================================== */
+/* =========================================================
+   380px AND BELOW
+   VERY SMALL MOBILE
+   ========================================================= */
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
 
-    .brand span {
-        font-size: 16px;
+    /* NAVBAR */
+
+    .navbar {
+        height: auto;
     }
 
-    .navbar nav a {
+    .navbar-container {
+        height: auto;
+
+        padding:
+            9px 10px;
+
+        flex-direction: column;
+
+        gap: 6px;
+    }
+
+    .logo-image {
+        max-width: 140px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap:
+            3px 8px;
+    }
+
+    .nav-links a {
+        padding: 3px 0;
+
         font-size: 9px;
     }
 
-    .hero h1 {
-        font-size: 27px;
+    .nav-links a::after {
+        bottom: 0;
     }
 
-    .hero-image {
-        transform: scale(.48);
+
+    /* HERO */
+
+    .resume-hero {
+        padding:
+            32px 12px
+            38px;
     }
 
-    .experience-card {
-        padding: 11px;
+    .resume-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
     }
 
-    .company-logo {
-        width: 65px;
-        height: 65px;
+    .section-label {
+        justify-content: center;
     }
 
-    .responsibilities li {
-        font-size: 9.5px;
+    .section-label p {
+        font-size: 9px;
+        letter-spacing: 1px;
     }
 
-    .copyright {
+    .resume-title {
+        font-size: 28px;
+    }
+
+    .resume-subtitle {
+        font-size: 13px;
+    }
+
+    .resume-description {
+        font-size: 11px;
+    }
+
+    .resume-btn {
+        max-width: 250px;
+
+        min-height: 44px;
+
+        font-size: 11px;
+    }
+
+    .pdf-info {
+        font-size: 10px;
+
+        justify-content: center;
+    }
+
+    .resume-image-card {
+        width: 260px;
+    }
+
+
+    /* HIGHLIGHTS */
+
+    .highlights-section {
+        padding:
+            32px 12px;
+    }
+
+    .highlights-heading h2 {
+        font-size: 19px;
+    }
+
+    .highlight-card {
+        padding: 17px;
+    }
+
+    .highlight-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .highlight-card h3 {
+        font-size: 13px;
+    }
+
+    .highlight-card p {
         font-size: 10px;
     }
+
+
+    /* CTA */
+
+    .resume-cta {
+        min-height: 230px;
+
+        padding:
+            35px 12px;
+    }
+
+    .resume-cta h2 {
+        font-size: 24px;
+    }
+
+    .resume-cta p {
+        font-size: 11px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding-top: 30px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        padding:
+            0 12px
+            25px;
+    }
+
+    .footer-brand h3 {
+        font-size: 13px;
+    }
+
+    .footer-brand p,
+    .footer-column a {
+        font-size: 10px;
+    }
+
+    .footer-column h3 {
+        font-size: 13px;
+    }
+
+    .footer-quote p {
+        font-size: 14px;
+    }
+
+    .footer-quote span {
+        font-size: 9px;
+    }
+
+    .footer-bottom {
+        min-height: 48px;
+
+        padding:
+            10px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        font-size: 9px;
+    }
+
 }
 
 
-/* =====================================================
-   REDUCED MOTION
-===================================================== */
+/* =========================================================
+   MOBILE LANDSCAPE
+   ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
+@media (max-width: 767px) and (orientation: landscape) {
 
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
+    .resume-hero {
+        padding:
+            35px 20px
+            40px;
     }
+
+    .resume-container {
+        grid-template-columns:
+            1fr 0.8fr;
+
+        gap: 25px;
+
+        text-align: left;
+    }
+
+    .section-label {
+        justify-content: flex-start;
+    }
+
+    .resume-buttons {
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+    .resume-btn {
+        width: auto;
+    }
+
+    .pdf-info {
+        justify-content: flex-start;
+    }
+
+    .resume-note {
+        margin-left: 0;
+    }
+
+    .resume-image-wrapper {
+        min-height: 350px;
+    }
+
+    .resume-image-card {
+        width: 230px;
+    }
+
+    .highlights-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   OVERFLOW PROTECTION
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    html,
+    body {
+        max-width: 100%;
+
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .resume-page,
+    .resume-hero,
+    .resume-container,
+    .highlights-section,
+    .highlights-container,
+    .resume-cta,
+    .footer {
+        max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    a {
+        overflow-wrap: break-word;
+    }
+
 }

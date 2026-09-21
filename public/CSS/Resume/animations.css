@@ -1,259 +1,589 @@
-/* =====================================================
-   RESUME PAGE - ANIMATIONS
-===================================================== */
+/* =========================================================
+   RESUME PAGE — ANIMATIONS.CSS
+   ========================================================= */
 
 
-/* =====================================================
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.resume-page {
+    animation:
+        pageFadeIn
+        0.8s
+        ease
+        both;
+}
+
+@keyframes pageFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
    NAVBAR
-===================================================== */
+   ========================================================= */
 
-.nav-menu a {
+.navbar {
+    animation:
+        navbarDown
+        0.7s
+        ease
+        both;
+}
 
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease;
+@keyframes navbarDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
 }
 
 
-.nav-menu a:hover {
+/* =========================================================
+   LOGO
+   ========================================================= */
 
-    transform: translateY(-2px);
+.logo {
+    animation:
+        logoAppear
+        0.8s
+        ease
+        both;
+}
+
+@keyframes logoAppear {
+
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 
 }
 
 
-/* =====================================================
-   HERO CONTENT
-===================================================== */
+/* =========================================================
+   NAV LINKS
+   ========================================================= */
+
+.nav-links a {
+    animation:
+        navLinkAppear
+        0.6s
+        ease
+        both;
+}
+
+.nav-links a:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.nav-links a:nth-child(2) {
+    animation-delay: 0.10s;
+}
+
+.nav-links a:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.nav-links a:nth-child(4) {
+    animation-delay: 0.20s;
+}
+
+.nav-links a:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+.nav-links a:nth-child(6) {
+    animation-delay: 0.30s;
+}
+
+.nav-links a:nth-child(7) {
+    animation-delay: 0.35s;
+}
+
+.nav-links a:nth-child(8) {
+    animation-delay: 0.40s;
+}
+
+@keyframes navLinkAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .resume-content {
-
     animation:
-        slideFromLeft 0.8s ease both;
+        heroLeft
+        0.9s
+        ease
+        0.15s
+        both;
+}
+
+@keyframes heroLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 
 }
 
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
 
 .resume-image-wrapper {
-
     animation:
-        slideFromRight 0.9s ease both;
-
+        heroRight
+        0.9s
+        ease
+        0.25s
+        both;
 }
 
-
-/* =====================================================
-   HIGHLIGHTS
-===================================================== */
-
-.highlights-container {
-
-    animation:
-        fadeUp 0.8s ease 0.2s both;
-
-}
-
-
-.highlight-card {
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-
-}
-
-
-.highlight-card:hover {
-
-    transform: translateY(-6px);
-
-    box-shadow:
-        0 0 25px rgba(0, 155, 255, 0.3);
-
-}
-
-
-.highlight-icon {
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-
-}
-
-
-.highlight-card:hover .highlight-icon {
-
-    transform: scale(1.08);
-
-}
-
-
-/* =====================================================
-   BUTTONS
-===================================================== */
-
-.resume-btn {
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease;
-
-}
-
-
-.resume-btn:hover {
-
-    transform: translateY(-4px);
-
-}
-
-
-.primary-btn:hover {
-
-    box-shadow:
-        0 12px 32px rgba(0, 183, 255, 0.5);
-
-}
-
-
-.secondary-btn:hover {
-
-    background:
-        rgba(0, 183, 255, 0.1);
-
-    box-shadow:
-        0 8px 25px rgba(0, 183, 255, 0.25);
-
-}
-
-
-/* =====================================================
-   RESUME IMAGE
-===================================================== */
-
-.resume-image-card {
-
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
-
-}
-
-
-.resume-image-card:hover {
-
-    transform: translateY(-6px);
-
-    box-shadow:
-        0 0 35px rgba(0, 204, 255, 0.8),
-        inset 0 0 25px rgba(0, 120, 255, 0.2);
-
-}
-
-
-/* =====================================================
-   CTA
-===================================================== */
-
-.cta-arrow {
-
-    animation:
-        arrowDown 1.8s ease-in-out infinite;
-
-}
-
-
-/* =====================================================
-   KEYFRAMES
-===================================================== */
-
-@keyframes slideFromLeft {
+@keyframes heroRight {
 
     from {
-
         opacity: 0;
-
-        transform:
-            translateX(-40px);
-
+        transform: translateX(40px);
     }
 
     to {
-
         opacity: 1;
-
-        transform:
-            translateX(0);
-
+        transform: translateX(0);
     }
 
 }
 
 
-@keyframes slideFromRight {
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
 
-    from {
-
-        opacity: 0;
-
-        transform:
-            translateX(40px);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            translateX(0);
-
-    }
-
+.section-label {
+    animation:
+        fadeUp
+        0.7s
+        ease
+        0.2s
+        both;
 }
-
 
 @keyframes fadeUp {
 
     from {
-
         opacity: 0;
-
-        transform:
-            translateY(25px);
-
+        transform: translateY(20px);
     }
 
     to {
-
         opacity: 1;
-
-        transform:
-            translateY(0);
-
+        transform: translateY(0);
     }
 
 }
 
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.resume-title {
+    animation:
+        titleReveal
+        0.8s
+        ease
+        0.3s
+        both;
+}
+
+@keyframes titleReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   IMAGE FLOAT
+   ========================================================= */
+
+.resume-image-card {
+    animation:
+        resumeFloat
+        5s
+        ease-in-out
+        infinite;
+}
+
+@keyframes resumeFloat {
+
+    0% {
+        transform:
+            translateY(0)
+            rotateY(-4deg);
+    }
+
+    50% {
+        transform:
+            translateY(-10px)
+            rotateY(-2deg);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            rotateY(-4deg);
+    }
+
+}
+
+
+/* =========================================================
+   IMAGE GLOW
+   ========================================================= */
+
+.image-glow {
+    animation:
+        glowPulse
+        4s
+        ease-in-out
+        infinite;
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        opacity: 0.55;
+        transform: scale(0.95);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.resume-buttons {
+    animation:
+        fadeUp
+        0.8s
+        ease
+        0.45s
+        both;
+}
+
+
+/* =========================================================
+   PDF INFO
+   ========================================================= */
+
+.pdf-info {
+    animation:
+        fadeUp
+        0.8s
+        ease
+        0.55s
+        both;
+}
+
+
+/* =========================================================
+   NOTE
+   ========================================================= */
+
+.resume-note {
+    animation:
+        fadeUp
+        0.8s
+        ease
+        0.65s
+        both;
+}
+
+
+/* =========================================================
+   HIGHLIGHTS SECTION
+   ========================================================= */
+
+.highlights-section {
+    animation:
+        sectionReveal
+        0.9s
+        ease
+        both;
+}
+
+@keyframes sectionReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   HIGHLIGHT CARDS
+   ========================================================= */
+
+.highlight-card {
+    animation:
+        cardReveal
+        0.7s
+        ease
+        both;
+}
+
+.highlight-card:nth-child(1) {
+    animation-delay: 0.10s;
+}
+
+.highlight-card:nth-child(2) {
+    animation-delay: 0.18s;
+}
+
+.highlight-card:nth-child(3) {
+    animation-delay: 0.26s;
+}
+
+.highlight-card:nth-child(4) {
+    animation-delay: 0.34s;
+}
+
+.highlight-card:nth-child(5) {
+    animation-delay: 0.42s;
+}
+
+@keyframes cardReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   HIGHLIGHT ICON
+   ========================================================= */
+
+.highlight-icon {
+    transition:
+        transform 0.3s ease;
+}
+
+.highlight-card:hover .highlight-icon {
+    transform:
+        scale(1.10)
+        rotate(-4deg);
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.resume-cta {
+    animation:
+        ctaReveal
+        0.9s
+        ease
+        both;
+}
+
+@keyframes ctaReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   CTA ICON
+   ========================================================= */
+
+.cta-decoration {
+    animation:
+        ctaIcon
+        3s
+        ease-in-out
+        infinite;
+}
+
+@keyframes ctaIcon {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+}
+
+
+/* =========================================================
+   CTA ARROW
+   ========================================================= */
+
+.cta-arrow {
+    animation:
+        arrowDown
+        1.8s
+        ease-in-out
+        infinite;
+}
 
 @keyframes arrowDown {
 
     0%,
     100% {
-
-        transform:
-            translateY(0);
-
+        transform: translateY(0);
     }
 
     50% {
+        transform: translateY(6px);
+    }
 
-        transform:
-            translateY(8px);
+}
 
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    animation:
+        footerReveal
+        0.8s
+        ease
+        both;
+}
+
+@keyframes footerReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+   ========================================================= */
+
+.footer-column a {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+        scroll-behavior:
+            auto !important;
     }
 
 }
